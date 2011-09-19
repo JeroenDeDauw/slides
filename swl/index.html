@@ -10,6 +10,7 @@
     <!-- This is the first slide -->
     <h2>Watching structured data</h2>
     <footer class="mainfooter">by Jeroen De Dauw</footer>
+    <footer class="license">CC BY-SA 3.0</footer>
 </section>
 
 <section>
@@ -77,10 +78,22 @@
 </section>
 
 <section>
-    <p>
+    <p class="black">
     	Questions?
     </p>
 </section>
+
+<section>
+	<h3>Some links</h3>
+	<ul>
+		<li><a href="http://www.mediawiki.org/wiki/Extension:Semantic_Watchlist" style="color: black">Semantic Watchlist</a><br /></li>
+		<li><a href="https://github.com/JeroenDeDauw/smwcon/tree/master/swl" style="color: black">Presentation source (Github)</a><br /></li>
+		<li>Follow me on Twitter: <a href="https://twitter.com/#!/JeroenDeDauw" style="color: black">@JeroenDeDauw</a><br /></li>
+		<li><a href="http://www.mediawiki.org/wiki/User:Jeroen_De_Dauw" style="color: black">My other extensions</a></li>
+	</ul>
+</section>
+
+
 
 <!-- Your Style -->
 <!-- Define the style of you presentation -->
@@ -123,10 +136,22 @@
     display: inline-block;
     width: 700px;
     height: 600px;
-    background-color: black;
-    color: white;
-    font-size: 60px;
     padding: 50px;
+  }
+  
+  q {
+  	font-size: 60px;
+  	background-color: black;
+  	color: white;
+  }
+  
+  p {
+  	font-size: 30px;
+  }
+  
+  .black {
+  	background-color: black;
+  	color: white;
   }
 
   .bigimg, video {
@@ -149,8 +174,14 @@
   }
 
   .mainfooter {
+  	bottom: 40px;
     font-size: 40px;
     color: black;
+  }
+  
+  .license {
+    font-size: 15px;
+    color: darkgray;
   }
 
   footer {
