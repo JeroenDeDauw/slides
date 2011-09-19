@@ -6,7 +6,7 @@
 <!-- Your Slides -->
 <!-- One section is one slide -->
 
-<section>
+<section class="main">
     <!-- This is the first slide -->
     <h2>Watching structured data</h2>
     <footer class="mainfooter">by Jeroen De Dauw</footer>
@@ -20,7 +20,6 @@
       <li>Email notifications</li>
       <li>MediaWiki watchlist insuficcient</li>
     </ul>
-    <footer>foo bar baz foo bar baz foo bar baz foo bar baz </footer>
 </section>
 
 <section>
@@ -28,7 +27,18 @@
 </section>
 
 <section>
-		
+    <h3>Semantic Watchlist</h3>
+    <ul class="incremental">
+    	<li>Watchlist groups</li>
+    	<li>User preferences</li>
+    	<li>Watchlist page</li>
+    	<li>Email notifications</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Watchlist groups</h3>
+    <img src="http://placekitten.com/g/800/600">
 </section>
 
 <section>
@@ -96,6 +106,7 @@
 
   .mainfooter {
     font-size: 40px;
+    color: black;
   }
 
   footer {
@@ -103,6 +114,11 @@
     bottom: 10px;
     right: 20px;
     font-size: 15px;
+    color: darkgray;
+  }
+  
+  a {
+  	color: darkgray;
   }
 
   /* Transition effect */
@@ -174,6 +190,13 @@
 
   window.onload = function() {
     slides = document.querySelectorAll("body > section");
+    
+    for ( i in slides ) {
+    	if ( slides[i].className != "main" ) {
+    		slides[i].innerHTML += '<footer>Watchling structured data with <a href="http://www.mediawiki.org/wiki/Extension:Semantic_Watchlist">Semantic Watchlist</a>, Jeroen De Dauw, SMWCon 2011 Berlin</footer>';
+    	}
+    }
+    
     onhashchange();
     document.body.className = "loaded";
     setupTouchEvents();
