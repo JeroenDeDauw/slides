@@ -29,7 +29,7 @@
 <section>
     <h3>Semantic Watchlist</h3>
     <ul class="incremental">
-    	<li>Watchlist groups</li>
+    	<li>Watchlist conditions</li>
     	<li>User preferences</li>
     	<li>Watchlist page</li>
     	<li>Email notifications</li>
@@ -37,15 +37,49 @@
 </section>
 
 <section>
-    <h3>Watchlist groups</h3>
-    <img src="http://placekitten.com/g/800/600">
+    <h3 style="margin-top: 25px;">Watchlist conditions</h3>
+    <img src="img/Swl-watchlistconditions.png" class="smallimg">
 </section>
 
 <section>
-  <q>
-    Soothe us with sweet lies. Is that a cooking show? No! I want to
-    live! There are still too many things I don't own!
-  </q>
+    <h3 style="margin-top: 25px;">User preferences</h3>
+    <img src="img/Swl-prefs.png" class="smallimg">
+</section>
+
+<section>
+    <h3 style="margin-top: 25px;">Watchlist page</h3>
+    <img src="img/Swl-watchlist.png" class="smallimg">
+</section>
+
+<section>
+    <h3 style="margin-top: 25px;">Email notifications</h3>
+    <img src="img/Swl-email.png" class="smallimg">
+</section>
+
+<section>
+    <h3>Some background</h3>
+    <ul class="incremental">
+    	<li><a href="http://wikiworks.com/">WikiWorks</a></li>
+    	<li>GNU GPL v3</li>
+    	<li>July 2011</li>
+    	<li>Version 0.1 (beta)</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Requirements</h3>
+    <ul class="incremental">
+    	<li>MediaWiki >= 1.17</li>
+    	<li>SMW >= 1.6</li>
+    	<li>PHP >= 5.2</li>
+    	<li>MySQL</li>
+    </ul>
+</section>
+
+<section>
+    <p>
+    	Questions?
+    </p>
 </section>
 
 <!-- Your Style -->
@@ -85,7 +119,7 @@
       margin: 50px 200px;
   }
 
-  q {
+  p, q {
     display: inline-block;
     width: 700px;
     height: 600px;
@@ -95,13 +129,23 @@
     padding: 50px;
   }
 
-  img, video {
-    width: 800px;
-    height: 600px;
+  .bigimg, video {
     position: absolute;
     top: 0;
     background-color: black;
     z-index: -1;
+    width: 800px;
+    height: 600px;
+  }
+  
+  video {
+    width: 800px;
+    height: 600px;
+  }
+  
+  .smallimg {
+  	max-height: 400px;
+  	max-width: 750px;
   }
 
   .mainfooter {
@@ -193,7 +237,7 @@
     
     for ( i in slides ) {
     	if ( slides[i].className != "main" ) {
-    		slides[i].innerHTML += '<footer>Watchling structured data with <a href="http://www.mediawiki.org/wiki/Extension:Semantic_Watchlist">Semantic Watchlist</a>, Jeroen De Dauw, SMWCon 2011 Berlin</footer>';
+    		slides[i].innerHTML += '<footer>Watching structured data with <a href="http://www.mediawiki.org/wiki/Extension:Semantic_Watchlist">Semantic Watchlist</a>, Jeroen De Dauw, SMWCon 2011 Berlin</footer>';
     	}
     }
     
