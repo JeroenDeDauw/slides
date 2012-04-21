@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 
 <meta charset="utf-8">
-<title>The Title Of Your Presentation</title>
+<title>SMW result formats</title>
 
 <!-- Your Slides -->
 <!-- One section is one slide -->
 
 <section>
-    <!-- This is the first slide -->
     <h1>Result formats</h1>
     <footer>
         <span style="display:block; font-size: 20px;"><a href="http://semantic-mediawiki.org/wiki/SMWCon_Spring_2012">SMWCon Spring 2012</a></span>
         <span style="display:block; font-size: 20px;"><a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></span>
         <span style="display:block; font-size: 12px; color: darkgray;"><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span>
     </footer>
+</section>
+
+<section>
+    <h3>In particular...</h3>
+    <ul>
+        <li>New developments</li>
+        <li>Features being worked upon</li>
+        <li>The future</li>
+    </ul>
+</section>
+
+<section>
+    <h3>SMWCon spring 2011</h3>
+    <ul class="incremental">
+        <li>SRF 1.5.3, February 9, 2011</li>
+        <li>SMW 1.5.6</li>
+        <li>MediaWiki 1.16.4</li>
+    </ul>
 </section>
 
 
@@ -117,7 +134,7 @@
     .incremental > *[aria-selected] { opacity: 1; }
 
         /* The items to-be-selected */
-    .incremental > *[aria-selected] ~ * { opacity: 0; }
+    .incremental > *[aria-selected] ~ * { opacity: 0.0842; }
 
         /* The progressbar, at the bottom of the slides, show the global
     progress of the presentation. */
@@ -452,6 +469,12 @@ Dz.setSlide = function(aIdx) {
 Dz.setIncremental = function(aStep) {
     this.step = aStep;
     var old = this.slides[this.idx - 1].$('.incremental > *[aria-selected]');
+
+    if ( this.idx === 3 && aStep === 3 ) {
+        var element = this.slides[this.idx - 1].$( 'h3' );
+        element.innerHTML = '<s>' + element.innerHTML + '</s> The stone age';
+    }
+
     if (old) {
         old.removeAttribute('aria-selected');
     }
