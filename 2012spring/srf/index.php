@@ -7,13 +7,21 @@
 <!-- Your Slides -->
 <!-- One section is one slide -->
 
-<section>
-    <h1>Result formats</h1>
+<?php
+
+$footer = <<<EOT
     <footer>
         <span style="display:block; font-size: 20px;"><a href="http://semantic-mediawiki.org/wiki/SMWCon_Spring_2012">SMWCon Spring 2012</a></span>
         <span style="display:block; font-size: 20px;"><a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></span>
         <span style="display:block; font-size: 12px; color: darkgray;"><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span>
     </footer>
+EOT;
+
+?>
+
+<section>
+    <h1>Result formats</h1>
+	<?php echo $footer; ?>
 </section>
 
 <section>
@@ -101,7 +109,7 @@
 </section>
 
 <section>
-    <h1>Questions?</h1>
+    <h1>Special:Ask</h1>
 </section>
 
 <section>
@@ -110,11 +118,18 @@
         <li><a href="http://semantic-mediawiki.org/wiki/Category:Result_formats">Result format documentation</a></li>
         <li><a href="https://github.com/JeroenDeDauw/smwcon/">These slides on GitHub</a></li>
     </ul>
-    <footer>
-        <span style="display:block; font-size: 20px;"><a href="http://semantic-mediawiki.org/wiki/SMWCon_Spring_2012">SMWCon Spring 2012</a></span>
-        <span style="display:block; font-size: 20px;"><a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></span>
-        <span style="display:block; font-size: 12px; color: darkgray;"><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span>
-    </footer>
+	<?php echo $footer; ?>
+</section>
+
+<section>
+	<h3>Special:Attribution</h3>
+	<ul class="attribution">
+		<li>Slides: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, <a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></li>
+		<li>SMW logo: CC BY-SA 3.0, Markus Krötzsch</li>
+		<li>Background: CC BY-SA 3.0, Cedric Van der Kelen</li>
+		<li><a href="https://github.com/paulrouget/dzslides">Slide engine</a>: WTFPL, Paul Rouget</li>
+	</ul>
+	<?php echo $footer; ?>
 </section>
 
 
@@ -133,6 +148,11 @@
         font-family: 'Ubuntu', arial, serif;
         font-size: 30px;
     }
+
+	ul.attribution {
+		margin-left:142px;
+		font-size: 15px;
+	}
 
     h1 {
         margin-top: 85px;
