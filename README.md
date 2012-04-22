@@ -39,3 +39,4 @@ A short overview of what's new and upcomming in Maps and Semantic Maps.
 Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
 
 View at: http://ext.bn2vs.com/smwcon/maps/
+ 
