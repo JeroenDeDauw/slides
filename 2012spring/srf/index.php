@@ -110,6 +110,7 @@ EOT;
 
 <section>
     <h1>Special:Ask</h1>
+	<?php echo $footer; ?>
 </section>
 
 <section>
