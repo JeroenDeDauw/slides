@@ -125,8 +125,8 @@ EOT;
 	<h3>Special:Attribution</h3>
 	<ul class="attribution">
 		<li>Slides: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, <a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></li>
-		<li>SMW logo: CC BY-SA 3.0, Markus Krötzsch</li>
-		<li>Background: CC BY-SA 3.0, Cedric Van der Kelen</li>
+		<li>SMW logo: CC BY-SA 3.0, <a href="http://korrekt.org/">Markus Krötzsch</a></li>
+		<li>Background: CC BY-SA 3.0, <a href="http://darklightxiii.deviantart.com/">Cedric Van der Kelen</a></li>
 		<li><a href="https://github.com/paulrouget/dzslides">Slide engine</a>: WTFPL, Paul Rouget</li>
 	</ul>
 	<?php echo $footer; ?>
