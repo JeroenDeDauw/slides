@@ -62,15 +62,19 @@ EOT;
 		<li>Google Maps v2 => v3</li>
 		<li>Updates to OpenLayers and GeoNames</li>
 		<li>Improved KML support</li>
-		<li>Marker clustering</li>
+		<li><a href="https://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html">Marker clustering</a></li>
 		<li>Lines and polygons</li>
 	</ul>
 </section>
 
 <section>
+	<img src="images/cluster.png">
+</section>
+
+<section>
     <h3>SMW + SRF 1.6.x</h3>
     <ul class="incremental">
-        <li>Better parameter handling</li>
+        <li><a href="http://semantic-mediawiki.org/wiki/Special:Ask">Better parameter handling</a></li>
         <li>Many fixes</li>
         <li>... and minor feature additions</li>
     </ul>
@@ -628,7 +632,7 @@ Dz.setIncremental = function(aStep) {
     this.step = aStep;
     var old = this.slides[this.idx - 1].$('.incremental > *[aria-selected]');
 
-    if ( this.idx === 3 && aStep === 3 ) {
+    if ( this.idx === 4 && aStep === 3 ) { // TODO
         var element = this.slides[this.idx - 1].$( 'h3' );
         element.innerHTML = '<s>' + element.innerHTML + '</s> The stone age';
     }
