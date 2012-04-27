@@ -34,6 +34,10 @@ EOT;
 </section>
 
 <section>
+	<img src="http://placekitten.com/g/800/600">
+</section>
+
+<section>
     <h3>SMWCon spring 2011</h3>
     <ul class="incremental">
         <li>SRF 1.5.3, February 9, 2011</li>
@@ -43,12 +47,24 @@ EOT;
 </section>
 
 <section>
-    <h3>MW 1.17: resource loader</h3>
-    <ul class="incremental">
-        <li>Modules and dependencies</li>
-        <li>Minifies and combines resources</li>
-        <li>Base64 embedded images and RTL</li>
-    </ul>
+	<h3>MW 1.17: resource loader</h3>
+	<ul class="incremental">
+		<li>Modules and dependencies</li>
+		<li>Minifies and combines resources</li>
+		<li>Base64 embedded images and RTL</li>
+	</ul>
+</section>
+
+<section>
+	<h3>(Semantic) Maps</h3>
+	<ul class="incremental">
+		<li>Full usage of resource loader</li>
+		<li>Google Maps v2 => v3</li>
+		<li>Updates to OpenLayers and GeoNames</li>
+		<li>Improved KML support</li>
+		<li>Marker clustering</li>
+		<li>Lines and polygons</li>
+	</ul>
 </section>
 
 <section>
@@ -79,6 +95,23 @@ EOT;
 </section>
 
 <section>
+	<h3><a href="https://github.com/mwjames/docs/tree/master/smwcon-2012">Examples by MWJames</a></h3>
+</section>
+
+<section>
+	<h3>Filtered format</h3>
+	<ul class="incremental" style="margin-left:142px">
+		<li>Similar to Exhibit</li>
+		<li>Developed by Stephan Gambke</li>
+		<li>Funded by <a href="http://www.prescientsoftware.co.uk">Prescient Software</a></li>
+		<li><a href="http://www.aroundisleofwight.info/en/Eating_and_Drinking">Example 0: aroundisleofwight.info</a></li>
+		<li><a href="http://www.prescientsoftware.co.uk/gateway/index.php/Special:RunQuery/Postcode_Lookup" data-postcode="SO18 2JR">
+			Example 1: events for disabled children
+		</a></li>
+	</ul>
+</section>
+
+<section>
     <h3 style="margin-bottom: 20px">Documentation++;</h3>
     <a href="http://semantic-mediawiki.org/wiki/Category:Result_formats">
         <img src="images/formats.png" style="display: block; margin-left: auto;margin-right: auto;" />
@@ -97,15 +130,26 @@ EOT;
 </section>
 
 <section>
-    <h3>Spark</h3>
+	<h3>Client side interactivity</h3>
+	<ul class="incremental">
+		<li>Continuation</li>
+		<li>Filtering</li>
+		<li>Aggregation</li>
+		<li>Query altering</li>
+	</ul>
+</section>
+
+<section>
+    <h3><a href="https://www.mediawiki.org/wiki/Extension:Spark">Spark</a></h3>
     <ul class="incremental">
         <li>Embedded SPARQL</li>
         <li>Minimal integration required</li>
+		<li><a href="http://129.13.109.100/~dropedia/index.php/Level_above_msl_at_AB3149,_AB3148,_AB3143">Example</a></li>
     </ul>
 </section>
 
 <section>
-    <h3>Wikidata?</h3>
+    <h3><a href="https://meta.wikimedia.org/wiki/Wikidata">Wikidata?</a></h3>
 </section>
 
 <section>
@@ -178,7 +222,7 @@ EOT;
     }
 
     ul {
-        margin: 50px 200px;
+        margin: 50px 100px 50px 200px;
     }
 
     p {
