@@ -10,7 +10,7 @@
 
   window.onload = function() {
     var iframe = $("iframe");
-    iframe.src = window.location + 'slides.php';
+    iframe.src = window.location + 'slides.html';
     iframe.onload = function() {
       view = iframe.contentWindow;
       view.postMessage("register", "*");
