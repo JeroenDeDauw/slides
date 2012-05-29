@@ -59,6 +59,11 @@
         this.idx = ~~cursor[0];
         this.step = ~~cursor[1];
         $("#slideidx").value = this.idx;
+        
+        var hsh = window.location.hash.split( '#' ).slice( 0, 2 )
+        hsh.push( this.idx );
+        window.location.hash = hsh.join( '#' );
+        
         $("#back").disabled = this.idx == 1;
         $("#forward").disabled = this.idx == this.count;
       }
@@ -84,7 +89,8 @@
       u += "Try<em>: " + document.location + "#yourslides.html</em>";
       u = "data:text/html," + encodeURIComponent(u);
     }
-    return u;
+    
+    return u + '#' + window.location.hash.split("#")[2];
   }
   
   Dz.loadIframe = function() {
