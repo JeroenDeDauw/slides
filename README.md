@@ -1,6 +1,6 @@
 Slides of Jeroen De Dauw [0] for various presentations using DZSlides[1].
 
-[0] http://www.mediawiki.org/wiki/User:Jeroen_De_Dauw
+[0] http://jeroendedauw.com, https://twitter.com/#!/JeroenDeDauw
 [1] http://paulrouget.com/dzslides
 
 

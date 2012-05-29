@@ -7,29 +7,24 @@
 <!-- Your Slides -->
 <!-- One section is one slide -->
 
-<?php
-
-$footer = <<<EOT
-    <footer>
-        <span style="display:block; font-size: 20px;"><a href="http://semantic-mediawiki.org/wiki/SMWCon_Spring_2012">SMWCon Spring 2012</a></span>
-        <span style="display:block; font-size: 20px;"><a href="http://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">Jeroen De Dauw</a></span>
-        <span style="display:block; font-size: 12px; color: darkgray;"><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span>
-    </footer>
-EOT;
-
-?>
-
 <section>
-    <h1>Result formats</h1>
-	<?php echo $footer; ?>
+    <h1>Wikidata</h1>
+    <h3 style="text-align:center; margin:20px;">The caching stuff</h3>
 </section>
 
 <section>
     <h3>In particular...</h3>
     <ul>
-        <li>New developments</li>
-        <li>Features being worked upon</li>
-        <li>The future</li>
+        <li>Copies of the data</li>
+        <li>Change propagation</li>
+    </ul>
+</section>
+
+<section>
+    <h3>In particular...</h3>
+    <ul class="incremental">
+        <li>Copies of the data</li>
+        <li>Change propagation</li>
     </ul>
 </section>
 
@@ -38,147 +33,22 @@ EOT;
 </section>
 
 <section>
-    <h3>SMWCon spring 2011</h3>
-    <ul class="incremental">
-        <li>SRF 1.5.3, February 9, 2011</li>
-        <li>SMW 1.5.6</li>
-        <li>MediaWiki 1.16.4</li>
-    </ul>
-</section>
-
-<section>
-	<h3>MW 1.17: resource loader</h3>
-	<ul class="incremental">
-		<li>Modules and dependencies</li>
-		<li>Minifies and combines resources</li>
-		<li>Base64 embedded images and RTL</li>
-	</ul>
-</section>
-
-<section>
-	<h3>(Semantic) Maps</h3>
-	<ul class="incremental">
-		<li>Full usage of resource loader</li>
-		<li>Google Maps v2 => v3</li>
-		<li>Updates to OpenLayers and GeoNames</li>
-		<li>Improved KML support</li>
-		<li><a href="https://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html">Marker clustering</a></li>
-		<li>Lines and polygons</li>
-	</ul>
-</section>
-
-<section>
-	<img src="images/cluster.png">
-</section>
-
-<section>
-    <h3>SMW + SRF 1.6.x</h3>
-    <ul class="incremental">
-        <li><a href="http://semantic-mediawiki.org/wiki/Special:Ask">Better parameter handling</a></li>
-        <li>Many fixes</li>
-        <li>... and minor feature additions</li>
-    </ul>
-</section>
-
-<section>
-    <h3>SMW + SRF 1.7.x</h3>
-    <ul class="incremental">
-        <li>Distribution support</li>
-        <li>Valuerank format</li>
-        <li>D3 formats</li>
-        <li>Tree formats</li>
-    </ul>
-</section>
-
-<section>
-    <h3>SMW + SRF 1.8.x: now</h3>
-    <ul class="incremental">
-        <li>Filtered format</li>
-        <li>JitGraph format</li>
-    </ul>
-</section>
-
-<section>
-	<h3><a href="https://github.com/mwjames/docs/tree/master/smwcon-2012">Examples by MWJames</a></h3>
-</section>
-
-<section>
-	<h3>Filtered format</h3>
-	<ul class="incremental" style="margin-left:142px">
-		<li>Similar to Exhibit</li>
-		<li>Developed by Stephan Gambke</li>
-		<li>Funded by <a href="http://www.prescientsoftware.co.uk">Prescient Software</a></li>
-		<li><a href="http://www.aroundisleofwight.info/en/Eating_and_Drinking">Example 0: aroundisleofwight.info</a></li>
-		<li><a href="http://www.prescientsoftware.co.uk/gateway/index.php/Special:RunQuery/Postcode_Lookup" data-postcode="SO18 2JR">
-			Example 1: events for disabled children
-		</a></li>
-	</ul>
-</section>
-
-<section>
-    <h3 style="margin-bottom: 20px">Documentation++;</h3>
-    <a href="http://semantic-mediawiki.org/wiki/Category:Result_formats">
-        <img src="images/formats.png" style="display: block; margin-left: auto;margin-right: auto;" />
-    </a>
-</section>
-
-<section>
-    <h3>Developer docs o_O</h3>
-    <ul>
-        <li><a href="http://semantic-mediawiki.org/wiki/Writing_result_printers">Link or it didn't happen</a></li>
-    </ul>
-</section>
-
-<section>
-    <h3>The future</h3>
-</section>
-
-<section>
-	<h3>Client side interactivity</h3>
-	<ul class="incremental">
-		<li>Continuation</li>
-		<li>Filtering</li>
-		<li>Aggregation</li>
-		<li>Query altering</li>
-	</ul>
-</section>
-
-<section>
-    <h3><a href="https://www.mediawiki.org/wiki/Extension:Spark">Spark</a></h3>
-    <ul class="incremental">
-        <li>Embedded SPARQL</li>
-        <li>Minimal integration required</li>
-		<li><a href="http://129.13.109.100/~dropedia/index.php/Level_above_msl_at_AB3149,_AB3148,_AB3143">Example</a></li>
-    </ul>
-</section>
-
-<section>
-    <h3><a href="https://meta.wikimedia.org/wiki/Wikidata">Wikidata?</a></h3>
-</section>
-
-<section>
     <h1>Special:Ask</h1>
-	<?php echo $footer; ?>
 </section>
 
 <section>
     <h3>Special:Links</h3>
     <ul style="margin-left:142px">
-        <li><a href="http://semantic-mediawiki.org/wiki/Category:Result_formats">Result format documentation</a></li>
-        <li><a href="https://github.com/JeroenDeDauw/smwcon/">These slides on GitHub</a></li>
+        <li><a href="https://github.com/JeroenDeDauw/slides/">These slides on GitHub</a></li>
     </ul>
-	<?php echo $footer; ?>
 </section>
 
 <section>
 	<h3>Special:Attribution</h3>
 	<ul class="attribution">
-		<li>SMW logo: CC BY-SA 3.0, <a href="http://korrekt.org/">Markus Krötzsch</a></li>
-		<li>Background: CC BY-SA 3.0, <a href="http://darklightxiii.deviantart.com/">Cedric Van der Kelen</a></li>
 		<li><a href="https://github.com/paulrouget/dzslides">Slide engine</a>: WTFPL, Paul Rouget</li>
 		<li>Slides: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, <a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></li>
 	</ul>
-	<?php echo $footer; ?>
 </section>
 
 
@@ -189,8 +59,11 @@ EOT;
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 
 <style>
-    html { background-color: #f6f6f6; color: black; }
-    body { background: url( 'images/bg2.jpeg' ); background-size: 100%;}
+    html {
+    	background-color: #f6f6f6;
+    }
+    	
+    /* body { background: url( 'images/bg2.jpeg' ); background-size: 100%;} */
         /* A section is a slide. It's size is 800x600, and this will never change */
     section {
         /* The font from Google */
@@ -256,16 +129,6 @@ EOT;
     figcaption {
         margin: 70px;
         font-size: 50px;
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 40px;
-        text-align: right;
-        background-color: #F6F6F6;
-        border-top: 1px solid #CCC;
     }
 
         /* Transition effect */
