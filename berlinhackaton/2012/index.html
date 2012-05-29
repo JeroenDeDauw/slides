@@ -79,7 +79,7 @@
   Dz.getUrl = function() {
     var u = window.location.hash.split("#")[1];
     if (!u) {
-      u = window.prompt("What is the URL of the slides?");
+      u = 'caching.html';
       if (u) {
         window.location.hash = u.split("#")[0];
         return u;
