@@ -178,9 +178,10 @@ Dz.onhashchange = function() {
     var cursor = window.location.hash.split("#"),
             newidx = 1,
             newstep = 0;
-    if (cursor.length == 2) {
+    if (cursor.length == 2 && ~~cursor[1].split(".")[0] > 0) {
         newidx = ~~cursor[1].split(".")[0];
         newstep = ~~cursor[1].split(".")[1];
+
         if (newstep > Dz.slides[newidx - 1].$$('.incremental > *').length) {
             newstep = 0;
             newidx++;
