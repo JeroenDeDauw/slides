@@ -21,6 +21,8 @@ SMWs result formats, the work being done right now and what the future might loo
 
 Presented by Jeroen De Dauw at SMWCon Spring 2012, April 2012, Carlsbad, CA.
 
+View at: http://ext.bn2vs.com/smwcon/srf/
+
 SMWCon fall 2011, Berlin
 -------------------------
 
