@@ -261,10 +261,10 @@ Dz.setIncremental = function(aStep) {
     this.step = aStep;
     var old = this.slides[this.idx - 1].$('.incremental > *[aria-selected]');
 
-    if ( this.idx === 4 && aStep === 3 ) { // TODO
-        var element = this.slides[this.idx - 1].$( 'h3' );
-        element.innerHTML = '<s>' + element.innerHTML + '</s> The stone age';
-    }
+//    if ( this.idx === 4 && aStep === 3 ) {
+//        var element = this.slides[this.idx - 1].$( 'h3' );
+//        element.innerHTML = '<s>' + element.innerHTML + '</s> The stone age';
+//    }
 
     if (old) {
         old.removeAttribute('aria-selected');
