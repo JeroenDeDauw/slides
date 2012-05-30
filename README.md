@@ -22,12 +22,12 @@ http://semantic-mediawiki.org/wiki/SMWCon
 
 Slides can be found in /smwcon.
 
-Berlin hackaton
+Berlin hackathon
 ----------------------------
 
-The yearly MediaWiki hackaton in Berlin.
+The yearly MediaWiki hackathon in Berlin.
 
-Slides can be found in /berlinhackaton.
+Slides can be found in /berlinhackathon.
 
 
 
