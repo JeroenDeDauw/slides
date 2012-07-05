@@ -17,6 +17,28 @@ Dz.init = function() {
     this.onhashchange();
     this.setupTouchEvents();
     this.onresize();
+
+	function externalLinks() {
+		if (!document.getElementsByTagName) return;
+
+		$$.forEach($$("a"), function(anchor){
+
+			if (anchor.getAttribute("href")) {
+				anchor.onclick = function() {
+					if ( window == window.top ) {
+						window.location = this.href;
+					}
+					else {
+						window.top.location = this.href;
+					}
+
+					return true;
+				};
+			}
+		});
+	}
+
+	externalLinks();
 }
 
 Dz.setupParams = function() {
