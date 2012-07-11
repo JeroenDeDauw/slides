@@ -45,7 +45,7 @@ View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/spark/
 
 ### Semantic Maps
 
-A short overview of what's new and upcomming in Maps and Semantic Maps.
+A short overview of what's new and upcoming in Maps and Semantic Maps.
 (5 min lightning talk)
 
 Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
