@@ -32,7 +32,7 @@ A short (15 min talk) introduction to the Semantic Watchlist extension.
 
 Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
 
-View at: http://ext.bn2vs.com/smwcon/swl/
+View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/swl/
 
 ### The future of SMW visualizations
 
@@ -41,7 +41,7 @@ and what tools can be utilized for this. (5 min lightning talk)
 
 Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
 
-View at: http://ext.bn2vs.com/smwcon/spark/
+View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/spark/
 
 ### Semantic Maps
 
@@ -50,4 +50,4 @@ A short overview of what's new and upcomming in Maps and Semantic Maps.
 
 Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
 
-View at: http://ext.bn2vs.com/smwcon/maps/
+View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/maps/

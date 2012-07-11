@@ -29,3 +29,11 @@ The yearly MediaWiki hackathon in Berlin.
 
 Slides can be found in /berlinhackathon.
 
+Wikimania
+----------------------------
+
+The yearly Wikimedia event.
+
+https://wikimania.wikimedia.org
+
+Slides can be found in /wikimania.
