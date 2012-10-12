@@ -1,7 +1,7 @@
    html {
     	background-color: #f6f6f6;
     }
-    	
+
     /* body { background: url( 'images/bg2.jpeg' ); background-size: 100%;} */
         /* A section is a slide. It's size is 800x600, and this will never change */
     section {
@@ -154,3 +154,12 @@
     figure > img, figure > video {
         width: 100%; height: 100%;
     }
+
+
+img.intehcentre {
+    display: block;
+    margin-left: 40px;
+    top: 50%;
+    margin-top: -50px;
+    position: absolute;
+}
