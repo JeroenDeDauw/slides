@@ -14,7 +14,13 @@ Dz.init = function() {
 
 	this.doLoop = function() {
 		_this.view = _this.iframe.contentWindow;
-		setTimeout( function() { _this.doLoop(); }, 500 );
+
+		if ( this.view.location.href === 'about:blank' ) {
+			window.location = window.location.href.split("#", 2).join( '' );
+		}
+		else {
+			setTimeout( function() { _this.doLoop(); }, 500 );
+		}
 	};
 
 	this.doLoop();
@@ -105,7 +111,8 @@ return u + '#' + window.location.hash.split("#")[2];
 
 Dz.loadIframe = function() {
 this.iframe = $("iframe");
-this.iframe.src = this.url = this.getUrl();
+var url = this.getUrl();
+this.iframe.src = this.url = url;
 this.iframe.onload = function() {
   Dz.view = this.contentWindow;
   Dz.postMsg(Dz.view, "REGISTER");
