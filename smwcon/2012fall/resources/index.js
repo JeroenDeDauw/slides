@@ -15,12 +15,18 @@ Dz.init = function() {
 	this.doLoop = function() {
 		_this.view = _this.iframe.contentWindow;
 
-		if ( this.view.location.href === 'about:blank' ) {
-			window.location = window.location.href.split("#", 2).join( '' );
-		}
-		else {
-			setTimeout( function() { _this.doLoop(); }, 500 );
-		}
+		setTimeout(
+			function() {
+				if ( _this.view.location.href === 'about:blank' ) {
+					window.location = window.location.href.split("#", 2).join( '' );
+				}
+				else {
+					_this.doLoop();
+				}
+			},
+			500
+		);
+
 	};
 
 	this.doLoop();
