@@ -164,6 +164,14 @@
        position: absolute;
    }
 
+   img.popupkitteh {
+       display: block;
+       margin-left: 40px;
+       top: 50%;
+       margin-top: -50px;
+       position: absolute;
+   }
+
    img.dafuiq {
        display: block;
        margin-left: 275px;

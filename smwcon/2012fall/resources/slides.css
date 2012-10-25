@@ -156,10 +156,18 @@
     }
 
 
-img.intehcentre {
-    display: block;
-    margin-left: 40px;
-    top: 50%;
-    margin-top: -50px;
-    position: absolute;
-}
+   img.intehcentre {
+       display: block;
+       margin-left: 40px;
+       top: 50%;
+       margin-top: -50px;
+       position: absolute;
+   }
+
+   img.popupkitteh {
+       display: block;
+       margin-left: 100px;
+       top: 20%;
+       margin-top: -50px;
+       position: absolute;
+   }
