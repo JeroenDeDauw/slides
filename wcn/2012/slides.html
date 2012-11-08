@@ -192,30 +192,75 @@
 </section>
 
 <section>
-    <h3>Wikibase</h3>
-    <ul class="incremental">
-        <li></li>
-    </ul>
+    <h3>Inline query example</h3>
+    <pre style="font-size: 30px;">
+        {{#ask:
+        <span style="color:darkblue">[[Category:Country]]
+        [[located in::Africa]]</span>
+        <span style="color:darkred">| ?Population
+        | ?Area</span>
+        <span style="color:darkgreen">| format=table</span>
+        }}
+    </pre>
+</section>
+
+<section>
+    <p style="font-size: 30px;">
+        <img src="resources/inlinequery.png" width="600px"><br /><br />
+        * <a href="http://semantic-mediawiki.org/wiki/Result_formats">Result formats</a><br />
+        * <a href="http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats/Presentation">SMWCon fall 2012 presentation</a>
+    </p>
 </section>
 
 <section>
     <h3>Wikibase</h3>
     <ul class="incremental">
-        <li></li>
+        <li>Developed for Wikidata</li>
+        <li>A set of extensions</li>
     </ul>
+</section>
+
+<section>
+    <h3>Wikibase: differences with SMW</h3>
+    <p style="text-align: center">
+        <img src="resources/fact.jpg" width="400px">
+    </p>
+</section>
+
+<section>
+    <h3>Wikibase: differences with SMW</h3>
+    <p style="text-align: center">
+        <img src="resources/dictionary.jpg" width="400px">
+    </p>
+</section>
+
+<section>
+    <h3>&nbsp;</h3>
+    <p style="text-align: center; font-size: 30px;">
+        Server-clients vs single wiki
+    </p>
+</section>
+
+<section>
+    <h3></h3>
+    <p style="text-align: center; font-size: 30px;" class="incremental">
+        <span><br /><br />More complex queries</span>
+        <span><br /><br />User defined data types</span>
+        <span><br /><br />Assigning "wikitext values" to properties</span>
+    </p>
 </section>
 
 <section>
     <h3>SMW & Wikibase</h3>
     <ul>
-        <li>DataValues</li>
-        <li>Parsers, formatters and validators</li>
-        <li>DataTypes</li>
-        <li>Parameter processing</li>
-        <li>Result formats</li>
-        <li>Result objects</li>
-        <li>Query descriptions</li>
-        <li>Moar?</li>
+        <li style="color:darkblue">DataValues</li>
+        <li style="color:darkblue">Parsers, formatters and validators</li>
+        <li style="color:darkblue">DataTypes</li>
+        <li style="color:darkred">Parameter processing</li>
+        <li style="color:darkgreen">Result formats</li>
+        <li style="color:darkgreen">Result objects</li>
+        <li style="color:darkgreen">Query descriptions</li>
+        <li style="color:black">Moar?</li>
     </ul>
 </section>
 
