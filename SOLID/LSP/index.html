@@ -42,22 +42,117 @@
 				</section>
 
 				<section>
-					<h2>foo</h2>
+					<h2>Original definition</h2>
 					<p>
-						bar
+						If for each object o1 of type S there is an object o2 of type T such that for all programs P
+						defined in terms of T, the behaviour of P is unchanged when o1 is substituted for o2 then S
+						is a subtype of T.
+					</p>
+
+				</section>
+
+				<section data-state="soothe">
+					<h3>Or in understandable format</h3>
+					<img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
+					<aside class="notes">
+						* Subtypes can be used as parent types<br />
+						* User can use Sub without knowing it is not Type
+					</aside>
+				</section>
+
+				<section>
+					<h2>Obvious!</h2>
+					<p>
+						Or not?
 					</p>
 				</section>
 
 				<section>
-					<h2>baz</h2>
-					<a class="image">
-						<img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
-					</a>
+					<h2>Not just inheritance</h2>
+					<img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
+
+					<aside class="notes">
+						* Static inheritance needed for polymorphism<br />
+						* Duck typing - message passing
+					</aside>
+
+					<p class="fragment">Static inheritance</p>
+					<p class="fragment">Duck typing</p>
 				</section>
 
-				<section data-state="alert" class="php">
+				<section>
+					<h2>Refused requests</h2>
+				</section>
+
+				<section>
+					<h3>Object missing property</h3>
+					<pre><code contenteditable  class="PHP">
+						class T() {}
+
+						$o = new T();
+
+						$o->f(); // boom
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Unexpected side effect(s)</h3>
+				</section>
+
+				<section>
+					<h3>The classic example</h3>
+					<pre><code contenteditable  class="PHP">
+class Rectange {
+	private $width;
+	private $height;
+	private $topLeftCorner;
+
+	public function getWidth();
+	public function getHeight();
+
+	public function setWidth( $width );
+	public function setHeight( $height );
+
+	public function getArea();
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Square</h3>
+					<p class="fragment">What is the relationship?</p>
+					<p class="fragment">Square <strong>is a</strong> rectangle</p>
+					<p class="fragment">=> inheritance!</p>
+				</section>
+
+				<section>
+					<h3>To many fields</h3>
+
+					<pre><code contenteditable  class="PHP">
+class Rectange {
+	private $width;
+	private $height;
+	private $topLeftCorner;
+
+	public function getWidth();
+	public function getHeight();
+
+	public function setWidth( $width );
+	public function setHeight( $height );
+
+	public function getArea();
+}
+
+class Square extends Rectangle {}
+					</code></pre>
+
+					<p class="fragment">Lets not care, enough memory anyway!</p>
+					<p class="fragment">But what about <code>setHeight</code> and <code>setWidth</code>?</p>
+				</section>
+
+				<section data-state="alert">
 					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
+					<pre><code contenteditable class="PHP">
 // A code be here
 					</code></pre>
 				</section>
