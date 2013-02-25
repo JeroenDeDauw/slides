@@ -148,15 +148,86 @@ class Square extends Rectangle {}
 
 					<p class="fragment">Lets not care, enough memory anyway!</p>
 					<p class="fragment">But what about <code>setHeight</code> and <code>setWidth</code>?</p>
+					<p class="fragment">Width and height need to be the same</p>
+				</section>
+
+				<section data-state="soothe">
+					<h3>Fixing the problem</h3>
+
+					<pre><code contenteditable  class="PHP">
+class Square extends Rectangle {
+    public function setWidth( $width ) {
+        $this->width = $width;
+        $this->height = $width;
+    }
+
+    public function setHeight( $height ) {
+        $this->width = $height;
+        $this->height = $height;
+    }
+}
+					</code></pre>
+
+					<p class="fragment">Still somewhat odd</p>
+					<p class="fragment">Though behaves like a rectangle</p>
 				</section>
 
 				<section data-state="alert">
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable class="PHP">
-// A code be here
+					<p><code>$rectangle->setHeight();</code></p>
+
+					<pre class="fragment"><code contenteditable class="PHP">
+function f( Rectangle $r ) {
+    $r->setWidth( 10 );
+    $r->setHeight( 5 );
+
+    assert( $r->getArea() === 50 ); // Boom
+}
+
+$a = new Square();
+f( $a );
 					</code></pre>
+
+					<p class="fragment">Have fun debugging!</p>
+					<p class="fragment">Hide if someone else finds this in your code</p>
+					<p class="fragment">How to fix this mess?</p>
 				</section>
 
+				<section>
+					<h3>Fixing the <s>fix</s> new problem</h3>
+
+					<pre><code contenteditable  class="PHP">
+function f( Rectangle $r ) {
+    if ( $r instanceof Square ) {
+        // ...
+    }
+    else { // Assume we got a Rectangle
+        // ...
+    }
+}
+					</code></pre>
+
+					<p class="fragment">OCP violation!</p>
+					<p class="fragment"><code>f</code> now dependent on <code>Square</code></p>
+				</section>
+
+				<section>
+					<h3>Third try is a charm!</h3>
+
+					<p>Let <code>Rectangle</code> extend <code>Square</code></p>
+
+					<pre><code contenteditable  class="PHP">
+class Square {
+    private $side;
+}
+
+class Rectangle extends Square {
+    private $otherSide;
+}
+					</code></pre>
+
+					<p class="fragment"><code>$s->setSide( 5 );</code></p>
+					<p class="fragment"><code>assert( $s->getArea() === 25 );</code></p>
+				</section>
 			</div>
 
 		</div>
