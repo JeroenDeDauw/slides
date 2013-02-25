@@ -228,6 +228,85 @@ class Rectangle extends Square {
 					<p class="fragment"><code>$s->setSide( 5 );</code></p>
 					<p class="fragment"><code>assert( $s->getArea() === 25 );</code></p>
 				</section>
+
+				<section>
+					<h3>The actual solution</h3>
+
+					<p class="fragment">Square and Rectangle are different, don't subtype!</p>
+
+					<p class="fragment">Never pass a Square into a method expecting Rectangle</p>
+
+					<p class="fragment">
+						But but but!
+						<br />Is a square not a rectangle?!
+					</p>
+				</section>
+
+				<section>
+					<h3>WTF?</h3>
+
+					<p>Is a square not a rectangle?!</p>
+
+					<p class="fragment">Yeah, it is a rectangle</p>
+
+					<p class="fragment">Contradicting yourself are you?</p>
+				</section>
+
+				<section>
+					<p>Nope</p>
+
+					<p>A square is a rectangle</p>
+
+					<pre class="fragment"><code contenteditable  class="PHP">
+						// This is not a square though
+						class Square {
+						// ...
+						}
+					</code></pre>
+
+					<p class="fragment">It is a code <strong>representing</strong> a square</p>
+				</section>
+
+				<section>
+					<h3>Representatives</h3>
+
+					<p class="fragment">Do not share the relationships of the things they represent</p>
+				</section>
+
+				<section>
+					<p>So I can't represent the real world?</p>
+
+					<p class="fragment">No real world principles violated</p>
+				</section>
+
+				<section>
+					<p>Integer <strong>is a</strong> real number</p>
+					<p class="fragment">Complex number <strong>is a</strong> real number</p>
+					<p class="fragment">Complex number <strong>contains</strong> two real number</p>
+
+					<p class="fragment">Makes perfect sense.<br />Free beer for who implements this and successfully instantiates a complex number</p>
+				</section>
+
+				<section>
+					<h3>More craziness</h3>
+
+					<p>Class T</p>
+					<p>Class S extends T</p>
+
+					<p class="fragment">List&lt;T&gt; is not a subtype of List&lt;S&gt;</p>
+
+					<p class="fragment">Cannot pass list of Square to function expecting list of Shape</p>
+
+					<pre class="fragment"><code contenteditable  class="PHP">
+$rectangles = new List&lt;Rectangle&gt;();
+
+f( $rectangles );
+
+function f( List&lt;Shape&gt; $list ) {
+    $list.add( new Circle() );
+}
+					</code></pre>
+				</section>
 			</div>
 
 		</div>
