@@ -11,6 +11,33 @@ Presentations
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 
+SMWCon Fall 2012, Cologne
+--------------------------
+
+### Developing SMW (extensions)
+
+An introduction to how to develop Semantic MediaWiki and extensions.
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions)
+
+### Current status and next steps for SMW
+
+The yearly "what happened and what are we working on now" talk.
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Current_status_and_next_steps_for_SMW
+
+### New features in Maps and Semantic Maps
+
+An overview of all the cool new stuff in Maps and Semantic Maps as well as a peek to what's on the horizon.
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Maps_and_Semantic_Maps
+
+### New features in Semantic Result Formats
+
+An overview of all the awesome new features in Semantic Result Formats 1.8.
+
+http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats
+
 SMWCon spring 2012, Carlsbad
 ----------------------------
 
