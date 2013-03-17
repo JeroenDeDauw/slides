@@ -158,10 +158,30 @@
                 </section>
 
                 <section>
-                    <h3>SQLStore3</h3>
-                    <ul>
-                        <li>TODO</li>
-                    </ul>
+                    <section>
+                        <h3>SQLStore3</h3>
+                        <ul>
+                            <li>Google Summer of Code 2012 project "Green SMW"</li>
+                            <li>Student: Nischay Nahata</li>
+                            <li class="fragment">Goal: performance improvements</li>
+                            <li class="fragment">Low hanging fruit, no fancy magic</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>SQLStore3 changes</h3>
+                        <ul>
+                            <li class="fragment">In memory cache</li>
+                            <li class="fragment">One table per DataItem type</li>
+                            <li class="fragment">Selective updating using hashes and diffs</li>
+                            <li class="fragment">Precomputed property usage statistics</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>SQLStore3 impact</h3>
+                        <p>
+                            ~5x speedup for some wikis
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -201,30 +221,6 @@
                         <li>Changed to match the Ask API</li>
                         <li>Compatibility via syntax=obsolete</li>
                         <li><a href="https://semantic-mediawiki.org/wiki/Help:JSON_format">semantic-mediawiki.org/wiki/Help:JSON_format</a></li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Improved continuation links</h3>
-                    <ul>
-                        <li>Generic link generation</li>
-                        <li>All result formats</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Unit tests</h3>
-                    <ul>
-                        <li>First unit tests, integrated with MW</li>
-                        <li>Only coverage of some components so far</li>
-                        <li>New tests being added</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Property statistics</h3>
-                    <ul>
-                        <li>TODO</li>
                     </ul>
                 </section>
 
@@ -285,6 +281,23 @@
                     </section>
                 </section>
 
+                <section>
+                    <h3>Improved continuation links</h3>
+                    <ul>
+                        <li>Generic link generation</li>
+                        <li>All result formats</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Unit tests</h3>
+                    <ul>
+                        <li>First unit tests, integrated with MW</li>
+                        <li>Only coverage of some components so far</li>
+                        <li>New tests being added</li>
+                    </ul>
+                </section>
+
                 <section data-state="blackout">
                     <h2>Roadmap</h2>
                 </section>
@@ -327,11 +340,13 @@
                         <li>Improving Special:Ask UI</li>
                         <li>Code quality improvements</li>
                         <li>More tests</li>
+                        <li>Wikibase interoperability</li>
+                        <li class="fragment"><span style="color:lightgray">Stealing stuff from Wikibase</span></li>
                     </ul>
                     <p><br /><a href="https://semantic-mediawiki.org/wiki/Roadmap">semantic-mediawiki.org/wiki/Roadmap</a></p>
                 </section>
 
-                <section data-state="soothe">
+                <section data-state="blackout">
                     <p>
                         Your ideas and support are welcome!<br /><br />
                         <img src="img/patch.jpg" alt="Y U NO LOAD"><br /><br />
