@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Yearly SMW overview</title>
+
+		<meta name="description" content="Yearly SMW overview for SMWCon Spring 2013">
+		<meta name="author" content="Jeroen De Dauw">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+                    <section>
+                        <h2>Yearly LolCats overview</h2>
+                        <p>
+                            Caturday will not be stopped!<br />
+                            <img src="img/Willnotbestopped.gif" alt="Y U NO LOAD">
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <h2>Yearly SMW overview</h2>
+                        <p>
+                            Presentation by <a href="http://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
+                            TODO: link
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>About me</h3>
+                        <ul>
+                            <li class="fragment">MW dev since 2009</li>
+                            <li class="fragment">SMW maintainer</li>
+                            <li class="fragment">Wikidata developer</li>
+                            <li class="fragment">Passion for code quality</li>
+                            <li class="fragment">Lolcats</li>
+                        </ul>
+                    </section>
+				</section>
+
+                <section>
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Development</li>
+                        <li>Infrastructure</li>
+                        <li>SMW 1.8</li>
+                        <li>SMW 1.9 / roadmap</li>
+                    </ul>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Development</h2>
+                </section>
+
+                <section>
+                    <h3>Contributors</h3>
+                        <p class="fragment">~27 developers (up from 18), 67 total<br /></p>
+                        <p class="fragment">"Large, active development team", top 10%<br /></p>
+                        <p class="fragment">Maintainers: Markus Krötzsch, James Hong Kong & Jeroen</p>
+                </section>
+
+                <section>
+                    <h3>Commits</h3>
+                    <p>
+                        ~900 commits
+                        <img src="img/commits.jpeg" alt="Y U NO LOAD">
+                        "Stable Y-O-Y development activity"
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Lines of code</h3>
+                    <p>
+                        59k => 79k
+                        <img src="img/loc.jpeg" alt="Y U NO LOAD">
+                        "Mature, well-established codebase"
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Some extensions</h3>
+                    <ul>
+                        <li class="fragment">SRF: ~500 commits, <span style="color:lightgreen">up 115%</span></li>
+                        <li class="fragment">SRF: ~22 developers, <span style="color:lightgreen">up 100%</span></li>
+                        <li class="fragment">(S)M: ~22 developers, <span style="color:lightgreen">up 80%</span></li>
+                    </ul>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Infrastructure</h2>
+                </section>
+
+                <section>
+                    <h3>The SMW wiki</h3>
+                    <ul>
+                        <li><a href="http://semantic-mediawiki.org/wiki/Semantic_Result_Formats">Semantic Result Formats</a></li>
+                        <li><a href="http://semantic-mediawiki.org/wiki/Maps">Maps</a> and <a href="http://semantic-mediawiki.org/wiki/Semantic_Maps">Semantic Maps</a></li>
+                        <li><a href="http://semantic-mediawiki.org/wiki/Category:Developer_documentation">Developer documentation</a></li>
+                        <li><a href="http://semantic-mediawiki.org/wiki/Wiki_of_the_Month">Wiki of the Month</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>New server</h3>
+                    <ul>
+                        <li>Faster box, better caching</li>
+                        <li>More frequent updates</li>
+                        <li><a href="http://semantic-mediawiki.org/doc/">Doxygen back up and running</a></li>
+                        <li>CI: tests, coverage, nightlies?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Git migration</h3>
+                    <p>
+                        <a href="https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticMediaWiki.git">gerrit.wikimedia.org/ ... /SemanticMediaWiki.git</a>
+                        <a href="https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/SemanticMediaWiki.git;a=tags"><img src="img/tags.png"></a>
+                    </p>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>SMW 1.8</h2>
+                </section>
+
+                <section>
+                    <h3>Compatibility</h3>
+                    <ul>
+                        <li>Dropped support for MW 1.16</li>
+                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>SQLStore3</h3>
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Ask UI improvements</h3>
+                    <ul>
+                        <li>Less cluttered, more dynamic</li>
+                        <li>
+                            Better documentation
+                            <img src="img/ask.png" alt="Y U NO LOAD">
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Tooltip improvements</h3>
+                    <ul>
+                        <li>Old tooltips <s>horrible</s> sub-optimal</li>
+                        <li>Rewritten using qtip 2</li>
+                        <li>Used by SMW and extensions</li>
+                        <li><a href="https://semantic-mediawiki.org/wiki/Help:Tooltip">semantic-mediawiki.org/wiki/Help:Tooltip</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Ask API</h3>
+                    <ul>
+                        <li>Ask API now stable</li>
+                        <li>Sorting support added</li>
+                        <li>Continuation support added</li>
+                        <li><a href="https://semantic-mediawiki.org/wiki/Ask_API">semantic-mediawiki.org/wiki/Ask_API</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>JSON result format</h3>
+                    <ul>
+                        <li>Changed to match the Ask API</li>
+                        <li>Compatibility via syntax=obsolete</li>
+                        <li><a href="https://semantic-mediawiki.org/wiki/Help:JSON_format">semantic-mediawiki.org/wiki/Help:JSON_format</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Improved continuation links</h3>
+                    <ul>
+                        <li>Generic link generation</li>
+                        <li>All result formats</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Unit tests</h3>
+                    <ul>
+                        <li>First unit tests, integrated with MW</li>
+                        <li>Only coverage of some components so far</li>
+                        <li>New tests being added</li>
+                    </ul>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Roadmap</h2>
+                </section>
+
+                <section>
+                    <h3>SMW 1.9</h3>
+                    <p></p>
+                    <ul>
+                        <li>Dropped support for MW 1.16</li>
+                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Compatibility</h3>
+                    <ul>
+                        <li>Dropped support for MW 1.16</li>
+                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                    </ul>
+                </section>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
