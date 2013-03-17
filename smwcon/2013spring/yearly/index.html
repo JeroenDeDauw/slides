@@ -48,7 +48,7 @@
                         <h2>Yearly SMW overview</h2>
                         <p>
                             Presentation by <a href="http://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
-                            TODO: link
+                            bit.ly/smw-2013
                         </p>
                     </section>
 
@@ -152,7 +152,8 @@
                     <h3>Compatibility</h3>
                     <ul>
                         <li>Dropped support for MW 1.16</li>
-                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                        <li>Added support for MW 1.19 and 1.20</li>
+                        <li class="fragment">Added support for PHP 5.4.x</li>
                     </ul>
                 </section>
 
@@ -220,28 +221,141 @@
                     </ul>
                 </section>
 
+                <section>
+                    <h3>Property statistics</h3>
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Query info now stored</h3>
+                        <ul>
+                            <li>Property:Has query</li>
+                            <li>Property:Query string</li>
+                            <li>Property:Query format</li>
+                            <li>Property:Query size</li>
+                            <li>Property:Query depth</li>
+                        </ul>
+                        <p class="fragment">So you can query for queries! :)</p>
+                    </section>
+
+                    <section>
+                        <p>The total number of queries</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query size::+]]</span>
+|format=count
+}}</pre>
+
+                        <p>Number of pages with queries</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Has query::+]]</span>
+|format=count
+}}</pre>
+
+                        <p># queries with format=count</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query format::count]]</span>
+|format=count
+}}</pre>
+
+                        <p># pages with a query with size > 10</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Has query.Query size::>10]]</span>
+|format=count
+}}</pre>
+                    </section>
+
+                    <section>
+                        <p>The 10 largest queries with their size and query string</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query string::+]]</span>
+|?Query size
+|?Query string
+<span style="color:lightblue">|sort=Query size
+|order=desc
+|limit=10</span>
+}}</pre>
+
+                        <p class="fragment">
+                            <img src="img/queryquery.jpeg" alt="Y U NO LOAD">
+                            <a href="https://semantic-mediawiki.org/wiki/Help:Querying_for_queries">semantic-mediawiki.org/wiki/Help:Querying_for_queries</a>
+                        </p>
+                    </section>
+                </section>
+
                 <section data-state="blackout">
                     <h2>Roadmap</h2>
                 </section>
 
                 <section>
                     <h3>SMW 1.9</h3>
-                    <p></p>
+                    <p>Loosely scheduled for April 2013</p>
                     <ul>
-                        <li>Dropped support for MW 1.16</li>
-                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                        <li class="fragment">Dropped support for MW 1.17 and 1.18</li>
+                        <li class="fragment">Added support for MW 1.21</li>
+                        <li class="fragment">Dropped support for PHP 5.2.x</li>
+                        <li class="fragment">Dropped SQLStore2</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h3>Compatibility</h3>
+                    <h3>SMW 1.9 new features</h3>
                     <ul>
-                        <li>Dropped support for MW 1.16</li>
-                        <li>Added support for MW 1.19, 1.20 and 1.21</li>
+                        <li>Script to rebuild the property statistics</li>
+                        <li class="fragment">+sep= as multiple value separator in #set and #subobject</li>
+                        <li class="fragment">Display cache information in concept pages</li>
+                        <li class="fragment">Added various CSS classes</li>
+                        <li class="fragment">More tests</li>
                     </ul>
                 </section>
 
+                <section>
+                    <h3>SMW 1.10?</h3>
+                    <p>Loosely scheduled for August 2013</p>
+                    <ul>
+                        <li>Make use of DataValues library</li>
+                        <li>Make use of the Ask library</li>
+                    </ul>
+                </section>
 
+                <section>
+                    <h3>Further roadmap</h3>
+                    <ul>
+                        <li>Multiple sources of data</li>
+                        <li>Improving Special:Ask UI</li>
+                        <li>Code quality improvements</li>
+                        <li>More tests</li>
+                    </ul>
+                    <p><br /><a href="https://semantic-mediawiki.org/wiki/Roadmap">semantic-mediawiki.org/wiki/Roadmap</a></p>
+                </section>
+
+                <section data-state="soothe">
+                    <p>
+                        Your ideas and support are welcome!<br /><br />
+                        <img src="img/patch.jpg" alt="Y U NO LOAD"><br /><br />
+                        Questions?
+                    </p>
+                </section>
+
+                <section data-state="blackout">
+                    <h3>Special:Links</h3>
+                    <ul>
+                        <li><a href="http://bit.ly/smw-2013">View slides bit.ly/smw-2013</a></li>
+                        <li><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></li>
+                        <li><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></li>
+                        <li><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></li>
+                    </ul>
+                </section>
+
+                <section data-state="blackout">
+                    <h3>Special:Attribution</h3>
+                    <ul>
+                        <li>Slides: CC BY-SA 3.0, Jeroen De Dauw</li>
+                        <li>Slide engine: reveal.js, Copyright (C) 2013 Hakim El Hattab</li>
+                    </ul>
+                </section>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
