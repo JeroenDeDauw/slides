@@ -58,8 +58,9 @@
                     <ul>
                         <li>Development</li>
                         <li>Infrastructure</li>
-                        <li>SMW 1.8</li>
-                        <li>SMW 1.9 / roadmap</li>
+                        <li>Recap: SMW 1.8</li>
+                        <li>Next up: SMW 1.9</li>
+                        <li>Roadmap</li>
                     </ul>
                 </section>
 
@@ -158,6 +159,95 @@
                             <img src="img/packagist.jpeg" alt="Y U NO LOAD">
                         </p>
                     </section>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>SMW 1.8</h2>
+                </section>
+
+                <section>
+                    <h3>Compatibility</h3>
+                    <ul>
+                        <li>Dropped support for MW 1.16</li>
+                        <li>Added support for MW 1.19 and 1.20</li>
+                        <li class="fragment">Added support for PHP 5.4.x</li>
+                        <li class="fragment">Added support for SQLite</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>SQLStore3</li>
+                        <li>Special:Ask UI improvements</li>
+                        <li>Tooltip improvements</li>
+                        <li>Ask API: sorting and continuation</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Query info now stored</h3>
+                        <ul>
+                            <li>Property:Has query</li>
+                            <li>Property:Query string</li>
+                            <li>Property:Query format</li>
+                            <li>Property:Query size</li>
+                            <li>Property:Query depth</li>
+                        </ul>
+                        <p class="fragment">So you can query for queries! :)</p>
+                    </section>
+
+                    <section>
+                        <p>The total number of queries</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query size::+]]</span>
+|format=count
+}}</pre>
+
+                        <p>Number of pages with queries</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Has query::+]]</span>
+|format=count
+}}</pre>
+
+                        <p># queries with format=count</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query format::count]]</span>
+|format=count
+}}</pre>
+
+                        <p># pages with a query with size > 10</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Has query.Query size::>10]]</span>
+|format=count
+}}</pre>
+                    </section>
+
+                    <section>
+                        <p>The 10 largest queries with their size and query string</p>
+<pre>{{#ask:
+<span style="color:lightgreen">[[Query string::+]]</span>
+|?Query size
+|?Query string
+<span style="color:lightblue">|sort=Query size
+|order=desc
+|limit=10</span>
+}}</pre>
+
+                        <p class="fragment">
+                            <img src="img/queryquery.jpeg" alt="Y U NO LOAD">
+                            <a href="https://semantic-mediawiki.org/wiki/Help:Querying_for_queries">semantic-mediawiki.org/wiki/Help:Querying_for_queries</a>
+                        </p>
+                    </section>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>SMW 1.9</h2>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Roadmap</h2>
                 </section>
 
                 <section data-state="blackout">
