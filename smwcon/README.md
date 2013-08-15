@@ -1,8 +1,5 @@
-Slides of Jeroen De Dauw [0] for SMWCon [1] using DZSlides[2].
-
-[0] http://www.mediawiki.org/wiki/User:Jeroen_De_Dauw
-[1] http://semantic-mediawiki.org/wiki/SMWCon
-[2] http://paulrouget.com/dzslides
+Slides of [Jeroen De Dauw](https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw)
+for [SMWCon](https://semantic-mediawiki.org/wiki/SMWCon).
 
 
 Presentations
