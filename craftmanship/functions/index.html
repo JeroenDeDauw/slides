@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Clean functions</title>
+
+		<meta name="description" content="How to create clean functions">
+        <meta name="author" content="Jeroen De Dauw">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+            <section>
+                <h2>Yearly LolCats overview</h2>
+                <p>
+                    Caturday will not be stopped!<br />
+                    <img src="img/cat.gif" alt="Y U NO LOAD">
+                </p>
+            </section>
+
+            <section>
+                <h2>Yearly SMW overview</h2>
+                <p>
+                    Presentation by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
+                    bit.ly/2013-smw<br /><br />
+                    <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Current_status_and_next_steps_for_SMW">SMWCon Fall 2013, Berlin</a>
+                </p>
+            </section>
+
+
+
+            <section data-state="blackout" data-transition="linear">
+                <h3>Special:Links</h3>
+                <ul>
+                    <li><a href="http://bit.ly/smw-2013">View slides bit.ly/smw-2013</a></li>
+                    <li><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></li>
+                    <li><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></li>
+                    <li><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></li>
+                </ul>
+            </section>
+
+            <section data-state="blackout">
+                <h3>Special:Attribution</h3>
+                <ul>
+                    <li>Slides: CC BY-SA 3.0, Jeroen De Dauw</li>
+                    <li>Slide engine: reveal.js, Copyright (C) 2013 Hakim El Hattab</li>
+                </ul>
+            </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/leap/leap.js', async: true }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
