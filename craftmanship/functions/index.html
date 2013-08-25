@@ -52,6 +52,10 @@
                     </p>
                 </section>
 
+                <section data-state="blackout">
+                    <h2>Function size and naming</h2>
+                </section>
+
                 <section>
                     <h3>How big should a function be?</h3>
                     <ol>
@@ -72,14 +76,37 @@
 
                 <section>
                     <p>
-                        Name length rule
+                        Predicates of if and while statements
                     </p>
+
+                    <pre><code contenteditable class="PHP">
+if ( $foo === 'bar' && ( $user->isAllowed( '' ) || $baz )
+    && $this->bah() ) {
+    $this->sendWelcomeMessage();
+}
+                    </code></pre>
+
+                    <pre><code contenteditable class="PHP">
+if ( $this->isFirstPost() ) {
+    $this->sendWelcomeMessage();
+}
+                    </code></pre>
                 </section>
 
                 <section>
                     <p>
-                        Predicates of if and while statements
+                        Name length rule
                     </p>
+
+                    <pre><code contenteditable class="PHP">
+$user->remove();
+
+function remove() {
+    // ...
+    $this->removePostsFromDatabase();
+    // ...
+}
+                    </code></pre>
                 </section>
 
                 <section>
@@ -179,7 +206,6 @@
                         Sorry this message is so long,<br />
                         I had no time to shorten it
                     </blockquote>
-
                     <br />
 
                     <ul>
@@ -189,8 +215,119 @@
                     </ul>
                 </section>
 
-                <section data-state="blackout" data-transition="linear">
-                    <h2>Overview</h2>
+                <section>
+                    <h3>Example from gerrit</h3>
+                    <ul>
+                        <li><a href="https://gerrit.wikimedia.org/r/#/c/78365/2/lib/resources/jquery.wikibase/jquery.wikibase.entityselector.js">Step 0, wrong direction</a></li>
+                        <li><a href="https://gerrit.wikimedia.org/r/#/c/78365/3/lib/resources/jquery.wikibase/jquery.wikibase.entityselector.js">Step 1, first split</a></li>
+                        <li><a href="https://gerrit.wikimedia.org/r/#/c/78365/4/lib/resources/jquery.wikibase/jquery.wikibase.entityselector.js">Step 2, second split</a></li>
+                    </ul>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Function arguments</h2>
+                </section>
+
+                <section>
+                    <h3>How many?</h3>
+                    <ul>
+                        <li>Ideally none, the fewer the better</li>
+                        <li class="fragment">More then 3 requires very special justification</li>
+                        <li class="fragment">Arguments are hard to understand</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Flag arguments</h3>
+                    <p>
+                        Makes a function do two things!
+                    </p>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+                        renderHtml( true );
+                    </code></pre>
+                </section>
+
+                <section>
+                   <pre><code contenteditable class="PHP">
+function renderHtml( $userIsLoggedIn ) {
+    // ...
+    if ( $userIsLoggedIn ) {
+        // ...
+    }
+    // ...
+}
+                   </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+function renderHtmlForLoggedInUser() {
+
+}
+
+function renderHtmlForAnonUser() {
+
+}
+                    </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+renderHtmlForLoggedInUser();
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Argument objects</h3>
+                    <pre><code contenteditable class="PHP">
+                        function drawCircle( $x, $y, $radius ) {}
+                    </code></pre>
+
+                    <pre><code contenteditable class="PHP">
+                        function drawCircle( Point $center, $radius ) {}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Output arguments</h3>
+                    <pre><code contenteditable class="PHP">
+appendFooter( $report );
+                    </code></pre>
+
+                    <pre><code contenteditable class="PHP">
+$report->appendFooter();
+                    </code></pre>
+                </section>
+
+                <section data-state="blackout">
+                    <h2>Side effects</h2>
+                </section>
+
+                <section>
+                    <p>Either do something OR answer something, not both!</p>
+                </section>
+
+                <section>
+                   <pre><code contenteditable class="Java">
+public boolean set( String attributeName, String value );
+                   </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="Java">
+if ( set( "username", "NyanCat" ) )
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Same for returning error codes. Error handling is one thing.</p>
+                </section>
+
+                <section>
+                    <h3>Conclusion</h3>
+                    <ul>
+                        <li>Small!</li>
+                        <li class="fragment">Small well named functions act like signposts</li>
+                        <li class="fragment">Classes hide in big functions</li>
+                        <li class="fragment">Functions do one thing, extract till you drop</li>
+                        <li class="fragment">Minimize arguments</li>
+                        <li class="fragment">Command query separation</li>
+                    </ul>
                 </section>
 
 
