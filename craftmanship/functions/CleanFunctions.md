@@ -9,7 +9,10 @@ into play. Everyone can write functions, few people actually do it well.
 How big should a function be? A screenfull, 20 lines? If a function should only
 do one thing, how can one count the number of things a function does?
 
-These and many other questions will be answered.
+During this presentation you will learn why well designed functions are so important
+to Object Orientated Design, maintainability of your code and good programming in
+general. You'll learn how to distinguish between good and bad functions, and how to
+refactor the later into the former.
 
 ## Audience
 
