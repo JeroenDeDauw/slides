@@ -45,3 +45,9 @@ SOLID
 Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
 
 Slides can be found in /SOLID.
+
+## Software craftmanship
+
+Presentations about [software craftmanship](http://manifesto.softwarecraftsmanship.org).
+
+Slides can be found in /craftmanship.
