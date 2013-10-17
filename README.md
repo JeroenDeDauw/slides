@@ -7,6 +7,18 @@ Presentations
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 
+## SOLID
+
+Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
+
+Slides can be found in [/SOLID](/SOLID).
+
+## Software craftmanship
+
+Presentations about [software craftmanship](http://manifesto.softwarecraftsmanship.org).
+
+Slides can be found in [/craftmanship](/craftmanship).
+
 SMWCon
 -------
 
@@ -16,38 +28,22 @@ developers and enthusiasts of Semantic MediaWiki, including corporate users, aca
 and others. SMWCon is held once a year in North America, in the spring, and once in
 Europe, in the fall.
 
-Slides can be found in /smwcon.
+Slides can be found in [/smwcon](/smwcon).
 
-Berlin hackathon
------------------
+## Berlin hackathon
 
 The yearly MediaWiki hackathon in Berlin.
 
-Slides can be found in /berlinhackathon.
+Slides can be found in [/berlinhackathon](/berlinhackathon).
 
-Wikimania
-----------
+## Wikimania
 
 The yearly [Wikimedia](https://wikimania.wikimedia.org) event.
 
-Slides can be found in /wikimania.
+Slides can be found in [/wikimania](/wikimania).
 
-Wikimania Conferentie Nederland
--------------------------------
+## Wikimania Conferentie Nederland
 
 The yearly [Wikimedia Nederland event](https://www.wikimediaconferentie.nl).
 
-Slides can be found in /wcn.
-
-SOLID
-------
-
-Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
-
-Slides can be found in /SOLID.
-
-## Software craftmanship
-
-Presentations about [software craftmanship](http://manifesto.softwarecraftsmanship.org).
-
-Slides can be found in /craftmanship.
+Slides can be found in [/wcn](/wcn).
