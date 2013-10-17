@@ -64,10 +64,13 @@
                     <li>Data access layer</li>
                     <li>Core workflows</li>
                     <li>Presentation layer</li>
+                    <li>Development process</li>
+                    <li>Extension points</li>
+                    <li></li>
                 </ul>
             </section>
 
-            <section>
+            <section data-background="#005555" data-transition="linear" data-background-transition="slide">
                 <h3>The data model</h3>
                 <ul>
                     <li>SMW\DataItem</li>
@@ -76,38 +79,92 @@
                 </ul>
             </section>
 
-            <section>
+            <section data-background="#005566" data-transition="linear" data-background-transition="slide">
                 <h3>DataItem</h3>
                 <ul>
-                    <li></li>
+                    <li>Represent a basic kind of value, ie string, number, coordinate</li>
+                    <li>Immutable</li>
+                    <li>Context independent</li>
+                    <li>Limited implementations</li>
                 </ul>
             </section>
 
-            <section>
+            <section data-background="#005577" data-transition="linear" data-background-transition="slide">
                 <h3>DataValue</h3>
                 <ul>
-                    <li></li>
+                    <li>Contains a DataItem</li>
+                    <li>Contains a DIProperty and a data type</li>
+                    <li>Parsing user input</li>
+                    <li>Formatting values</li>
                 </ul>
             </section>
 
-            <section>
+            <section data-background="#005588" data-transition="linear" data-background-transition="slide">
                 <h3>SemanticData</h3>
                 <ul>
-                    <li></li>
+                    <li>A subject (DIWikiPage)</li>
+                    <li>A list of values (DataItem)</li>
+                    <li>Indexed by property (DIProperty)</li>
                 </ul>
             </section>
 
-            <section>
-                <h3>Data access layer</h3>
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>Data access layer: SMWStore</h3>
                 <ul>
-                    <li></li>
+                    <li>Reading</li>
+                    <li>Writing</li>
+                    <li>Query answering</li>
+                    <li>Setup</li>
                 </ul>
             </section>
 
-            <section>
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>SMWStore: reading</h3>
+                <ul>
+                    <li>SMWSemanticData getSemanticData(SMWDIWikiPage $subject)</li>
+                    <li>SMWDataItem[] getPropertyValues($subject, SMWDIProperty $property)</li>
+                    <li>SMWDIWikiPage[] getPropertySubjects(SMWDIProperty $property, $value)</li>
+                    <li>SMWDIProperty[] getProperties(SMWDIWikiPage $subject)</li>
+                    <li>...</li>
+                </ul>
+            </section>
+
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>SMWStore: writing</h3>
+                <ul>
+                    <li>updateData(SMWSemanticData $data)</li>
+                    <li>deleteSubject(Title $title)</li>
+                    <li>clearData(SMWDIWikiPage $di)</li>
+                </ul>
+            </section>
+
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>SMWStore: query answering</h3>
+                <p>SMWQueryResult getQueryResult(SMWQuery $query)</p>
+            </section>
+
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>Domain layer query answering</h3>
+                <ul>
+                    <li>string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)</li>
+                </ul>
+            </section>
+
+            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+                <h3>Domain layer query answering: SMWQuery</h3>
+                <ul>
+                    <li>Contains an SMWDescription</li>
+                    <li>Contains an array of SMWPrintRequest</li>
+                    <li>Options such as limit and offset</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555" data-transition="linear" data-background-transition="slide">
                 <h3>Core workflows</h3>
                 <ul>
-                    <li></li>
+                    <li>Page saved</li>
+                    <li>Data collected into SMWSemanticData</li>
+                    <li>Data written to SMWStore</li>
                 </ul>
             </section>
 
