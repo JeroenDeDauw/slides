@@ -23,7 +23,7 @@ Examples are mainly in PHP and Java, though the presentation also applies to oth
 languages. All examples are trivial, so knowledge of these languages is not required,
 while of course a plus.
 
-## Topics list
+## Topic list
 
 The topics covered include:
 
