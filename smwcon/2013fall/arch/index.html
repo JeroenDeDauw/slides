@@ -36,7 +36,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-            <section>
+            <section data-transition="default">
                 <h2>Building on top of SMW</h2>
                 <p>
                     Tutorial by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
@@ -45,7 +45,7 @@
                 </p>
             </section>
 
-            <section>
+            <section data-transition="default">
                 <h3>About me</h3>
                 <ul>
                     <li>(S)MW dev since 2009</li>
@@ -57,58 +57,57 @@
                 </ul>
             </section>
 
-            <section>
+            <section data-transition="default">
                 <h3>Overview</h3>
                 <ul>
                     <li>The data model</li>
-                    <li>Data access layer</li>
-                    <li>Core workflows</li>
-                    <li>Presentation layer</li>
-                    <li>Development process</li>
-                    <li>Extension points</li>
-                    <li></li>
+                    <li class="fragment">Data access layer</li>
+                    <li class="fragment">Core workflows</li>
+                    <li class="fragment">Presentation layer</li>
+                    <li class="fragment">Development process</li>
+                    <li class="fragment">Extension points</li>
                 </ul>
             </section>
 
-            <section data-background="#005555" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005555" data-background-transition="default">
                 <h3>The data model</h3>
                 <ul>
-                    <li>SMW\DataItem</li>
-                    <li>SMW\DataValue</li>
-                    <li>SMW\SemanticData</li>
+                    <li>SMW\<b>DataItem</b></li>
+                    <li class="fragment">SMW\<b>DataValue</b></li>
+                    <li class="fragment">SMW\<b>SemanticData</b></li>
                 </ul>
             </section>
 
-            <section data-background="#005566" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005566">
                 <h3>DataItem</h3>
                 <ul>
-                    <li>Represent a basic kind of value, ie string, number, coordinate</li>
-                    <li>Immutable</li>
-                    <li>Context independent</li>
-                    <li>Limited implementations</li>
+                    <li>Represent a basic kind of value<span class="fragment">, ie number, coordinate, page</span></li>
+                    <li class="fragment">Immutable</li>
+                    <li class="fragment">Context independent</li>
+                    <li class="fragment">Limited implementations</li>
                 </ul>
             </section>
 
-            <section data-background="#005577" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005577">
                 <h3>DataValue</h3>
                 <ul>
                     <li>Contains a DataItem</li>
                     <li>Contains a DIProperty and a data type</li>
-                    <li>Parsing user input</li>
-                    <li>Formatting values</li>
+                    <li class="fragment">Parsing user input</li>
+                    <li class="fragment">Formatting values</li>
                 </ul>
             </section>
 
-            <section data-background="#005588" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005588">
                 <h3>SemanticData</h3>
                 <ul>
                     <li>A subject (DIWikiPage)</li>
-                    <li>A list of values (DataItem)</li>
-                    <li>Indexed by property (DIProperty)</li>
+                    <li class="fragment">A list of values (DataItem)</li>
+                    <li class="fragment">Indexed by property (DIProperty)</li>
                 </ul>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
+            <section data-background="#006655">
                 <h3>Data access layer: SMWStore</h3>
                 <ul>
                     <li>Reading</li>
@@ -118,40 +117,51 @@
                 </ul>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
-                <h3>SMWStore: reading</h3>
-                <ul>
-                    <li>SMWSemanticData getSemanticData(SMWDIWikiPage $subject)</li>
-                    <li>SMWDataItem[] getPropertyValues($subject, SMWDIProperty $property)</li>
-                    <li>SMWDIWikiPage[] getPropertySubjects(SMWDIProperty $property, $value)</li>
-                    <li>SMWDIProperty[] getProperties(SMWDIWikiPage $subject)</li>
-                    <li>...</li>
-                </ul>
+            <section data-background="#006655">
+                <p>SMWStore: reading</p>
+                <pre><code contenteditable class="PHP">
+SMWSemanticData getSemanticData(SMWDIWikiPage $subject)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDataItem[] getPropertyValues($subject, SMWDIProperty $property )
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDIWikiPage[] getPropertySubjects(SMWDIProperty $property, $value)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDIProperty[] getProperties(SMWDIWikiPage $subject)
+                </code></pre>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
-                <h3>SMWStore: writing</h3>
-                <ul>
-                    <li>updateData(SMWSemanticData $data)</li>
-                    <li>deleteSubject(Title $title)</li>
-                    <li>clearData(SMWDIWikiPage $di)</li>
-                </ul>
+            <section data-background="#006655">
+                <p>SMWStore: writing</p>
+                <pre class="fragment"><code contenteditable class="PHP">
+updateData(SMWSemanticData $data)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+deleteSubject(Title $title)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+clearData(SMWDIWikiPage $di)
+                </code></pre>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
-                <h3>SMWStore: query answering</h3>
-                <p>SMWQueryResult getQueryResult(SMWQuery $query)</p>
+            <section data-background="#006655">
+                <p>SMWStore: query answering</p>
+                <pre><code contenteditable class="PHP">
+SMWQueryResult getQueryResult(SMWQuery $query)
+                </code></pre>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
-                <h3>Domain layer query answering</h3>
+            <section data-background="#006655">
+                <p>Domain layer query answering</p>
                 <ul>
                     <li>string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)</li>
                 </ul>
             </section>
 
-            <section data-background="#006655" data-transition="linear" data-background-transition="slide">
-                <h3>Domain layer query answering: SMWQuery</h3>
+            <section data-background="#006655">
+                <p>Domain layer query answering: SMWQuery</p>
                 <ul>
                     <li>Contains an SMWDescription</li>
                     <li>Contains an array of SMWPrintRequest</li>
@@ -159,7 +169,7 @@
                 </ul>
             </section>
 
-            <section data-background="#005555" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005555">
                 <h3>Core workflow: page save</h3>
                 <ul>
                     <li>Page saved</li>
@@ -168,7 +178,7 @@
                 </ul>
             </section>
 
-            <section data-background="#005555" data-transition="linear" data-background-transition="slide">
+            <section data-background="#005555">
                 <h3>Core workflow: inline queries</h3>
                 <ul>
                     <li>Page rebuild</li>
@@ -218,7 +228,8 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+                backgroundTransition: 'slide',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
