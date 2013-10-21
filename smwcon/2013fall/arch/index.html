@@ -202,11 +202,57 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
             <section data-background="#005555">
                 <h3>Presentation layer</h3>
                 <ul>
-                    <li>Parser hooks</li>
-                    <li class="fragment">Result formats</li>
+                    <li>Result formats</li>
+                    <li class="fragment">Parser hooks</li>
                     <li class="fragment">Special pages</li>
                     <li class="fragment">Web API</li>
                 </ul>
+            </section>
+
+            <section>
+                <section data-background="#005555">
+                    <h3>Result printers</h3>
+                    <p>Takes an SMWQueryResult<span class="fragment">, returns a string</span></p>
+                    <p class="fragment">
+                        Implementations implement SMWIResultPrinter<span class="fragment">,
+                        <br />typically derive from SMW\ResultPrinter</span>
+                    </p>
+                    <p class="fragment">includes/queryprinters</p>
+                    <p class="fragment">semantic-mediawiki.org/wiki/Writing_result_formats</p>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+protected function getResultText(SMWQueryResult $res, $outputMode) {
+    return wfMessage( 'your-message-key' )->text();
+}
+                    </code></pre>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+public function getParamDefinitions( array $definitions ) {
+    $definitions[] = array(
+        'type' => 'string',
+        'name' => 'conference',
+        'default' => 'SMWCon',
+        'message' => 'smw-paramdesc-conference',
+    );
+
+    // ...
+
+    return $definitions;
+}
+                    </code></pre>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+public function getName() {
+    return wfMessage( 'your-message-key' )->text();
+}
+                    </code></pre>
+                </section>
             </section>
 
             <section data-background="#005555">
@@ -215,22 +261,6 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                     <li>includes/parserhooks</li>
                     <li class="fragment">ask, concept, declare, show, subobject, info, smwdoc, recurring events</li>
                 </ul>
-            </section>
-
-            <section>
-                <section data-background="#005555">
-                    <h3>Result printers</h3>
-                    <p>Takes an SMWQueryResult<span class="fragment">, returns a string</span></p>
-                    <p class="fragment">Implementations derive from SMW\ResultPrinter</p>
-                    <p class="fragment">includes/queryprinters</p>
-                </section>
-
-                <section data-background="#005555">
-                    <h3>ResultPrinter</h3>
-                    <pre><code contenteditable class="PHP">
-TODO
-                    </code></pre>
-                </section>
             </section>
 
             <section data-background="#005555">
