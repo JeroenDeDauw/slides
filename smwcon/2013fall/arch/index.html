@@ -37,10 +37,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
             <section data-transition="default">
-                <h2>Building on top of SMW</h2>
+                <h2>An introduction to SMWs architecture</h2>
                 <p>
                     Tutorial by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
-                    <br /><br />
+                    bit.ly/smw-arch<br /><br />
                     <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW">SMWCon Fall 2013, Berlin</a>
                 </p>
             </section>
@@ -284,26 +284,25 @@ public function getName() {
 
             <section data-background="#005555">
                 <h3>Hooks</h3>
-                <ul>
-                    <li>TODO: link</li>
-                    <li class="fragment">Data values</li>
-                    <li class="fragment">SMWStore::updateData => SMWStore::updateData[Before/After]</li>
-                    <li class="fragment">ctrl+f wfRunHooks</li>
-                </ul>
-            </section>
-
-            <section data-background="#005555">
-                <p>Questions TODO</p>
+                <pre><code contenteditable class="PHP">
+$wgHooks['someEvent'][] = function() {
+    // Handle the event
+};
+                </code></pre>
+                <p class="fragment">docs/hooks.md<span class="fragment">, ctrl+f wfRunHooks</span></p>
+                <p class="fragment">SMWStore::updateData => SMWStore::updateData[Before/After]</p>
             </section>
 
             <section data-state="blackout" data-transition="linear">
                 <h3>Special:Links</h3>
-                <ul>
-                    <li><a href="">View slides </a></li>
-                    <li><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></li>
-                    <li><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></li>
-                    <li><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></li>
-                </ul>
+                <p><a href="http://bit.ly/smw-arch">View slides at bit.ly/smw-arch</a></p>
+                <p><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></p>
+                <p><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></p>
+                <p><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></p>
+            </section>
+
+            <section data-state="blackout">
+                <img src="img/i-has-question-lolcat.jpg" />
             </section>
 
             <section data-state="blackout">
