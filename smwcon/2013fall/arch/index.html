@@ -155,22 +155,32 @@ SMWQueryResult getQueryResult(SMWQuery $query)
 
             <section data-background="#006655">
                 <p>Domain layer query answering</p>
-                <ul>
-                    <li>string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)</li>
-                </ul>
+                <pre><code contenteditable class="PHP">
+string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
+                </code></pre>
             </section>
 
             <section data-background="#006655">
                 <p>Domain layer query answering: SMWQuery</p>
                 <ul>
-                    <li>Contains an SMWDescription</li>
-                    <li>Contains an array of SMWPrintRequest</li>
-                    <li>Options such as limit and offset</li>
+                    <li>
+                        Contains an SMWDescription
+                        <span class="fragment" style="color:lightblue">
+                            <br />[[Category:Talks]] [[Has speaker:Jeroen]]
+                        </span>
+                    </li>
+                    <li class="fragment">
+                        Contains an array of SMWPrintRequest
+                        <span class="fragment" style="color:lightblue">
+                            <br />? Has title | ?Has length
+                        </span>
+                    </li>
+                    <li class="fragment">Options such as limit and offset</li>
                 </ul>
             </section>
 
             <section data-background="#005555">
-                <h3>Core workflow: page save</h3>
+                <p>Core workflow: page save</p>
                 <ul>
                     <li>Page saved</li>
                     <li>Data collected into SMWSemanticData</li>
@@ -179,7 +189,7 @@ SMWQueryResult getQueryResult(SMWQuery $query)
             </section>
 
             <section data-background="#005555">
-                <h3>Core workflow: inline queries</h3>
+                <p>Core workflow: inline queries</p>
                 <ul>
                     <li>Page rebuild</li>
                     <li>Ask parser function invoked</li>
@@ -189,8 +199,6 @@ SMWQueryResult getQueryResult(SMWQuery $query)
                     <li>Result printer output added to page</li>
                 </ul>
             </section>
-
-
 
             <section data-state="blackout" data-transition="linear">
                 <h3>Special:Links</h3>
