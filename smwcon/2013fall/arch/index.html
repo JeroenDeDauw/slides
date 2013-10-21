@@ -64,7 +64,6 @@
                     <li class="fragment">Data access layer</li>
                     <li class="fragment">Core workflows</li>
                     <li class="fragment">Presentation layer</li>
-                    <li class="fragment">Development process</li>
                     <li class="fragment">Extension points</li>
                 </ul>
             </section>
@@ -183,21 +182,88 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                 <p>Core workflow: page save</p>
                 <ul>
                     <li>Page saved</li>
-                    <li>Data collected into SMWSemanticData</li>
-                    <li>Data written to SMWStore</li>
+                    <li class="fragment">Data collected into SMWSemanticData</li>
+                    <li class="fragment">Data written to SMWStore</li>
+                </ul>
+            </section>
+
+                <section data-background="#005555">
+                    <p>Core workflow: inline queries</p>
+                    <ul>
+                        <li>Page rebuild</li>
+                        <li class="fragment">Ask parser function invoked</li>
+                        <li class="fragment">Ask query wikitext parsed</li>
+                        <li class="fragment">Query passed to store</li>
+                        <li class="fragment">Query result passed to result printer</li>
+                        <li class="fragment">Result printer output added to page</li>
+                    </ul>
+                </section>
+
+            <section data-background="#005555">
+                <h3>Presentation layer</h3>
+                <ul>
+                    <li>Parser hooks</li>
+                    <li class="fragment">Result formats</li>
+                    <li class="fragment">Special pages</li>
+                    <li class="fragment">Web API</li>
                 </ul>
             </section>
 
             <section data-background="#005555">
-                <p>Core workflow: inline queries</p>
+                <h3>Parser Hooks</h3>
                 <ul>
-                    <li>Page rebuild</li>
-                    <li>Ask parser function invoked</li>
-                    <li>Ask query wikitext parsed</li>
-                    <li>Query passed to store</li>
-                    <li>Query result passed to result printer</li>
-                    <li>Result printer output added to page</li>
+                    <li>includes/parserhooks</li>
+                    <li class="fragment">ask, concept, declare, show, subobject, info, smwdoc, recurring events</li>
                 </ul>
+            </section>
+
+            <section>
+                <section data-background="#005555">
+                    <h3>Result printers</h3>
+                    <p>Takes an SMWQueryResult<span class="fragment">, returns a string</span></p>
+                    <p class="fragment">Implementations derive from SMW\ResultPrinter</p>
+                    <p class="fragment">includes/queryprinters</p>
+                </section>
+
+                <section data-background="#005555">
+                    <h3>ResultPrinter</h3>
+                    <pre><code contenteditable class="PHP">
+TODO
+                    </code></pre>
+                </section>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Special pages</h3>
+                <p>includes/specials</p>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Web API</h3>
+                <p>includes/api</p>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Extension points</h3>
+                <ul>
+                    <li>Result formats</li>
+                    <li class="fragment">Data values</li>
+                    <li class="fragment">Hooks</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Hooks</h3>
+                <ul>
+                    <li>TODO: link</li>
+                    <li class="fragment">Data values</li>
+                    <li class="fragment">SMWStore::updateData => SMWStore::updateData[Before/After]</li>
+                    <li class="fragment">ctrl+f wfRunHooks</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555">
+                <p>Questions TODO</p>
             </section>
 
             <section data-state="blackout" data-transition="linear">
