@@ -86,7 +86,7 @@ if ( $foo === 'bar' && ( $user->isAllowed( '' ) || $baz )
 }
                     </code></pre>
 
-                    <pre><code contenteditable class="PHP">
+                    <pre class="fragment"><code contenteditable class="PHP">
 if ( $this->isFirstPost() ) {
     $this->sendWelcomeMessage();
 }
@@ -277,11 +277,11 @@ renderHtmlForLoggedInUser();
                 <section>
                     <h3>Argument objects</h3>
                     <pre><code contenteditable class="PHP">
-                        function drawCircle( $x, $y, $radius ) {}
+function drawCircle( $x, $y, $radius ) {}
                     </code></pre>
 
                     <pre><code contenteditable class="PHP">
-                        function drawCircle( Point $center, $radius ) {}
+function drawCircle( Point $center, $radius ) {}
                     </code></pre>
                 </section>
 
