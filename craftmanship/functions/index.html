@@ -60,8 +60,13 @@
                     <h3>How big should a function be?</h3>
                     <ol>
                         <li class="fragment">It should be SMALL</li>
-                        <li class="fragment">It should be SMALLER then that</li>
+                        <li class="fragment">It should be SMALLER than that</li>
                     </ol>
+                    <br /><br />
+                    <blockquote class="fragment">
+                        A function should do one thing.<br />
+                        It should do it well, and it should do it only.
+                    </blockquote>
                 </section>
 
                 <section>
@@ -69,7 +74,11 @@
                 </section>
 
                 <section>
-                    <p>
+                    <h3>Doing one thing</h3>
+                    <p class="fragment">
+                        One level of abstraction
+                    </p>
+                    <p class="fragment">
                         How much indenting / nesting?
                     </p>
                 </section>
@@ -231,16 +240,16 @@ function remove() {
                 <section>
                     <h3>How many?</h3>
                     <ul>
-                        <li>Ideally none, the fewer the better</li>
-                        <li class="fragment">More then 3 requires very special justification</li>
+                        <li class="fragment">Ideally none, the fewer the better</li>
                         <li class="fragment">Arguments are hard to understand</li>
+                        <li class="fragment">More then 3 requires very special justification</li>
                     </ul>
                 </section>
 
                 <section>
                     <h3>Flag arguments</h3>
-                    <p>
-                        Makes a function do two things!
+                    <p class="fragment">
+                        Makes a function do multiple things!
                     </p>
 
                     <pre class="fragment"><code contenteditable class="PHP">
