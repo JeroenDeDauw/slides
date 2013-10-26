@@ -6,5 +6,5 @@ For an overview of all presentations, view the [top level README file](../README
 
 How to create truly clean, well designed, functions.
 
-* View [the abstract](functions/CleanFunctions.md)
+* Read [the abstract](functions/CleanFunctions.md)
 * View [the slides](http://bit.ly/clean-functions)
