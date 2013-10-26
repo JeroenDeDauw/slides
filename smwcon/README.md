@@ -62,7 +62,7 @@ https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012
 An introduction to how to develop Semantic MediaWiki and extensions.
 
 * [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions))
-* [Slides](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions)/Presentation)
+* [Slides](http://bit.ly/smw-dev)
 * [Video recording](http://www.youtube.com/watch?v=EL1sPGAoN58)
 
 ### Current status and next steps for SMW
