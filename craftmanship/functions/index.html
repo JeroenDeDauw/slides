@@ -247,18 +247,19 @@ function remove() {
                 </section>
 
                 <section>
-                    <h3>Flag arguments</h3>
-                    <p class="fragment">
-                        Make functions do multiple things!
-                    </p>
+                    <section>
+                        <h3>Flag arguments</h3>
+                        <p class="fragment">
+                            Make functions do multiple things!
+                        </p>
 
-                    <pre class="fragment"><code contenteditable class="PHP">
-                        renderHtml( true );
-                    </code></pre>
-                </section>
+                        <pre class="fragment"><code contenteditable class="PHP">
+                            renderHtml( true );
+                        </code></pre>
+                    </section>
 
-                <section>
-                   <pre><code contenteditable class="PHP">
+                    <section>
+                       <pre><code contenteditable class="PHP">
 function renderHtml( $userIsLoggedIn ) {
     // ...
     if ( $userIsLoggedIn ) {
@@ -266,9 +267,9 @@ function renderHtml( $userIsLoggedIn ) {
     }
     // ...
 }
-                   </code></pre>
+                       </code></pre>
 
-                    <pre class="fragment"><code contenteditable class="PHP">
+                        <pre class="fragment"><code contenteditable class="PHP">
 function renderHtmlForLoggedInUser() {
 
 }
@@ -276,12 +277,14 @@ function renderHtmlForLoggedInUser() {
 function renderHtmlForAnonUser() {
 
 }
-                    </code></pre>
+                        </code></pre>
 
-                    <pre class="fragment"><code contenteditable class="PHP">
+                        <pre class="fragment"><code contenteditable class="PHP">
 renderHtmlForLoggedInUser();
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
+
 
                 <section>
                     <h3>Argument objects</h3>
