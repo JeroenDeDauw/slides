@@ -231,14 +231,15 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                 <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
 protected function getResultText(SMWQueryResult $res, $outputMode) {
-    return wfMessage( 'your-message-key' )->text();
+    // ...
+    return 'some string computed from $res';
 }
                     </code></pre>
                 </section>
 
                 <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
-public function getParamDefinitions( array $definitions ) {
+public function getParamDefinitions(array $definitions) {
     $definitions[] = array(
         'type' => 'string',
         'name' => 'conference',
@@ -255,8 +256,12 @@ public function getParamDefinitions( array $definitions ) {
 
                 <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
-public function getName() {
-    return wfMessage( 'your-message-key' )->text();
+protected function getResultText(SMWQueryResult $res, $outputMode) {
+    // ...
+    if ( $this->params['displaylolcats'] ) {
+        // ...
+    }
+    // ...
 }
                     </code></pre>
                 </section>
@@ -296,7 +301,7 @@ $wgHooks['someEvent'][] = function() {
     // Handle the event
 };
                 </code></pre>
-                <p class="fragment">docs/hooks.md<span class="fragment">, ctrl+f wfRunHooks</span></p>
+                <p class="fragment">docs/hooks.md<span class="fragment">, ctrl+f "wfRunHooks"</span></p>
                 <p class="fragment">SMWStore::updateData => SMWStore::updateData[Before/After]</p>
             </section>
 
