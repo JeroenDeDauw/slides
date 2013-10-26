@@ -56,7 +56,7 @@
                 <ul>
                     <li>Jeroen De Dauw</li>
                     <li class="fragment">(S)MW dev since 2009</li>
-                    <li class="fragment">Working for WMDE on Wikidata</li>
+                    <li class="fragment">Architect Wikidata at WMDE</li>
                     <li class="fragment">Domain layer guy</li>
                     <li class="fragment">Software craftsmanship</li>
                     <li class="fragment">Passion for interoperability and reuse</li>
@@ -104,7 +104,7 @@
                 </ul>
             </section>
 
-            <section data-background="#005588">
+            <section data-background="#005570">
                 <h3>SemanticData</h3>
                 <ul>
                     <li>A subject (DIWikiPage)</li>
@@ -113,7 +113,7 @@
                 </ul>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#006065">
                 <h3>Data access layer: SMWStore</h3>
                 <ul>
                     <li>Reading</li>
@@ -123,7 +123,7 @@
                 </ul>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#006560">
                 <p>SMWStore: reading</p>
                 <pre><code contenteditable class="PHP">
 SMWSemanticData getSemanticData(SMWDIWikiPage $subject)
@@ -139,7 +139,7 @@ SMWDIProperty[] getProperties(SMWDIWikiPage $subject)
                 </code></pre>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#007055">
                 <p>SMWStore: writing</p>
                 <pre class="fragment"><code contenteditable class="PHP">
 updateData(SMWSemanticData $data)
@@ -152,21 +152,21 @@ clearData(SMWDIWikiPage $di)
                 </code></pre>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#007550">
                 <p>SMWStore: query answering</p>
                 <pre><code contenteditable class="PHP">
 SMWQueryResult getQueryResult(SMWQuery $query)
                 </code></pre>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#006555">
                 <p>Domain layer query answering</p>
                 <pre><code contenteditable class="PHP">
 string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                 </code></pre>
             </section>
 
-            <section data-background="#006655">
+            <section data-background="#005555">
                 <p>Domain layer query answering: SMWQuery</p>
                 <ul>
                     <li>
@@ -185,7 +185,7 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                 </ul>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#005050">
                 <p>Core workflow: page save</p>
                 <ul>
                     <li>Page saved</li>
@@ -194,7 +194,7 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                 </ul>
             </section>
 
-                <section data-background="#005555">
+                <section data-background="#004545">
                     <p>Core workflow: inline queries</p>
                     <ul>
                         <li>Page rebuild</li>
@@ -206,7 +206,7 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                     </ul>
                 </section>
 
-            <section data-background="#005555">
+            <section data-background="#004040">
                 <h3>Presentation layer</h3>
                 <ul>
                     <li>Result formats</li>
@@ -217,7 +217,7 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
             </section>
 
             <section>
-                <section data-background="#005555">
+                <section data-background="#003535">
                     <h3>Result printers</h3>
                     <p>Takes an SMWQueryResult<span class="fragment">, returns a string</span></p>
                     <p class="fragment">
@@ -228,7 +228,7 @@ string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
                     <p class="fragment">semantic-mediawiki.org/wiki/Writing_result_formats</p>
                 </section>
 
-                <section data-background="#005555">
+                <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
 protected function getResultText(SMWQueryResult $res, $outputMode) {
     return wfMessage( 'your-message-key' )->text();
@@ -236,7 +236,7 @@ protected function getResultText(SMWQueryResult $res, $outputMode) {
                     </code></pre>
                 </section>
 
-                <section data-background="#005555">
+                <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
 public function getParamDefinitions( array $definitions ) {
     $definitions[] = array(
@@ -253,7 +253,7 @@ public function getParamDefinitions( array $definitions ) {
                     </code></pre>
                 </section>
 
-                <section data-background="#005555">
+                <section data-background="#003535">
                     <pre><code contenteditable class="PHP">
 public function getName() {
     return wfMessage( 'your-message-key' )->text();
@@ -262,7 +262,7 @@ public function getName() {
                 </section>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#004030">
                 <h3>Parser Hooks</h3>
                 <ul>
                     <li>includes/parserhooks</li>
@@ -270,17 +270,17 @@ public function getName() {
                 </ul>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#004535">
                 <h3>Special pages</h3>
                 <p>includes/specials</p>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#005040">
                 <h3>Web API</h3>
                 <p>includes/api</p>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#005045">
                 <h3>Extension points</h3>
                 <ul>
                     <li>Result formats</li>
@@ -289,7 +289,7 @@ public function getName() {
                 </ul>
             </section>
 
-            <section data-background="#005555">
+            <section data-background="#005050">
                 <h3>Hooks</h3>
                 <pre><code contenteditable class="PHP">
 $wgHooks['someEvent'][] = function() {
