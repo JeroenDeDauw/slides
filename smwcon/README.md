@@ -55,29 +55,39 @@ Provides an overview of the imporvements made to Maps and Semantic Maps over the
 SMWCon Fall 2012, Cologne
 --------------------------
 
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012
+
 ### Developing SMW (extensions)
 
 An introduction to how to develop Semantic MediaWiki and extensions.
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions))
+* [Slides](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Developing_SMW_(extensions)/Presentation)
+* [Video recording](http://www.youtube.com/watch?v=EL1sPGAoN58)
 
 ### Current status and next steps for SMW
 
 The yearly "what happened and what are we working on now" talk.
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Current_status_and_next_steps_for_SMW
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/Current_status_and_next_steps_for_SMW)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2012fall/)
+* [Video recording](http://www.youtube.com/watch?v=Fy0Ofz9VwTk)
 
 ### New features in Maps and Semantic Maps
 
 An overview of all the cool new stuff in Maps and Semantic Maps as well as a peek to what's on the horizon.
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Maps_and_Semantic_Maps
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Maps_and_Semantic_Maps)
+* [Slides](http://jeroendedauw.github.com/slides/smwcon/2012fall/maps/#maps-is-awesome.html)
+* [Video recording](http://www.youtube.com/watch?v=IF0_q8fisnY)
 
 ### New features in Semantic Result Formats
 
 An overview of all the awesome new features in Semantic Result Formats 1.8.
 
-http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats
+* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats)
+* [Slides](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats/Presentation)
+* [Video recording](http://www.youtube.com/watch?v=iCo6up6Kftc)
 
 SMWCon spring 2012, Carlsbad
 ----------------------------
