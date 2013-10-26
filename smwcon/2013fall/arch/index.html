@@ -37,18 +37,25 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
             <section>
-                <h2>Building on top of SMW</h2>
-                <p>
-                    Tutorial by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
-                    bit.ly/smw-tutorial<br /><br />
-                    <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW">SMWCon Fall 2013, Berlin</a>
-                </p>
+                <section data-transition="default">
+                    <h2>An introduction to SMWs architecture</h2>
+                    <p>
+                        Tutorial by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
+                        bit.ly/smw-arch<br /><br />
+                        <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW">SMWCon Fall 2013, Berlin</a>
+                    </p>
+                </section>
+
+                <section data-transition="default">
+                    <img src="img/refactoring.gif" />
+                </section>
             </section>
 
-            <section>
+            <section data-transition="default">
                 <h3>About me</h3>
                 <ul>
-                    <li>(S)MW dev since 2009</li>
+                    <li>Jeroen De Dauw</li>
+                    <li class="fragment">(S)MW dev since 2009</li>
                     <li class="fragment">Working for WMDE on Wikidata</li>
                     <li class="fragment">Domain layer guy</li>
                     <li class="fragment">Software craftsmanship</li>
@@ -57,21 +64,252 @@
                 </ul>
             </section>
 
-            <section>
+            <section data-transition="default">
                 <h3>Overview</h3>
                 <ul>
-                    <li></li>
+                    <li>The data model</li>
+                    <li class="fragment">Data access layer</li>
+                    <li class="fragment">Core workflows</li>
+                    <li class="fragment">Presentation layer</li>
+                    <li class="fragment">Extension points</li>
                 </ul>
+            </section>
+
+            <section data-background="#005555" data-background-transition="default">
+                <h3>The data model</h3>
+                <ul>
+                    <li>SMW\<b>DataItem</b></li>
+                    <li class="fragment">SMW\<b>DataValue</b></li>
+                    <li class="fragment">SMW\<b>SemanticData</b></li>
+                </ul>
+            </section>
+
+            <section data-background="#005560">
+                <h3>DataItem</h3>
+                <ul>
+                    <li>Represent a basic kind of value<span class="fragment">, ie number, coordinate, page</span></li>
+                    <li class="fragment">Immutable</li>
+                    <li class="fragment">Context independent</li>
+                    <li class="fragment">Limited implementations</li>
+                </ul>
+            </section>
+
+            <section data-background="#005565">
+                <h3>DataValue</h3>
+                <ul>
+                    <li>Contains a DataItem</li>
+                    <li>Contains a DIProperty and a data type</li>
+                    <li class="fragment">Parsing user input</li>
+                    <li class="fragment">Formatting values</li>
+                </ul>
+            </section>
+
+            <section data-background="#005588">
+                <h3>SemanticData</h3>
+                <ul>
+                    <li>A subject (DIWikiPage)</li>
+                    <li class="fragment">A list of values (DataItem)</li>
+                    <li class="fragment">Indexed by property (DIProperty)</li>
+                </ul>
+            </section>
+
+            <section data-background="#006655">
+                <h3>Data access layer: SMWStore</h3>
+                <ul>
+                    <li>Reading</li>
+                    <li>Writing</li>
+                    <li>Query answering</li>
+                    <li>Setup</li>
+                </ul>
+            </section>
+
+            <section data-background="#006655">
+                <p>SMWStore: reading</p>
+                <pre><code contenteditable class="PHP">
+SMWSemanticData getSemanticData(SMWDIWikiPage $subject)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDataItem[] getPropertyValues($subject, SMWDIProperty $property)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDIWikiPage[] getPropertySubjects(SMWDIProperty $property, $value)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+SMWDIProperty[] getProperties(SMWDIWikiPage $subject)
+                </code></pre>
+            </section>
+
+            <section data-background="#006655">
+                <p>SMWStore: writing</p>
+                <pre class="fragment"><code contenteditable class="PHP">
+updateData(SMWSemanticData $data)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+deleteSubject(Title $title)
+                </code></pre>
+                <pre class="fragment"><code contenteditable class="PHP">
+clearData(SMWDIWikiPage $di)
+                </code></pre>
+            </section>
+
+            <section data-background="#006655">
+                <p>SMWStore: query answering</p>
+                <pre><code contenteditable class="PHP">
+SMWQueryResult getQueryResult(SMWQuery $query)
+                </code></pre>
+            </section>
+
+            <section data-background="#006655">
+                <p>Domain layer query answering</p>
+                <pre><code contenteditable class="PHP">
+string SMWQueryProcessor::getResultFromQuery(SMWQuery $query, array $params)
+                </code></pre>
+            </section>
+
+            <section data-background="#006655">
+                <p>Domain layer query answering: SMWQuery</p>
+                <ul>
+                    <li>
+                        Contains an SMWDescription
+                        <span class="fragment" style="color:lightblue">
+                            <br />[[Category:Talks]] [[Has speaker:Jeroen]]
+                        </span>
+                    </li>
+                    <li class="fragment">
+                        Contains an array of SMWPrintRequest
+                        <span class="fragment" style="color:lightblue">
+                            <br />? Has title | ?Has length
+                        </span>
+                    </li>
+                    <li class="fragment">Options such as limit and offset</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555">
+                <p>Core workflow: page save</p>
+                <ul>
+                    <li>Page saved</li>
+                    <li class="fragment">Data collected into SMWSemanticData</li>
+                    <li class="fragment">Data written to SMWStore</li>
+                </ul>
+            </section>
+
+                <section data-background="#005555">
+                    <p>Core workflow: inline queries</p>
+                    <ul>
+                        <li>Page rebuild</li>
+                        <li class="fragment">Ask parser function invoked</li>
+                        <li class="fragment">Ask query wikitext parsed</li>
+                        <li class="fragment">Query passed to store</li>
+                        <li class="fragment">Query result passed to result printer</li>
+                        <li class="fragment">Result printer output added to page</li>
+                    </ul>
+                </section>
+
+            <section data-background="#005555">
+                <h3>Presentation layer</h3>
+                <ul>
+                    <li>Result formats</li>
+                    <li class="fragment">Parser hooks</li>
+                    <li class="fragment">Special pages</li>
+                    <li class="fragment">Web API</li>
+                </ul>
+            </section>
+
+            <section>
+                <section data-background="#005555">
+                    <h3>Result printers</h3>
+                    <p>Takes an SMWQueryResult<span class="fragment">, returns a string</span></p>
+                    <p class="fragment">
+                        Implementations implement SMWIResultPrinter<span class="fragment">,
+                        <br />typically derive from SMW\ResultPrinter</span>
+                    </p>
+                    <p class="fragment">includes/queryprinters</p>
+                    <p class="fragment">semantic-mediawiki.org/wiki/Writing_result_formats</p>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+protected function getResultText(SMWQueryResult $res, $outputMode) {
+    return wfMessage( 'your-message-key' )->text();
+}
+                    </code></pre>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+public function getParamDefinitions( array $definitions ) {
+    $definitions[] = array(
+        'type' => 'string',
+        'name' => 'conference',
+        'default' => 'SMWCon',
+        'message' => 'smw-paramdesc-conference',
+    );
+
+    // ...
+
+    return $definitions;
+}
+                    </code></pre>
+                </section>
+
+                <section data-background="#005555">
+                    <pre><code contenteditable class="PHP">
+public function getName() {
+    return wfMessage( 'your-message-key' )->text();
+}
+                    </code></pre>
+                </section>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Parser Hooks</h3>
+                <ul>
+                    <li>includes/parserhooks</li>
+                    <li class="fragment">ask, concept, declare, show, subobject, info, smwdoc, recurring events</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Special pages</h3>
+                <p>includes/specials</p>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Web API</h3>
+                <p>includes/api</p>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Extension points</h3>
+                <ul>
+                    <li>Result formats</li>
+                    <li class="fragment">Data values</li>
+                    <li class="fragment">Hooks</li>
+                </ul>
+            </section>
+
+            <section data-background="#005555">
+                <h3>Hooks</h3>
+                <pre><code contenteditable class="PHP">
+$wgHooks['someEvent'][] = function() {
+    // Handle the event
+};
+                </code></pre>
+                <p class="fragment">docs/hooks.md<span class="fragment">, ctrl+f wfRunHooks</span></p>
+                <p class="fragment">SMWStore::updateData => SMWStore::updateData[Before/After]</p>
             </section>
 
             <section data-state="blackout" data-transition="linear">
                 <h3>Special:Links</h3>
-                <ul>
-                    <li><a href="http://bit.ly/smw-tutorial">View slides bit.ly/smw-tutorial</a></li>
-                    <li><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></li>
-                    <li><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></li>
-                    <li><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></li>
-                </ul>
+                <p><a href="http://bit.ly/smw-arch">View slides at bit.ly/smw-arch</a></p>
+                <p><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub (source)</a></p>
+                <p><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></p>
+                <p><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></p>
+            </section>
+
+            <section data-state="blackout">
+                <img src="img/i-has-question-lolcat.jpg" />
             </section>
 
             <section data-state="blackout">
@@ -100,7 +338,8 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+                backgroundTransition: 'slide',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [

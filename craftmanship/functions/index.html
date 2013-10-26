@@ -40,7 +40,7 @@
                     <h2>Clean functions</h2>
                     <p>
                         Caturday will not be stopped!<br />
-                        <img src="img/cat.gif" alt="Y U NO LOAD">
+                        <img src="img/Willnotbestopped.gif" alt="Y U NO LOAD">
                     </p>
                 </section>
 
@@ -60,8 +60,13 @@
                     <h3>How big should a function be?</h3>
                     <ol>
                         <li class="fragment">It should be SMALL</li>
-                        <li class="fragment">It should be SMALLER then that</li>
+                        <li class="fragment">It should be SMALLER than that</li>
                     </ol>
+                    <br /><br />
+                    <blockquote class="fragment">
+                        A function should do one thing.<br />
+                        It should do it well, and it should do it only.
+                    </blockquote>
                 </section>
 
                 <section>
@@ -69,7 +74,11 @@
                 </section>
 
                 <section>
-                    <p>
+                    <h3>Doing one thing</h3>
+                    <p class="fragment">
+                        One level of abstraction
+                    </p>
+                    <p class="fragment">
                         How much indenting / nesting?
                     </p>
                 </section>
@@ -86,7 +95,7 @@ if ( $foo === 'bar' && ( $user->isAllowed( '' ) || $baz )
 }
                     </code></pre>
 
-                    <pre><code contenteditable class="PHP">
+                    <pre class="fragment"><code contenteditable class="PHP">
 if ( $this->isFirstPost() ) {
     $this->sendWelcomeMessage();
 }
@@ -170,7 +179,7 @@ function remove() {
                     <h3>New people</h3>
                     <ul>
                         <li class="fragment">Do not recognize anything</li>
-                        <li class="fragment">Can only star wandering around aimlessly</li>
+                        <li class="fragment">Can only start wandering around aimlessly</li>
                     </ul>
                 </section>
 
@@ -231,16 +240,16 @@ function remove() {
                 <section>
                     <h3>How many?</h3>
                     <ul>
-                        <li>Ideally none, the fewer the better</li>
-                        <li class="fragment">More then 3 requires very special justification</li>
+                        <li class="fragment">Ideally none, the fewer the better</li>
                         <li class="fragment">Arguments are hard to understand</li>
+                        <li class="fragment">More then 3 requires very special justification</li>
                     </ul>
                 </section>
 
                 <section>
                     <h3>Flag arguments</h3>
-                    <p>
-                        Makes a function do two things!
+                    <p class="fragment">
+                        Make functions do multiple things!
                     </p>
 
                     <pre class="fragment"><code contenteditable class="PHP">
@@ -277,11 +286,11 @@ renderHtmlForLoggedInUser();
                 <section>
                     <h3>Argument objects</h3>
                     <pre><code contenteditable class="PHP">
-                        function drawCircle( $x, $y, $radius ) {}
+function drawCircle( $x, $y, $radius ) {}
                     </code></pre>
 
                     <pre><code contenteditable class="PHP">
-                        function drawCircle( Point $center, $radius ) {}
+function drawCircle( Point $center, $radius ) {}
                     </code></pre>
                 </section>
 
@@ -330,13 +339,13 @@ if ( set( "username", "NyanCat" ) )
                     </ul>
                 </section>
 
-
                 <section data-state="blackout" data-transition="linear">
                     <h3>Links</h3>
                     <ul>
                         <li><a href="http://bit.ly/clean-functions">View slides bit.ly/clean-functions</a></li>
                         <li><a href="https://github.com/JeroenDeDauw/slides/">Slides source on GitHub</a></li>
                     </ul>
+                    <img src="img/cat.gif" />
                 </section>
 
                 <section data-state="blackout">
