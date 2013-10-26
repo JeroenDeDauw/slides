@@ -6,17 +6,17 @@ for various presentations.
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 
-## SOLID
-
-Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
-
-Slides can be found in [/SOLID](/SOLID).
-
 ## Software craftmanship
 
 Presentations about [software craftmanship](http://manifesto.softwarecraftsmanship.org).
 
 Slides can be found in [/craftmanship](/craftmanship).
+
+### SOLID
+
+Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
+
+Slides can be found in [/SOLID](/SOLID).
 
 ## SMWCon
 
