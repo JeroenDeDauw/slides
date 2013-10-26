@@ -13,15 +13,23 @@ https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013
 
 ### Current status and next steps for SMW
 
+The yearly "what happened and what are we working on now" talk.
+
 * [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Current_status_and_next_steps_for_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/yearly/)
 
 ### Building on top of SMW
 
+This technical presentation is aimed at those who want to get a better understanding of
+SMWs architecture and how one can build on top of the platform.
+
 * [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/arch/)
 
 ### Hands-on session. Programming SMW
+
+This technical workshop is aimed at those who want to get started with Semantic MediaWiki
+development, and at those who want to improve their skills.
 
 * [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Hands-on_session._Programming_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/dev/)
