@@ -1,8 +1,7 @@
 Slides of [Jeroen De Dauw](https://twitter.com/#!/JeroenDeDauw)
 for various presentations.
 
-Presentations
-=============
+# Presentations
 
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
@@ -19,8 +18,7 @@ Presentations about [software craftmanship](http://manifesto.softwarecraftsmansh
 
 Slides can be found in [/craftmanship](/craftmanship).
 
-SMWCon
--------
+## SMWCon
 
 SMWCon, or the [Semantic MediaWiki Conference](http://semantic-mediawiki.org/wiki/SMWCon),
 is a twice-yearly gathering for users,
