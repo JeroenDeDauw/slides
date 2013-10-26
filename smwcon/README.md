@@ -2,11 +2,29 @@ Slides of [Jeroen De Dauw](https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw)
 for [SMWCon](https://semantic-mediawiki.org/wiki/SMWCon).
 
 
-Presentations
-=============
+# SMWCon presentations
 
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
+
+## SMWCon Fall 2013, Berlin
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013
+
+### Current status and next steps for SMW
+
+* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Current_status_and_next_steps_for_SMW)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/yearly/)
+
+### Building on top of SMW
+
+* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/arch/)
+
+### Hands-on session. Programming SMW
+
+* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Hands-on_session._Programming_SMW)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/dev/)
 
 SMWCon Fall 2012, Cologne
 --------------------------
