@@ -20,7 +20,7 @@ Slides can be found in [/SOLID](/SOLID).
 
 ## SMWCon
 
-SMWCon, or the [Semantic MediaWiki Conference](http://semantic-mediawiki.org/wiki/SMWCon),
+SMWCon, or the [Semantic MediaWiki Conference](https://semantic-mediawiki.org/wiki/SMWCon),
 is a twice-yearly gathering for users,
 developers and enthusiasts of Semantic MediaWiki, including corporate users, academics
 and others. SMWCon is held once a year in North America, in the spring, and once in
@@ -28,19 +28,21 @@ Europe, in the fall.
 
 Slides can be found in [/smwcon](/smwcon).
 
-## Berlin hackathon
+## Wikimedia events
+
+### Berlin hackathon
 
 The yearly MediaWiki hackathon in Berlin.
 
 Slides can be found in [/berlinhackathon](/berlinhackathon).
 
-## Wikimania
+### Wikimania
 
 The yearly [Wikimedia](https://wikimania.wikimedia.org) event.
 
 Slides can be found in [/wikimania](/wikimania).
 
-## Wikimania Conferentie Nederland
+### Wikimania Conferentie Nederland
 
 The yearly [Wikimedia Nederland event](https://www.wikimediaconferentie.nl).
 
