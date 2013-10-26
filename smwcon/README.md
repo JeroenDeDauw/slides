@@ -15,7 +15,7 @@ https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013
 
 The yearly "what happened and what are we working on now" talk.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Current_status_and_next_steps_for_SMW)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Current_status_and_next_steps_for_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/yearly/)
 
 ### Building on top of SMW
@@ -23,7 +23,7 @@ The yearly "what happened and what are we working on now" talk.
 This technical presentation is aimed at those who want to get a better understanding of
 SMWs architecture and how one can build on top of the platform.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Building_on_top_of_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/arch/)
 
 ### Hands-on session. Programming SMW
@@ -31,7 +31,7 @@ SMWs architecture and how one can build on top of the platform.
 This technical workshop is aimed at those who want to get started with Semantic MediaWiki
 development, and at those who want to improve their skills.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Hands-on_session._Programming_SMW)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Hands-on_session._Programming_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013fall/dev/)
 
 ## SMWCon Spring 2013, New York City
@@ -42,14 +42,14 @@ https://semantic-mediawiki.org/wiki/SMWCon_Spring_2013
 
 The yearly "what happened and what are we working on now" talk.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Spring_2013/Current_status_and_next_steps_for_SMW)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Spring_2013/Current_status_and_next_steps_for_SMW)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013spring/yearly/)
 
 ### New features in Maps and Semantic Maps
 
 Provides an overview of the imporvements made to Maps and Semantic Maps over the past year.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Spring_2013/New_features_in_Maps_and_Semantic_Maps)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Spring_2013/New_features_in_Maps_and_Semantic_Maps)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013spring/maps/#maps-is-awesome.html)
 
 SMWCon Fall 2012, Cologne
@@ -85,8 +85,8 @@ An overview of all the cool new stuff in Maps and Semantic Maps as well as a pee
 
 An overview of all the awesome new features in Semantic Result Formats 1.8.
 
-* [Wiki page](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats)
-* [Slides](http://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats/Presentation)
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats)
+* [Slides](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats/Presentation)
 * [Video recording](http://www.youtube.com/watch?v=iCo6up6Kftc)
 
 SMWCon spring 2012, Carlsbad
