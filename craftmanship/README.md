@@ -13,5 +13,5 @@ How to create truly clean, well designed, functions.
 
 Why static code is generally harmful and should be rarely used.
 
-* Read [the abstract](static/CleanFunctions.md)
+* Read [the abstract](static/Static.md)
 * View [the slides]()
