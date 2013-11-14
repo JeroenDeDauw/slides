@@ -8,3 +8,10 @@ How to create truly clean, well designed, functions.
 
 * Read [the abstract](functions/CleanFunctions.md)
 * View [the slides](http://bit.ly/clean-functions)
+
+### The S in STUPID
+
+Why static code is generally harmful and should be rarely used.
+
+* Read [the abstract](static/CleanFunctions.md)
+* View [the slides]()
