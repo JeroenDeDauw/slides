@@ -1,6 +1,6 @@
 # The S in STUPID
 
-Or "Static consdiered harmfull"
+Aka "Static consdiered harmfull"
 
 The static keyword is perhaps the most abused one in your typical Java or PHP project nowadays.
 Many luminaries in the field of software design have written about the typical problems usage
