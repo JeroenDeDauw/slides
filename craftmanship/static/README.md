@@ -4,7 +4,7 @@ Aka "Static consdiered harmfull"
 
 The static keyword is perhaps the most abused one in your typical Java or PHP project nowadays.
 Many luminaries in the field of software design have written about the typical problems usage
-of static bring with them. The Gang of Four said, when asked what they would do if they where
+of static results in. The Gang of Four said, when asked what they would do if they where
 to publish a new version of their classic Design Patterns book, that they'd drop the Singleton
 pattern as it is now recognized as an anti-pattern.
 
