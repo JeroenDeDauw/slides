@@ -115,7 +115,7 @@ public function testDoStuff() {
     $object->doStuff();
 }
                         </code></pre>
-                        <p>Logger::log and DataStore::saveObject are ALWAYS called</p>
+                        <p class="fragment">Logger::log and DataStore::saveObject are ALWAYS called</p>
                     </section>
 
                     <section>
@@ -138,7 +138,40 @@ public function testDoStuff() {
                         <img src="img/state-leaked.jpeg" />
                     </section>
 
-                    
+                    <section>
+                        <pre><code contenteditable class="PHP">DataStore::saveObject( $object );</code></pre>
+                        <pre class="fragment"><code contenteditable class="PHP">
+class DataStore {
+    public function saveObject( $object ) {
+        $loadBalancer = LoadBalancerFactory::getInstance();
+        // ...
+        $database->update( /* ... */ );
+        // ...
+        Logger::log( 'done saving object' );
+    }
+}
+                        </code></pre>
+                        <img src="img/many-cats.jpeg" class="fragment" width="400px" />
+                    </section>
+                </section>
+
+                <section data-transition="linear">
+                    <p>Lets fix it!</p>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+class Logger {
+
+    public static function log() {
+        // ...
+    }
+
+    public static function resetForTesting() {
+        // ...
+    }
+
+}
+                    </code></pre>
+                    <img src="img/omg-cat.gif" class="fragment" />
                 </section>
 
                 <section data-state="blackout" data-transition="linear">
