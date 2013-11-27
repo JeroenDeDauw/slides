@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>The S in stupid</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -42,13 +42,103 @@
                         Presentation by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
                         bit.ly/static-code
                     </p>
+                    <img src="img/static-cat.jpeg" width="275px" />
                 </section>
 
                 <section data-transition="linear">
-                    <h3>Conclusion</h3>
-                    <ul>
-                        <li>TODO</li>
-                    </ul>
+                    <section data-transition="linear">
+                        <h3>STUPID?</h3>
+                        <ul>
+                            <li><b><span style="color:#9999ff">S</span></b><span style="color:#aaaaff">tatic</span></li>
+                            <li><b><span style="color:lightblue">T</span></b>ight Coupling</li>
+                            <li><b><span style="color:lightblue">U</span></b>ntestability</li>
+                            <li><b><span style="color:lightblue">P</span></b>remature Optimization</li>
+                            <li><b><span style="color:lightblue">I</span></b>ndescriptive Naming</li>
+                            <li><b><span style="color:lightblue">D</span></b>uplication</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>SOLID</h3>
+                        <ul>
+                            <li><b><span style="color:lightblue">S</span></b>ingle Responsibility Principle</li>
+                            <li><b><span style="color:lightblue">O</span></b>pen/Closed Principle</li>
+                            <li><b><span style="color:lightblue">L</span></b>iskov Substitution Principle</li>
+                            <li><b><span style="color:lightblue">I</span></b>nterface Segregation Principle</li>
+                            <li><b><span style="color:lightblue">D</span></b>ependency Inversion Principle</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-transition="linear">
+                        <p>What is wrong with this code?</p>
+                        <pre><code contenteditable class="PHP">
+public function doStuff() {
+    // ...
+
+    Logger::log( 'doing stuff during caturday is madness' );
+
+    // ...
+
+    DataStore::saveObject( $object );
+
+    // ...
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code contenteditable class="PHP">
+public function doStuff() {
+    Logger::log( 'doing stuff during caturday is madness' );
+    DataStore::saveObject( $object );
+}
+                        </code></pre>
+                        <ul>
+                            <li>Method/class dependent on Logger and DataStore</li>
+                            <li class="fragment">What if the caller wants to use a different logger?</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <pre><code contenteditable class="PHP">
+public function doStuff() {
+    Logger::log( 'doing stuff during caturday is madness' );
+    DataStore::saveObject( $object );
+}
+                        </code></pre>
+
+                        <pre><code contenteditable class="PHP">
+public function testDoStuff() {
+    // Some bootstrapping code ...
+
+    $object->doStuff();
+}
+                        </code></pre>
+                        <p>Logger::log and DataStore::saveObject are ALWAYS called</p>
+                    </section>
+
+                    <section>
+                        <img src="img/database.jpeg" />
+                    </section>
+
+                    <section>
+                        <img src="img/fragility.jpeg" />
+                    </section>
+
+                    <section>
+                        <img src="img/fat-cat.jpg" />
+                    </section>
+
+                    <section>
+                        <img src="img/order-is-relevant.jpeg" />
+                    </section>
+
+                    <section>
+                        <img src="img/state-leaked.jpeg" />
+                    </section>
+
+                    
                 </section>
 
                 <section data-state="blackout" data-transition="linear">
