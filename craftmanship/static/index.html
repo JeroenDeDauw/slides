@@ -177,7 +177,88 @@ class Logger {
                 <section data-transition="linear">
                     <p>Using an instance</p>
 
+                    <pre class="fragment"><code contenteditable class="PHP">
+class Logger {
+    public function log() { /* ... */ }
+}
+                    </code></pre>
+                    <pre class="fragment"><code contenteditable class="PHP">
+public function doStuff() {
+    // ...
+    Logger::getInstance()->log( 'doing stuff during caturday is madness' );
+    // ...
+}
+                    </code></pre>
+                    <img src="img/no.png" class="fragment" />
                 </section>
+
+                <section data-transition="linear">
+                    <section>
+                        <p>The SOLI<span style="color:lightblue">D</span> solution</p>
+
+                        <pre><code contenteditable class="PHP">
+public function doStuff( Logger $logger, DataStore $dataStore ) {
+    // ...
+
+    $logger->log( 'doing stuff during caturday is madness' );
+
+    // ...
+
+    $dataStore->saveObject( $object );
+
+    // ...
+}
+                        </code></pre>
+                        <p class="fragment">
+                            <span style="color:lightblue"><b>D</b></span>ependency Inversion Principle<br />
+                            <img src="img/success.jpeg" width="200px" />
+                        </p>
+                        </section>
+                    <section>
+                        <pre><code contenteditable class="PHP">
+public function __construct( Logger $logger, DataStore $dataStore ) {
+    $this->logger = $logger;
+    $this->dataStore = $dataStore;
+}
+
+public function doStuff() {
+    // ...
+
+    $this->logger->log( 'doing stuff during caturday is madness' );
+
+    // ...
+
+    $this->dataStore->saveObject( $object );
+
+    // ...
+}
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section data-transition="linear">
+                    <p></p>
+
+                    <pre><code contenteditable class="PHP">
+public function testDoStuff() {
+    // ...
+
+    // Create simple mocks
+    $logger = new NullLogger();
+    $dataStore = new MockDataStore();
+
+    $object->doStuff( $logger, $dataStore );
+
+    // ...
+}
+                    </code></pre>
+                    <p class="fragment">
+                        <span style="color:lightblue"><b>D</b></span>ependency Inversion Principle<br />
+                        <img src="img/success.jpeg" width="200px" />
+                    </p>
+                </section>
+
+
 
                 <section data-state="blackout" data-transition="linear">
                     <h3>These slides</h3>
