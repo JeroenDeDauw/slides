@@ -49,9 +49,9 @@
                     <section data-transition="linear">
                         <h3>STUPID?</h3>
                         <ul>
-                            <li><b><span style="color:#9999ff">S</span></b><span style="color:#aaaaff">tatic</span></li>
-                            <li><b><span style="color:lightblue">T</span></b>ight Coupling</li>
-                            <li><b><span style="color:lightblue">U</span></b>ntestability</li>
+                            <li class="fragment grow"><b><span style="color:#9999ff">S</span></b><span style="color:#aaaaff">tatic</span></li>
+                            <li class="fragment grow"><b><span style="color:lightblue">T</span></b>ight Coupling</li>
+                            <li class="fragment grow"><b><span style="color:lightblue">U</span></b>ntestability</li>
                             <li><b><span style="color:lightblue">P</span></b>remature Optimization</li>
                             <li><b><span style="color:lightblue">I</span></b>ndescriptive Naming</li>
                             <li><b><span style="color:lightblue">D</span></b>uplication</li>
@@ -60,11 +60,11 @@
                     <section>
                         <h3>SOLID</h3>
                         <ul>
-                            <li><b><span style="color:lightblue">S</span></b>ingle Responsibility Principle</li>
+                            <li class="fragment grow"><b><span style="color:lightblue">S</span></b>ingle Responsibility Principle</li>
                             <li><b><span style="color:lightblue">O</span></b>pen/Closed Principle</li>
                             <li><b><span style="color:lightblue">L</span></b>iskov Substitution Principle</li>
                             <li><b><span style="color:lightblue">I</span></b>nterface Segregation Principle</li>
-                            <li><b><span style="color:lightblue">D</span></b>ependency Inversion Principle</li>
+                            <li class="fragment grow"><b><span style="color:lightblue">D</span></b>ependency Inversion Principle</li>
                         </ul>
                     </section>
                 </section>
@@ -252,6 +252,12 @@ public function testDoStuff() {
                     </code></pre>
                 </section>
 
+                <section data-transition="linear">
+                    <blockquote>
+                        The secret in testing is writing testable code.
+                    </blockquote>
+                    <p>-- Miško Hevery</p>
+                </section>
 
                 <section data-transition="linear">
                     <section>
@@ -300,6 +306,21 @@ class Utils {
 
                         <p class="fragment">And now min awesomeness become config stored in your db...</p>
                     </section>
+                </section>
+
+                <section>
+                    <p>Singleton</p>
+                    <p class="fragment">Often considered an anti-pattern</p>
+                    <p class="fragment">Should not be used all over</p>
+                    <p class="fragment">Global state is transitive</p>
+                </section>
+
+                <section>
+                    <p>Global state</p>
+                    <pre><code class="PHP">$GLOBALS['database']->saveStuff();</code></pre>
+                    <pre><code class="PHP">getDatabase()->saveStuff();</code></pre>
+                    <pre><code class="PHP">Database::singleton()->saveStuff();</code></pre>
+                    <pre><code class="PHP">ServiceRegistry::getService( 'database' )->saveStuff();</code></pre>
                 </section>
 
                 <section data-transition="linear">
