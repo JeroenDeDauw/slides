@@ -238,12 +238,10 @@ public function doStuff() {
                 </section>
 
                 <section data-transition="linear">
-                    <p></p>
-
                     <pre><code contenteditable class="PHP">
 public function testDoStuff() {
     $logger = new NullLogger();
-    $dataStore = new MockDataStore();
+    $dataStore = $this->getMock( 'DataStore' );
 
     $object = new SomeObject( $logger, $dataStore );
 
@@ -255,6 +253,65 @@ public function testDoStuff() {
                 </section>
 
 
+                <section data-transition="linear">
+                    <section>
+                        <p>What about this static call?</p>
+
+                        <pre><code contenteditable class="java">
+class Awesome {
+
+    public int calculateAwesomeness() {
+        // ...
+
+        // Clearly this can never be negative
+        return Math.Abs( $awesomeness );
+    }
+
+}
+                        </code></pre>
+
+                        <p class="fragment">Static calls to leaves in the call graph are less evil</p>
+                    </section>
+                    <section>
+                        <p>Leaves can stop being leaves</p>
+
+                        <pre><code contenteditable class="PHP">
+class Awesome {
+
+    public function calculateAwesomeness() {
+        // ...
+
+        return Utils::normalizeAwesomeness( $awesomeness );
+    }
+
+}
+                        </code></pre>
+
+                        <pre><code contenteditable class="PHP">
+class Utils {
+
+    public static function normalizeAwesomeness( $awesomeness ) {
+        $minAwesomeness = 9001;
+        return min( $minAwesomeness, $awesomeness );
+    }
+
+}
+                        </code></pre>
+
+                        <p class="fragment">And now min awesomeness become config stored in your db...</p>
+                    </section>
+                </section>
+
+                <section data-transition="linear">
+                    <h3>Conclusion</h3>
+                    <ul>
+                        <li>Static code is procedural, not OO</li>
+                        <li class="fragment">Static code causes tight coupling</li>
+                        <li class="fragment">Any state accessed via static code is global</li>
+                        <li class="fragment">Testing code with static calls is very hard</li>
+                        <li class="fragment">Static code suggests SRP violation</li>
+                    </ul>
+                </section>
 
                 <section data-state="blackout" data-transition="linear">
                     <h3>These slides</h3>
