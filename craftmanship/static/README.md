@@ -1,6 +1,6 @@
 # The S in STUPID
 
-Aka "Static consdiered harmfull"
+Aka "Static considered harmful"
 
 The static keyword is perhaps the most abused one in your typical Java or PHP project nowadays.
 Many luminaries in the field of software design have written about the typical problems usage
@@ -29,10 +29,19 @@ is not required, while of course a plus.
 
 The topics covered include:
 
-* Loose coopling between objects
+* Loose coupling between objects
 * Making code testable
 * Making code flexible
 * The relation between static code and global state
 * The Singleton design pattern
 * Why math.abs is not problematic
 * The place of static in an OO language
+
+## Slides
+
+The presentation contains high quality slides with lots of long complicated
+sentences, citations and detailed proofs, to ensure sufficient seriousness.
+
+<img src="img/preview/slides-cat.jpeg" />
+
+<img src="img/preview/slides-omg.jpeg" />
