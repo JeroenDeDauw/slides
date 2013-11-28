@@ -214,13 +214,14 @@ public function doStuff( Logger $logger, DataStore $dataStore ) {
                             <img src="img/success.jpeg" width="200px" />
                         </p>
                         </section>
-                    <section>
-                        <pre><code contenteditable class="PHP">
+                        <section>
+                            <pre><code contenteditable class="PHP">
 public function __construct( Logger $logger, DataStore $dataStore ) {
     $this->logger = $logger;
     $this->dataStore = $dataStore;
 }
-
+                            </code></pre>
+                            <pre><code contenteditable class="PHP">
 public function doStuff() {
     // ...
 
@@ -241,21 +242,16 @@ public function doStuff() {
 
                     <pre><code contenteditable class="PHP">
 public function testDoStuff() {
-    // ...
-
-    // Create simple mocks
     $logger = new NullLogger();
     $dataStore = new MockDataStore();
+
+    $object = new SomeObject( $logger, $dataStore );
 
     $object->doStuff( $logger, $dataStore );
 
     // ...
 }
                     </code></pre>
-                    <p class="fragment">
-                        <span style="color:lightblue"><b>D</b></span>ependency Inversion Principle<br />
-                        <img src="img/success.jpeg" width="200px" />
-                    </p>
                 </section>
 
 
