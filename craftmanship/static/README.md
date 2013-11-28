@@ -42,6 +42,6 @@ The topics covered include:
 The presentation contains high quality slides with lots of long complicated
 sentences, citations and detailed proofs, to ensure sufficient seriousness.
 
-<img src="img/preview/slides-cat.jpeg" />
+<img src="img/preview/slides-cat.jpeg" width="200px" />
 
-<img src="img/preview/slides-omg.jpeg" />
+<img src="img/preview/slides-omg.jpeg" width="200px" />
