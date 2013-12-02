@@ -131,18 +131,18 @@ public function testDoStuff() {
                     </section>
 
                     <section>
-                        <img src="img/order-is-relevant.jpeg" />
-                    </section>
-
-                    <section>
                         <img src="img/state-leaked.jpeg" />
                     </section>
 
                     <section>
+                        <img src="img/order-is-relevant.jpeg" />
+                    </section>
+
+                    <section>
                         <pre><code contenteditable class="PHP">DataStore::saveObject( $object );</code></pre>
-                        <pre class="fragment"><code contenteditable class="PHP">
+                        <pre><code contenteditable class="PHP">
 class DataStore {
-    public function saveObject( $object ) {
+    public static function saveObject( $object ) {
         $loadBalancer = LoadBalancerFactory::getInstance();
         // ...
         $database->update( /* ... */ );
@@ -245,7 +245,7 @@ public function testDoStuff() {
 
     $object = new SomeObject( $logger, $dataStore );
 
-    $object->doStuff( $logger, $dataStore );
+    $object->doStuff();
 
     // ...
 }
@@ -284,19 +284,9 @@ class Awesome {
                         <pre><code contenteditable class="PHP">
 class Awesome {
 
-    public function calculateAwesomeness() {
+    public static function calculateAwesomeness() {
         // ...
 
-        return Utils::normalizeAwesomeness( $awesomeness );
-    }
-
-}
-                        </code></pre>
-
-                        <pre><code contenteditable class="PHP">
-class Utils {
-
-    public static function normalizeAwesomeness( $awesomeness ) {
         $minAwesomeness = 9001;
         return min( $minAwesomeness, $awesomeness );
     }
@@ -304,7 +294,7 @@ class Utils {
 }
                         </code></pre>
 
-                        <p class="fragment">And now min awesomeness become config stored in your db...</p>
+                        <p class="fragment">And now min awesomeness becomes config stored in your db...</p>
                     </section>
                 </section>
 
