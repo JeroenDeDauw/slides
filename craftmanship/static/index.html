@@ -299,33 +299,41 @@ class Awesome {
                 </section>
 
                 <section>
-                    <img src="img/only-one.jpeg" />
+                    <section>
+                        <img src="img/only-one.jpeg" />
+                    </section>
+
+                    <section>
+                        <img src="img/only-one.jpg" />
+                    </section>
+
+                    <section>
+                        <h3>Singleton</h3>
+                        <p>Often considered an anti-pattern</p>
+                        <p class="fragment">Should not be used all over</p>
+                        <p class="fragment">Global state is transitive</p>
+                    </section>
                 </section>
 
                 <section>
-                    <img src="img/only-one.jpg" />
-                </section>
+                    <section>
+                        <p>Global state</p>
+                        <pre><code class="PHP">$GLOBALS['database']->saveStuff();</code></pre>
+                        <pre><code class="PHP">getDatabase()->saveStuff();</code></pre>
+                        <pre><code class="PHP">Database::saveStuff();</code></pre>
+                        <pre><code class="PHP">Database::singleton()->saveStuff();</code></pre>
+                        <pre><code class="PHP">ServiceRegistry::getService( 'database' )->saveStuff();</code></pre>
+                    </section>
 
-                <section>
-                    <h3>Singleton</h3>
-                    <p>Often considered an anti-pattern</p>
-                    <p class="fragment">Should not be used all over</p>
-                    <p class="fragment">Global state is transitive</p>
-                </section>
+                    <section>
+                        <img src="img/hooks-doc.jpeg" width="600px" />
+                        <br />
+                        <img src="img/hooks-members.jpeg" width="600px" />
+                    </section>
 
-                <section>
-                    <p>Global state</p>
-                    <pre><code class="PHP">$GLOBALS['database']->saveStuff();</code></pre>
-                    <pre><code class="PHP">getDatabase()->saveStuff();</code></pre>
-                    <pre><code class="PHP">Database::saveStuff();</code></pre>
-                    <pre><code class="PHP">Database::singleton()->saveStuff();</code></pre>
-                    <pre><code class="PHP">ServiceRegistry::getService( 'database' )->saveStuff();</code></pre>
-                </section>
-
-                <section>
-                    <img src="img/hooks-doc.jpeg" width="600px" />
-                    <br />
-                    <img src="img/hooks-members.jpeg" width="600px" />
+                    <section>
+                        <img src="img/facepalm.jpeg" />
+                    </section>
                 </section>
 
                 <section data-transition="linear">
