@@ -80,7 +80,21 @@
 
                     <section>
                         <h3>What are components?</h3>
+                        <p>Organizational level</p>
+                        <p></p>
                         <p>EDA, SOA</p>
+                        <img src="img/Component-based-Software-Engineering-example2.gif">
+                    </section>
+
+                    <section>
+                        <h3>Benefits of components</h3>
+                        <p class="fragment">Separation of concerns</p>
+                        <p class="fragment">Reusability</p>
+                        <p class="fragment">Encapsulation</p>
+                        <p class="fragment">Substitutability</p>
+                        <p class="fragment">Independently deployable</p>
+                        <p class="fragment">Independently developable</p>
+                        <p class="fragment">Divide and conquer</p>
                     </section>
 
                 </section>
@@ -97,7 +111,57 @@
                             How should components relate to each other?
                             <span class="fragment" style="color:lightgreen"><br />&#8594; Principles of package coupling</span>
                         </p>
+                        <br />
+                        <p class="fragment">
+                            How big should a component be?
+                        </p>
                     </div>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Coupling: Acyclic dependencies principle</h3>
+
+                        <p class="fragment">Directed acyclic graph</p>
+                    </section>
+
+                    <section>
+                        <img src="img/adp-violation.gif" width="700px">
+                    </section>
+
+                    <section>
+                        <img src="img/adp-compliance.gif" width="700px">
+                    </section>
+
+                    <section>
+                        <img src="img/dep-graph.png" width="700px">
+                    </section>
+
+                    <section>
+                        <img src="img/cat-chasing-tail.gif">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Coupling: Stable-dependencies principle</h3>
+
+                        <p>Depend in the direction of stability</p>
+                    </section>
+
+                    <section>
+                        <h3>Coupling: Stable-abstractions principle</h3>
+
+                        <p>A package should be as abstract as it is stable</p>
+                    </section>
+
+                    <section>
+                        <img src="img/phpdepend-graph.png">
+                    </section>
+
+                    <section>
+                        <img src="img/abstractness-instability.png">
+                    </section>
                 </section>
 
                 <section>
@@ -115,6 +179,7 @@
                         <h3>Cohesion: Common-closure principle</h3>
                         <p class="fragment">Classes that change for the same reason should be in the same component</p>
                         <p class="fragment">SRP extended to components</p>
+                        <p class="fragment">Changes should not span packages, and affect everything in the package</p>
                     </section>
                 </section>
 
@@ -122,6 +187,7 @@
                     <section>
                         <h3>Cohesion: Common-reuse principle</h3>
                         <p class="fragment">Classes that are used together should be in the same component</p>
+                        <p class="fragment">If you use one class from a package, you depend on them all</p>
                         <p class="fragment">Like ISP</p>
                     </section>
                 </section>
@@ -134,24 +200,21 @@
 
                 <section>
                     <section>
-                        <h3>Coupling: Acyclic dependencies principle</h3>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h3>Coupling: Stable-dependencies principle</h3>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h3>Coupling: Stable-abstractions principle</h3>
+                        <p>Component size</p>
                     </section>
                 </section>
 
                 <section>
                     <img src="img/contain-it.gif" />
+                </section>
+
+                <section>
+                    <p>Recommended reading</p>
+                    <ul>
+                        <li><a href="https://www.goodreads.com/book/show/8686650-continuous-delivery">Continuous delivery</a>, chapter 13 "managing Components and Dependencies"</li>
+                        <li><a href="https://www.goodreads.com/book/show/3735293-clean-code">Clean Code</a>, chapter 11 "Systems"</li>
+                        <li><a href="https://www.goodreads.com/book/show/3735293-clean-code">Patterns of Enterprise Application Architecture</a>, chapter 1 "Layering"</li>
+                    </ul>
                 </section>
 
             </div>
