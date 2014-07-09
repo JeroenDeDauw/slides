@@ -11,7 +11,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
@@ -57,8 +57,8 @@
                         </small>
                     </p>
 
-                    <p><br /><a href="http://bit.ly/">
-                        http://bit.ly/
+                    <p><br /><a href="http://bit.ly/component-design">
+                        http://bit.ly/component-design
                     </a></p>
                 </section>
 
@@ -85,13 +85,13 @@
 
                     <section>
                         <h3>Benefits of components</h3>
-                        <p class="fragment">Separation of concerns</p>
-                        <p class="fragment">Reusability</p>
-                        <p class="fragment">Encapsulation</p>
-                        <p class="fragment">Substitutability</p>
-                        <p class="fragment">Independently deployable</p>
-                        <p class="fragment">Independently developable</p>
-                        <p class="fragment">Divide and conquer</p>
+                        <p class="fragment roll-in highlight-current-green">Separation of concerns</p>
+                        <p class="fragment roll-in highlight-current-green">Reusability</p>
+                        <p class="fragment roll-in highlight-current-green">Encapsulation</p>
+                        <p class="fragment roll-in highlight-current-green">Substitutability</p>
+                        <p class="fragment roll-in highlight-current-green">Independently deployable</p>
+                        <p class="fragment roll-in highlight-current-green">Independently developable</p>
+                        <p class="fragment roll-in highlight-current-green">Divide and conquer</p>
                     </section>
 
                 </section>
@@ -122,11 +122,11 @@
                         <p class="fragment">Directed acyclic graph</p>
                     </section>
 
-                    <section>
+                    <section data-state="alert">
                         <img src="img/adp-violation.gif" width="700px">
                     </section>
 
-                    <section>
+                    <section data-state="soothe">
                         <img src="img/adp-compliance.gif" width="700px">
                     </section>
 
@@ -144,7 +144,7 @@
                 </section>
 
                 <section>
-                    <section>
+                    <section data-state="blackout">
                         <h3>Coupling: Stable-dependencies principle</h3>
 
                         <p>Depend in the direction of stability</p>
@@ -152,7 +152,7 @@
                 </section>
 
                 <section>
-                    <section>
+                    <section data-state="blackout">
                         <h3>Coupling: Stable-abstractions principle</h3>
 
                         <p>A package should be as abstract as it is stable</p>
@@ -168,31 +168,36 @@
                 </section>
 
                 <section>
-                    <section>
+                    <section data-state="blackout">
                         <h3>Cohesion: Reuse-release equivalence principle</h3>
 
-                        <p class="fragment">In order to be reused, a component must be released</p>
-                        <p class="fragment">Granule of release is granule of reuse</p>
-                        <p class="fragment">Either all reusable or not reusable</p>
+                        <p class="fragment roll-in highlight-current-blue">In order to be reused, a component must be released</p>
+                        <p class="fragment roll-in highlight-current-blue">Granule of release is granule of reuse</p>
+                        <p class="fragment roll-in highlight-current-blue">Either all reusable or not reusable</p>
                     </section>
                 </section>
 
                 <section>
-                    <section>
+                    <section data-state="blackout">
                         <h3>Cohesion: Common-closure principle</h3>
-                        <p class="fragment">Classes that change for the same reason should be in the same component</p>
-                        <p class="fragment">SRP extended to components</p>
-                        <p class="fragment">Changes should not span packages, and affect everything in the package</p>
+                        <p class="fragment roll-in highlight-current-green">Classes that change for the same reason should be in the same component</p>
+                        <br />
+                        <p class="fragment roll-in highlight-current-green">SRP extended to components</p>
+                        <br />
+                        <p class="fragment roll-in highlight-current-green">Changes should not span packages, and affect everything in the package</p>
                     </section>
                 </section>
 
                 <section>
-                    <section>
+                    <section data-state="blackout">
                         <h3>Cohesion: Common-reuse principle</h3>
-                        <p class="fragment">Classes that are used together should be in the same component</p>
-                        <p class="fragment">If you use one class from a package, you depend on them all</p>
-                        <p class="fragment">Like ISP</p>
+                        <p class="fragment roll-in highlight-current-blue">Classes that are used together should be in the same component</p>
+                        <br />
+                        <p class="fragment roll-in highlight-current-blue">If you use one class from a package, you depend on them all</p>
+                        <br />
+                        <p class="fragment roll-in highlight-current-blue">Like ISP</p>
                     </section>
+
                     <section>
                         <img src="img/ISP.jpg">
                     </section>
@@ -200,20 +205,26 @@
 
                 <section>
                     <h3>Things not covered</h3>
-                    <p class="fragment">Interplay of the forces<br /></p>
-                    <p class="fragment">Evolution of components<br /></p>
-                    <p class="fragment">Components in a layered system<br /></p>
+                    <p class="fragment roll-in highlight-current-green">Interplay of the forces<br /></p>
+                    <p class="fragment roll-in highlight-current-green">Evolution of components<br /></p>
+                    <p class="fragment roll-in highlight-current-green">Components in a layered system<br /></p>
                     <img src="img/contain-it.gif" class="fragment" width="400px" />
                 </section>
 
-                <section>
+                <section data-state="blackout">
                     <p>Recommended reading</p>
+                    <br />
+
                     <ul>
-                        <li><a href="https://www.goodreads.com/book/show/8686650-continuous-delivery">Continuous delivery</a>, chapter 13 "managing Components and Dependencies"</li>
-                        <li><a href="https://www.goodreads.com/book/show/3735293-clean-code">Clean Code</a>, chapter 11 "Systems"</li>
-                        <li><a href="https://www.goodreads.com/book/show/3735293-clean-code">Patterns of Enterprise Application Architecture</a>, chapter 1 "Layering"</li>
-                        <li><a href="http://cleancoders.com/category/component-design#videos">Clean Code component design videos</a></li>
+                        <li><small><a href="https://www.goodreads.com/book/show/8686650-continuous-delivery">Continuous delivery</a>, chapter 13 "managing Components and Dependencies"</small></li>
+                        <li><small><a href="https://www.goodreads.com/book/show/3735293-clean-code">Clean Code</a>, chapter 11 "Systems"</small></li>
+                        <li><small><a href="https://www.goodreads.com/book/show/3735293-clean-code">Patterns of Enterprise Application Architecture</a>, chapter 1 "Layering"</small></li>
+                        <li><small><a href="http://cleancoders.com/category/component-design#videos">Clean Code component design videos</a></small></li>
                     </ul>
+
+                    <p><br /><a href="http://bit.ly/component-design">
+                        http://bit.ly/component-design
+                    </a></p>
                 </section>
 
             </div>
