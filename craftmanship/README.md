@@ -16,6 +16,7 @@ How to create well designed components
 
 * Read [the abstract](components/README.md)
 * View [the slides](http://bit.ly/component-design)
+* Read [the blog post](http://www.bn2vs.com/blog/2014/07/12/component-design/)
 
 ### The S in STUPID
 
