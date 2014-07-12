@@ -15,7 +15,7 @@ How to create truly clean, well designed, functions.
 How to create well designed components
 
 * Read [the abstract](components/README.md)
-* View [the slides](bit.ly/component-design)
+* View [the slides](http://bit.ly/component-design)
 
 ### The S in STUPID
 
