@@ -25,3 +25,9 @@ Why static code is generally harmful and should be rarely used.
 * Read [the abstract](static/README.md)
 * View [the slides](http://bit.ly/static-code)
 * Read [the blog post](http://www.bn2vs.com/blog/2013/11/15/presentation-the-s-in-stupid/)
+
+### The Liskov Substitution Principle
+
+A simple principle that aids in avoiding common inheritance related pitfalls.
+
+* View [the slides](http://bit.ly/solid-lsp)
