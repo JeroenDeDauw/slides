@@ -74,13 +74,28 @@
                 </section>
 
                 <section>
-                    <h3>Doing one thing</h3>
+                    <h3>What is "one thing"?</h3>
                     <p class="fragment">
                         One level of abstraction
                     </p>
-                    <p class="fragment">
-                        How much indenting / nesting?
-                    </p>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+function onFirstPost() {
+    $messageText = $this->getWelcomeMessageBody();
+    if ($this->addFooter()) $messageText.=$this->getWelcomeMessageFooter();
+    $this->emailer->send( $messageText );
+    foreach ( $this->getReviewers() as $reviewer ) {
+         $this->reviewerNotifier->notify( $reviewer );
+    }
+}
+                    </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+function onFirstPost() {
+    $this->sendWelcomeMessage();
+    $this->notifyReviewers();
+}
+                    </code></pre>
                 </section>
 
                 <section>
@@ -100,6 +115,30 @@ if ( $this->isFirstPost() ) {
     $this->sendWelcomeMessage();
 }
                     </code></pre>
+                </section>
+
+                <section>
+                    <p>
+                        Bodies of control structures
+                    </p>
+
+                    <pre><code contenteditable class="PHP">
+if ( $this->isFirstPost() ) {
+    $this->sendWelcomeMessage();
+}
+                    </code></pre>
+
+                    <pre><code contenteditable class="PHP">
+foreach ( $this->getReviewers() as $reviewer ) {
+    $this->notifyReviewer( $reviewer );
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>
+                        How much indenting / nesting?
+                    </p>
                 </section>
 
                 <section>
@@ -128,6 +167,20 @@ function remove() {
                     <p>
                         Well written prose
                     </p>
+                    <pre><code contenteditable class="PHP">
+if ( $this->isFirstPost() ) {
+    $this->sendWelcomeMessage();
+    $this->notifyReviewers();
+}
+                    </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+function notifyReviewers() {
+    foreach ( $this->reviewers as $reviewer ) {
+        $reviewer->notify( $this->post );
+    }
+}
+                    </code></pre>
                 </section>
 
                 <section>
@@ -212,9 +265,10 @@ function remove() {
 
                 <section>
                     <blockquote>
-                        Sorry this message is so long,<br />
-                        I had no time to shorten it
+                        I'm sorry I had to write you such a long letter,<br />
+                        but I did not have time to write you a short one
                     </blockquote>
+                    <p>-- Blaise Pascal</p>
                     <br />
 
                     <ul>
