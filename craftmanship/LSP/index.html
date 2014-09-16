@@ -83,39 +83,24 @@
 					</aside>
 				</section>
 
+                <section>
+                    <h2>Not just inheritance</h2>
+                    <img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
+
+                    <aside class="notes">
+                        * Static inheritance needed for polymorphism<br />
+                        * Duck typing - message passing
+                    </aside>
+
+                    <p class="fragment">Static inheritance</p>
+                    <p class="fragment">Duck typing</p>
+                </section>
+
 				<section>
 					<h2>Obvious!</h2>
 					<p>
 						Or not?
 					</p>
-				</section>
-
-				<section>
-					<h2>Not just inheritance</h2>
-					<img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
-
-					<aside class="notes">
-						* Static inheritance needed for polymorphism<br />
-						* Duck typing - message passing
-					</aside>
-
-					<p class="fragment">Static inheritance</p>
-					<p class="fragment">Duck typing</p>
-				</section>
-
-				<section>
-					<h2>Refused requests</h2>
-				</section>
-
-				<section>
-					<h3>Object missing property</h3>
-					<pre><code contenteditable class="PHP">
-						class T() {}
-
-						$o = new T();
-
-						$o->f(); // boom
-					</code></pre>
 				</section>
 
 				<section>
@@ -268,9 +253,9 @@ class Rectangle extends Square {
 				<section>
 					<h3>WTF?</h3>
 
-					<p>Is a square not a rectangle?!</p>
+					<p>Squares are not rectangles?!</p>
 
-					<p class="fragment">Yeah, it is a rectangle</p>
+					<p class="fragment">Yeah, they are rectangles</p>
 
 					<p class="fragment">Contradicting yourself are you?</p>
 				</section>
@@ -278,13 +263,13 @@ class Rectangle extends Square {
 				<section>
 					<p>Nope</p>
 
-					<p>A square is a rectangle</p>
+					<p>Squares are rectangles</p>
 
 					<pre class="fragment"><code contenteditable class="PHP">
-						// This is not a square though
-						class Square {
-						// ...
-						}
+// This is not a square though
+class Square {
+    // ...
+}
 					</code></pre>
 
 					<p class="fragment">It is a code <strong>representing</strong> a square</p>
