@@ -20,9 +20,15 @@
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
-        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
     </script>
 
     <!--[if lt IE 9]>
@@ -48,10 +54,10 @@
         <section>
             <h3>Overview</h3>
             <ul>
-                <li>Status of the SMW project</li>
-                <li>New in 1.9 and 2.0</li>
-                <li>Upcoming features</li>
-                <li>Contributing to SMW</li>
+                <li class="fragment roll-in highlight-current-green">Status of the SMW project</li>
+                <li class="fragment roll-in highlight-current-green">New in 1.9 and 2.0</li>
+                <li class="fragment roll-in highlight-current-green">Upcoming features</li>
+                <li class="fragment roll-in highlight-current-green">Contributing to SMW</li>
             </ul>
         </section>
 
@@ -211,6 +217,10 @@
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
         // Optional libraries used to extend on reveal.js
         dependencies: [
             { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -219,9 +229,6 @@
             { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
             { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
             { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            // { src: 'plugin/leap/leap.js', async: true }
-            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
     });
 
