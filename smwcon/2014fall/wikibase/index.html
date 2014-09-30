@@ -56,12 +56,10 @@
             <h3>Overview</h3>
             <ul>
                 <li class="fragment roll-in highlight-current-green">What is Wikibase?</li>
-                <ul class="fragment roll-in highlight-current-green">
-                    <li>Wikibase Repository</li>
-                    <li>Wikibase Client</li>
-                    <li>The components</li>
-                </ul>
-                <li class="fragment roll-in highlight-current-green">The future and interoperability with SMW</li>
+                <li class="fragment roll-in highlight-current-green">The data model</li>
+                <li class="fragment roll-in highlight-current-green">Wikibase Repository</li>
+                <li class="fragment roll-in highlight-current-green">Wikibase Client</li>
+                <li class="fragment roll-in highlight-current-green">The components</li>
                 <li class="fragment roll-in highlight-current-green">Questions</li>
             </ul>
         </section>
@@ -267,11 +265,11 @@
                         <span class="fragment">&#10140; Value snak</span>
                     </li>
                     <li class="fragment">
-                        Date of death has no value
+                        Date of death does not exist
                         <span class="fragment">&#10140; No value snak</span>
                     </li>
                     <li class="fragment">
-                        Date of death has an unknown value
+                        Date of death is unknown
                         <span class="fragment">&#10140; Some value snak</span>
                     </li>
                 </ul>
@@ -360,29 +358,21 @@
                 </ul>
             </section>
 
-            <section>
-                <p>Picture of Item page be here</p>
-            </section>
+            <section data-background="img/item.png" data-transition="linear" data-background-transition="slide"></section>
+
+            <section data-background="img/itemhistory.png" data-transition="linear" data-background-transition="slide" data-background-size="95%"></section>
 
             <section>
-                <p>Picture of revision page be here</p>
+                <img src="img/itemdiff.png" />
             </section>
 
-            <section>
-                <p>Picture of diff be here</p>
-            </section>
+            <section data-background="img/recentchanges.png" data-transition="linear" data-background-transition="slide"></section>
+
+            <!-- Page UI: No wikitext -->
+            <section data-background="img/item-gui.png" data-transition="linear" data-background-transition="slide"></section>
 
             <section>
-                <p>Picture recent changes be here</p>
-            </section>
-
-            <section>
-                <p>Picture of Item page be here</p>
-                <!-- Page UI: No wikitext -->
-            </section>
-
-            <section>
-                <p>Picture of web API be here</p>
+                <img src="img/get-entities-api.png" />
             </section>
         </section>
 
@@ -406,7 +396,11 @@
             </section>
 
             <section>
-                <p>Picture sidebar be here</p>
+                <img src="img/sidebar.png" />
+            </section>
+
+            <section>
+                <img src="img/recentchanges2.png" />
             </section>
 
             <section>
@@ -421,8 +415,51 @@
         <section>
             <section data-state="blackout" data-transition="linear">
                 <p>The components</p>
-                <!-- Overview -->
             </section>
+
+            <section>
+                <table width="100%">
+                    <tr>
+                        <td style="padding-bottom: 20px">
+                            <div style="text-align: center" class="fragment roll-in highlight-current-green" data-fragment-index="1">
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px">Repository</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">Client</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">Query</div>
+                            </div>
+                            <p style="display: inline-block; font-size: large" class="fragment roll-in highlight-current-green" data-fragment-index="1">
+                                Applications
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: dashed; padding-bottom: 20px; padding-top: 20px" class="fragment" data-fragment-index="2">
+                            <div style="text-align: center" class="fragment roll-in highlight-current-green" data-fragment-index="2">
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px">DataModel</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">DataModel Serialization</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">QueryEngine</div>
+                            </div>
+                            <p style="display: inline-block; font-size: large" class="fragment roll-in highlight-current-green" data-fragment-index="2">
+                                Domain specific components
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: dashed; padding-top: 20px" class="fragment" data-fragment-index="3">
+                            <div style="text-align: center" class="fragment roll-in highlight-current-green" data-fragment-index="3">
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px">Diff</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">DataValues</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">Ask</div>
+                                <div style="border: 2px solid gray; display: inline-block; padding: 5px; margin-left: 50px">Serialization</div>
+                            </div>
+                            <p style="display: inline-block; font-size: large" class="fragment roll-in highlight-current-green" data-fragment-index="3">
+                                Domain agnostic components
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section data-background="img/wikibase-components.png" data-transition="linear" data-background-transition="slide"></section>
 
             <section>
                 <p>DataModel & Serialization</p>
