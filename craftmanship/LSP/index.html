@@ -309,10 +309,10 @@ class ComplexNumber {
                         <pre><code contenteditable class="PHP">
 class RealNumber extends ComplexNumber {
 
-    public function __construct( RealNumber $realPart ) {
+    public function __construct( /* float */ $value ) {
         parent::__construct(
-            $realPart,
-            new RealNumber( /* 0 */ )
+            new RealNumber( $value ),
+            new RealNumber( 0 )
         );
     }
 
