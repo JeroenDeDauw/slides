@@ -28,6 +28,10 @@
             }
         </script>
 
+        <style>
+            .shadow { text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue; }
+        </style>
+
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -250,13 +254,13 @@ class Rectangle extends Square {
 				</section>
 
 				<section data-background="img/cat-wat.jpg" data-transition="linear" data-background-transition="slide">
-					<h3 style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">WTF?</h3>
+					<h3 class="shadow">WTF?</h3>
 
-					<p style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Squares are not rectangles?!</p>
+					<p class="shadow">Squares are not rectangles?!</p>
 
-					<p class="fragment" style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Yeah, they are rectangles</p>
+					<p class="fragment shadow">Yeah, they are rectangles</p>
 
-					<p class="fragment" style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Contradicting yourself are you?</p>
+					<p class="fragment shadow">Contradicting yourself are you?</p>
 				</section>
 
 				<section>
@@ -273,9 +277,9 @@ class Square {
 				</section>
 
 				<section data-background="img/cat-reflection.jpg" data-transition="linear" data-background-transition="slide">
-					<h3 style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Representatives</h3>
+					<h3 class="shadow">Representatives</h3>
 
-					<p class="fragment" style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Do not share the relationships of the things they represent</p>
+					<p class="fragment" class="shadow">Do not share the relationships of the things they represent</p>
 				</section>
 
 				<section>
@@ -360,8 +364,8 @@ function f( List&lt;Shape&gt; $list ) {
                     </section>
 				</section>
 
-                <section data-state="blackout">
-                    <img src="img/i-has-question-lolcat.jpg" />
+                <section data-background="img/cat-questions.jpg" data-transition="linear" data-background-transition="slide">
+                    <p class="shadow">Questions?</p>
                 </section>
 
                 <section data-state="blackout">
@@ -370,10 +374,12 @@ function f( List&lt;Shape&gt; $list ) {
                     <p><a href="http://www.objectmentor.com/resources/articles/lsp.pdf">LSP (Robert C Martin, pdf)</a></p>
                 </section>
 
-                <section data-state="blackout">
-                    <h3>Attribution</h3>
-                    <p>"WTF cat" by Bjorn Hermans, CC BY-NC-ND 2.0</p>
-                    <p>"Reflection cat" by Nikos Koutoulas, CC BY 2.0</p>
+                <section data-background="img/cattribution.jpg">
+                    <h3 class="shadow">Cattribution</h3>
+                    <p class="shadow">"WTF cat" by Bjorn Hermans, CC BY-NC-ND 2.0</p>
+                    <p class="shadow">"Reflection cat" by Nikos Koutoulas, CC BY 2.0</p>
+                    <p class="shadow">"Questions cat" by Linda Tanner, CC BY 2.0</p>
+                    <p class="shadow">"Attribution cat" by  Florencia Lewis, CC BY 2.0</p>
                 </section>
             </div>
 
