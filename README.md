@@ -12,12 +12,6 @@ Presentations about [software craftmanship](http://manifesto.softwarecraftsmansh
 
 Slides can be found in [/craftmanship](/craftmanship).
 
-### SOLID
-
-Presentations on the [SOLID principles](https://en.wikipedia.org/wiki/SOLID).
-
-Slides can be found in [/SOLID](/SOLID).
-
 ## SMWCon
 
 SMWCon, or the [Semantic MediaWiki Conference](https://semantic-mediawiki.org/wiki/SMWCon),
