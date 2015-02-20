@@ -7,6 +7,26 @@ for [SMWCon](https://semantic-mediawiki.org/wiki/SMWCon).
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 
+## SMWCon Fall 2014, Vienna
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014
+
+### Current status and next steps for SMW
+
+The yearly "what happened and what are we working on now" talk.
+
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014/Current_Status_and_Next_Steps_for_SMW)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2014fall/yearly/)
+* [Video](https://www.youtube.com/watch?v=a4WIPHeqCvU&list=PLv4ZNIEr6SqWjHJvegO9uLze1d7yy0jpk&index=10)
+
+### Wikibase, the Software behind Wikidata
+
+Introduction to the Wikibase software, including the data model, high level features and architecture.
+
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014/Wikibase,_the_Software_behind_Wikidata)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2014fall/wikibase/)
+* [Video](https://www.youtube.com/watch?v=H4GGd3UyA5E&list=PLv4ZNIEr6SqWjHJvegO9uLze1d7yy0jpk&index=8)
+
 ## SMWCon Fall 2013, Berlin
 
 https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013
