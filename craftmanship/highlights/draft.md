@@ -44,6 +44,7 @@
 	Dependency injection
 
 * Simple design is not simple
+	Effort is required to write easy to understand code
 
 * Yagni
 	Don't add complexity because you think you will need it
