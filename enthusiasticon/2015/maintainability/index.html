@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+    <!-- Reveal JS 3.1 -->
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Easy to maintain code</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+        <style>
+            .shadow { text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue; }
+        </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section data-background="img/cables.jpg" data-transition="linear">
+                    <h2><span class="shadow">Easy to maintain code</span></h2>
+
+                    <p class="shadow">
+                        <br />
+                        Created by
+                        <a href="https://github.com/JeroenDeDauw">Jeroen De Dauw</a>
+                        for <a href="https://wikimedia.de/">Wikimedia Deutschland</a>
+                        <br />
+                        Licensed <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+                    </p>
+
+                    <p class="shadow"><br /><a href="http://bit.ly/solid-lsp">
+                        http://bit.ly/solid-lsp
+                    </a></p>
+                </section>
+
+                <section>
+                    <p>Collection of pointers</p>
+                </section>
+
+                <section>
+                    <p>We want to go fast</p>
+
+                    <p class="fragment">
+                        <a href="http://martinfowler.com/bliki/TradableQualityHypothesis.html">Tradable quality hypothesis</a>
+                    </p>
+
+                    <p class="fragment">Write code for humans</p>
+
+                    <p class="fragment"><a href="http://manifesto.softwarecraftsmanship.org/">Software craftsmanship</a></p>
+                </section>
+
+                <section>
+                    <h3>Naming</h3>
+
+                    <p class="fragment">Reveal intent</p>
+
+                    <p class="fragment"><del>usrsbscr</del> &#10140; userSubscription</p>
+
+                    <p class="fragment">Avoid disinformation</p>
+
+                    <p class="fragment">Use one word per concept</p>
+
+                    <p class="fragment">Don't try to be clever/cute</p>
+                </section>
+
+                <section>
+                    <h3>Complexity</h3>
+
+                    <p class="fragment"><a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity">Cyclomatic complexity</a>, NPath complexity</p>
+
+                    <p class="fragment">Minimize scope, minimize state</p>
+                </section>
+
+                <section>
+                    <pre class="fragment"><code contenteditable class="PHP">
+function onFirstPost() {
+    $messageText = $this->getWelcomeMessageBody();
+    if ($this->addFooter()) {
+        $messageText.= $this->getWelcomeMessageFooter();
+    }
+    $this->emailer->send($messageText);
+
+    foreach ($this->getReviewers() as $reviewer) {
+        $this->reviewerNotifier->notify( $reviewer );
+    }
+}
+                    </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+function onFirstPost() {
+    $this->sendWelcomeMessage();
+    $this->notifyReviewers();
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Functions</h3>
+
+                    <ul>
+                        <li>Small, few ELOC</li>
+                        <li class="fragment">One level of abstraction</li>
+                        <li class="fragment">Little nesting</li>
+                        <li class="fragment">Single functional area</li>
+                        <li class="fragment">Minimize parameters</li>
+                        <li class="fragment">Command query separation</li>
+                    </ul>
+                </section>
+
+                <section>
+                   <pre><code contenteditable class="Java">
+public boolean set( String attributeName, String value );
+                   </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="Java">
+if ( set( "username", "NyanCat" ) )
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Minimize coupling</h3>
+
+                    <ul>
+                        <li>Number of classes bound to</li>
+                        <li class="fragment">Program against "interfaces"</li>
+                        <li class="fragment">Avoid inheritance</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Avoid global state</h3>
+
+                        <ul>
+                            <li>"Static" is global</li>
+                            <li class="fragment"><a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency injection</a></li>
+                        </ul>
+
+                        <pre class="fragment"><code contenteditable class="PHP">
+public function doStuff() {
+    FilesystemLogger::log( 'doing stuff on Caturday is madness' );
+    DataStore::getInstance()->saveObject( $object );
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                            <pre><code contenteditable class="PHP">
+function __construct( Logger $logger, DataStore $dataStore ) {
+    $this->logger = $logger;
+    $this->dataStore = $dataStore;
+}
+                            </code></pre>
+                            <pre><code contenteditable class="PHP">
+public function doStuff() {
+    $this->logger->log( 'doing stuff on Caturday is madness' );
+    $this->dataStore->saveObject( $object );
+}
+                            </code></pre>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h3>YAGNI</h3>
+                    <p><i>You Aren't Gonna Need It</i></p>
+                    <ul class="fragment">
+                        <li>cost of creation</li>
+                        <li>cost of delay</li>
+                        <li>cost of maintenance</li>
+                        <li>cost of correction</li>
+                    </ul>
+                    <p class="fragment">Applies to features, not ease of modification</p>
+                </section>
+
+                <section>
+                    <section>
+                        <p>Simple design is not simple</p>
+
+                        <div class="fragment">
+                            <blockquote>
+                                I'm sorry I had to write you such a long letter,<br />
+                                but I did not have time to write you a short one
+                            </blockquote>
+                            <p>-- Blaise Pascal</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <h3><a href="https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29">SOLID principles</a></h3>
+
+                    <ul>
+                        <li class="fragment">SRP: one responsibility per class</li>
+                        <li class="fragment">OCP: classes doing their job should not need change</li>
+                        <li class="fragment">LSP: able to provide a subtype instead of the type</li>
+                        <li class="fragment">ISP: client specific interfaces rather than general ones</li>
+                        <li class="fragment">DIP: program against "interfaces"</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3><a href="https://en.wikipedia.org/wiki/Software_design_pattern">Design patterns</a></h3>
+
+                    <p class="fragment">Reusable solution to common problem</p>
+
+                    <p class="fragment">Communication tool</p>
+                </section>
+
+                <section>
+                    <h3><a href="https://en.wikipedia.org/wiki/Multilayered_architecture">Layered design</a></h3>
+
+                    <img src="img/CleanArchitecture.jpg" width="700px"/>
+
+                    <small>Source: <a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture, Robert C Martin</a></small>
+
+                </section>
+
+                <section>
+                    <h3>Tests</h3>
+
+                    <p class="fragment">Testable code and good design go hand in hand</p>
+
+                </section>
+
+                <section>
+                    <h3>Avoid dogma</h3>
+
+                    <p class="fragment">Trade-offs</p>
+                    <p class="fragment">Transcend the rules</p>
+
+                </section>
+
+                <section data-background="img/cat-questions.jpg" data-transition="linear" data-background-transition="slide">
+                    <p class="shadow">Questions?</p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
