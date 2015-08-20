@@ -9,28 +9,34 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- For syntax highlighting -->
+		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<!-- Printing and PDF exports -->
 		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+        <style>
+            .shadow { text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue; }
+
+            .reveal .slides section .fragment.initially-hidden {
+                visibility: hidden;
+            }
+        </style>
 	</head>
 
 	<body>
@@ -39,14 +45,13 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
-                <section>
-                    <h2>Component design</h2>
-                    <p>
+                <section data-background="img/wall.jpg" data-transition="linear">
+                    <h2><span class="shadow">Component design</span></h2>
+                    <p class="shadow">
                         Getting cohesion and coupling right
                     </p>
 
-                    <p>
+                    <p class="shadow">
                         <br />
                         <small>
                             Created by
@@ -57,7 +62,7 @@
                         </small>
                     </p>
 
-                    <p><br /><a href="http://bit.ly/component-design">
+                    <p class="shadow"><br /><a href="http://bit.ly/component-design">
                         http://bit.ly/component-design
                     </a></p>
                 </section>
@@ -85,13 +90,13 @@
 
                     <section>
                         <h3>Benefits of components</h3>
-                        <p class="fragment roll-in highlight-current-green">Separation of concerns</p>
-                        <p class="fragment roll-in highlight-current-green">Reusability</p>
-                        <p class="fragment roll-in highlight-current-green">Encapsulation</p>
-                        <p class="fragment roll-in highlight-current-green">Substitutability</p>
-                        <p class="fragment roll-in highlight-current-green">Independently deployable</p>
-                        <p class="fragment roll-in highlight-current-green">Independently developable</p>
-                        <p class="fragment roll-in highlight-current-green">Divide and conquer</p>
+                        <p class="fragment highlight-current-green initially-hidden">Separation of concerns</p>
+                        <p class="fragment highlight-current-green initially-hidden">Reusability</p>
+                        <p class="fragment highlight-current-green initially-hidden">Encapsulation</p>
+                        <p class="fragment highlight-current-green initially-hidden">Substitutability</p>
+                        <p class="fragment highlight-current-green initially-hidden">Independently deployable</p>
+                        <p class="fragment highlight-current-green initially-hidden">Independently developable</p>
+                        <p class="fragment highlight-current-green initially-hidden">Divide and conquer</p>
                     </section>
 
                 </section>
@@ -117,16 +122,24 @@
 
                 <section>
                     <section>
-                        <h3>Coupling: Acyclic dependencies principle</h3>
+                        <h3>Coupling principles</h3>
+
+                        <p style="color:lightgreen">How should components relate to each other?</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Acyclic dependencies principle</h3>
 
                         <p class="fragment">Directed acyclic graph</p>
                     </section>
 
-                    <section data-state="alert">
+                    <section data-background="rgba( 200, 50, 30, 0.6 )">
                         <img src="img/adp-violation.gif" width="700px">
                     </section>
 
-                    <section data-state="soothe">
+                    <section data-background="rgba( 50, 200, 90, 0.4 )">
                         <img src="img/adp-compliance.gif" width="700px">
                     </section>
 
@@ -144,58 +157,80 @@
                 </section>
 
                 <section>
-                    <section data-state="blackout">
-                        <h3>Coupling: Stable-dependencies principle</h3>
+                    <section>
+                        <h3>Stable-dependencies principle</h3>
 
-                        <p class="fragment" style="color:lightgreen">Depend in the direction of stability</p>
+                        <p>Depend in the direction of stability</p>
+
+                        <p style="color:red" class="fragment">Very stable &#10140; somewhat stable &#10140; unstable</p>
+
+                        <p style="color:green" class="fragment">Unstable &#10140; somewhat stable &#10140; very stable</p>
                     </section>
                 </section>
 
                 <section>
-                    <section data-state="blackout">
-                        <h3>Coupling: Stable-abstractions principle</h3>
+                    <section>
+                        <h3>Stable-abstractions principle</h3>
 
                         <p class="fragment" style="color:lightgreen">A package should be as abstract as it is stable</p>
+
+                        <p class="fragment" style="color:lightgreen; font-size: large">Allows us to satisfy SDP while depending on abstractions and retaining changeability</p>
+
+                        <p class="fragment">Abstract = # concrete classes / # abstract classes</p>
+
+                        <p class="fragment">Stable = # dependents / # components</p>
                     </section>
 
                     <section>
-                        <img src="img/phpdepend-graph.png">
+                        <img src="img/phpdepend-graph.png" width="600px">
                     </section>
 
                     <section>
-                        <img src="img/abstractness-instability.png">
+                        <img src="img/abstractness-instability.png" width="600px">
                     </section>
                 </section>
 
                 <section>
-                    <section data-state="blackout">
-                        <h3>Cohesion: Reuse-release equivalence principle</h3>
+                    <section>
+                        <h3>Cohesion principles</h3>
 
-                        <p class="fragment roll-in highlight-current-blue">In order to be reused, a component must be released</p>
-                        <p class="fragment roll-in highlight-current-blue">Granule of release is granule of reuse</p>
-                        <p class="fragment roll-in highlight-current-blue">Either all reusable or not reusable</p>
+                        <p style="color:lightgreen">Which classes should go together in a component?</p>
                     </section>
                 </section>
 
                 <section>
-                    <section data-state="blackout">
-                        <h3>Cohesion: Common-closure principle</h3>
-                        <p class="fragment roll-in highlight-current-green">Classes that change for the same reason should be in the same component</p>
-                        <br />
-                        <p class="fragment roll-in highlight-current-green">SRP extended to components</p>
-                        <br />
-                        <p class="fragment roll-in highlight-current-green">Changes should not span packages, and affect everything in the package</p>
+                    <section>
+                        <h3>Reuse-release equivalence principle</h3>
+
+                        <p class="fragment initially-hidden highlight-current-blue">In order to be reused, a component must be released</p>
+                        <p class="fragment initially-hidden highlight-current-blue">Granule of release is granule of reuse</p>
+                        <p class="fragment initially-hidden highlight-current-blue">Either all reusable or not reusable</p>
                     </section>
                 </section>
 
                 <section>
-                    <section data-state="blackout">
-                        <h3>Cohesion: Common-reuse principle</h3>
-                        <p class="fragment roll-in highlight-current-blue">Classes that are used together should be in the same component</p>
+                    <section>
+                        <h3>Common-closure principle</h3>
+                        <p class="fragment initially-hidden highlight-current-green">Classes that change for the same reason should be in the same component</p>
+
+                        <p class="fragment initially-hidden highlight-current-green">
+                            Changes should not span packages<span class="fragment">,
+                            <span style="color: #17ff2e"><strong>and</strong> affect everything in the package</span></span>
+                        </p>
+                    </section>
+
+                    <section data-background="img/srp.jpg">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Common-reuse principle</h3>
+                        <p class="fragment initially-hidden highlight-current-blue">Classes that are used together should be in the same component</p>
                         <br />
-                        <p class="fragment roll-in highlight-current-blue">If you use one class from a package, you depend on them all</p>
+                        <p class="fragment initially-hidden highlight-current-blue">If you use one class from a package, you depend on them all</p>
                         <br />
-                        <p class="fragment roll-in highlight-current-blue">Like ISP</p>
+                        <p class="fragment initially-hidden highlight-current-blue">Like ISP</p>
                     </section>
 
                     <section>
@@ -205,13 +240,13 @@
 
                 <section>
                     <h3>Things not covered</h3>
-                    <p class="fragment roll-in highlight-current-green">Interplay of the forces<br /></p>
-                    <p class="fragment roll-in highlight-current-green">Evolution of components<br /></p>
-                    <p class="fragment roll-in highlight-current-green">Components in a layered system<br /></p>
+                    <p class="fragment initially-hidden highlight-current-green">Interplay of the forces<br /></p>
+                    <p class="fragment initially-hidden highlight-current-green">Evolution of components<br /></p>
+                    <p class="fragment initially-hidden highlight-current-green">Components in a layered system<br /></p>
                     <img src="img/contain-it.gif" class="fragment" width="400px" />
                 </section>
 
-                <section data-state="blackout">
+                <section>
                     <p>Recommended reading</p>
                     <br />
 
@@ -227,16 +262,16 @@
                     </a></p>
                 </section>
 
-            </div>
+			</div>
 
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 
-			// Full list of configuration options available here:
+			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
@@ -244,25 +279,33 @@
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
+				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 
 		</script>
+
+        <script>
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                if ( event.fragment.classList.contains( 'initially-hidden' ) ) {
+                    event.fragment.style.visibility = 'visible';
+                }
+            } );
+            Reveal.addEventListener( 'fragmenthidden', function( event ) {
+                if ( event.fragment.classList.contains( 'initially-hidden' ) ) {
+                    event.fragment.style.visibility = 'hidden';
+                }
+            } );
+        </script>
 
 	</body>
 </html>
