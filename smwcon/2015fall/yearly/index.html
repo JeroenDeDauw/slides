@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Yearly SMW overview</title>
+
+		<meta name="description" content="Yearly SMW overview for SMWCon Fall 2014">
+		<meta name="author" content="Jeroen De Dauw">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Yearly SMW overview</h2>
+					<p>
+						Presentation by <a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a><br /><br />
+						bit.ly/smw-2015<br /><br />
+						<a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2015/Current_Status_and_Next_Steps_for_Semantic_MediaWiki">SMWCon Fall 2015, Barcelona</a>
+					</p>
+
+					<br />
+				</section>
+
+				<section>
+					<p>Attendance sponsored by <a href="https://wikimedia.de">Wikimedia Deutschland</a></p>
+					<img src="img/wmde.svg" alt="Y U NO LOAD" style="background: #ffffff;" height="300px" />
+				</section>
+
+				<section data-transition="linear">
+					<img src="img/statistics_cat.jpg" alt="Y U NO LOAD" />
+				</section>
+
+				<section>
+					<section>
+						<h3>Codebase</h3>
+
+						<p class="fragment">~25 developers last year, ~90 total</p>
+
+						<p class="fragment">
+							~1500 code changes (up ~0%, ~50%)
+							<img src="img/commit_graph.jpg" alt="Y U NO LOAD">
+						</p>
+					</section>
+
+					<section>
+						<h3>Semantic Versioning standard</h3>
+
+						<p>
+							<span style="color:#ffcccc">MAJOR</span>.<span style="color:#ccffcc">MINOR</span>.<span style="color:#ccccff">PATCH</span>
+							<br />
+							<span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">3</span>.<span style="color:#ccccff">0</span>
+							<br />
+							<span class="fragment">
+								<span style="color:#ffcccc">BREAKS</span><span class="fragment">.<span style="color:#ccffcc">FEATURES</span></span><span class="fragment">.<span style="color:#ccccff">FIXES</span></span>
+							</span>
+						</p>
+
+						<p class="fragment">Want only bugfixes? <span class="fragment">&#10140; <span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">3</span>.<span style="color:#ccccff">x</span></span></p>
+						<p class="fragment">New features but no b/c breaks? <span class="fragment">&#10140; <span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">x</span></span></p>
+
+						<p class="fragment"><a href="http://semver.org/">semver.org</a></p>
+					</section>
+
+					<section>
+						<h3>Releases</h3>
+
+						<ul>
+							<li>2.1.0 <span style="color:gray">(+ 2.1.1, 2.1.2 & 2.1.3)</span></li>
+							<li>2.2.0 <span style="color:gray">(+ 2.2.1, 2.2.2 & 2.2.3)</span></li>
+							<li>2.3.0</li>
+						</ul>
+						<p>3 feature releases + 6 bugfix releases</p>
+					</section>
+
+					<section>
+						<h3>Contributors</h3>
+
+						<ul>
+							<li>MWJames</li>
+							<li>Jeroen De Dauw</li>
+							<li>Karsten Hoffmeyer (kghbln)</li>
+							<li>Felipe de Jong (jongfeli)</li>
+							<li>Vitaliy Filippov (vitalif)</li>
+							<li>Chris Koerner</li>
+							<li>Yaron Koren</li>
+							<li>Stephan Gambke</li>
+							<li>Mark A. Hershberger</li>
+							<li>paladox</li>
+							<li>Hermann Schwärzler</li>
+							<li>Amir E. Aharoni</li>
+						</ul>
+
+						<ul>
+							<li>Joel K. Pettersson</li>
+							<li>Purodha</li>
+							<li>umherirrender</li>
+							<li>Kunal Mehta (legoktm)</li>
+							<li>paladox2015</li>
+							<li>Arek Korbik</li>
+							<li>Km4tx</li>
+							<li>Joel K. Pettersson</li>
+							<li>Niklas Laxström</li>
+							<li>TranslateWiki.net</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-transition="none">
+					<section>
+						<h3>Quality assurance</h3>
+						<img src="img/ops_problem.jpg" />
+					</section>
+
+					<section>
+						<h3>Tests</h3>
+						<p>
+							<span style="color:#ff1717">0%</span>
+							<span class="fragment">&#10140; <span style="color:#ffff17">~20%</span></span>
+							<span class="fragment">&#10140; <span style="color:#66cc22">66%</span></span>
+							<span class="fragment">&#10140; <span style="color:#17ff2e">77%</span></span>
+						</p>
+						<img src="img/smw-tests.jpg" class="fragment" />
+					</section>
+
+					<section>
+							<img src="img/travis_history.png" alt="Y U NO LOAD">
+					</section>
+
+					<section data-transition="linear">
+						<img src="img/travis_old.jpeg" alt="Y U NO LOAD">
+					</section>
+
+					<section data-transition="linear">
+						<img src="img/travis_build.png" alt="Y U NO LOAD">
+					</section>
+
+					<section data-transition="linear" data-background-video="img/all-kittens-responding-nominally.webm">
+						<p>All kittens responding nominally</p><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					</section>
+
+					<section data-transition="none" data-background="img/scrutinizer_stats.png">
+						<img src="img/scrutinizer_rating.jpg" alt="Y U NO LOAD">
+					</section>
+				</section>
+
+				<section>
+					<h3>Community</h3>
+					<p class="fragment"><span style="color:#17ff2e">~1500</span> mails on <a href="http://sourceforge.net/p/semediawiki/mailman/semediawiki-user/">semediawiki-user</a></p>
+					<p class="fragment"><span style="color:#17ff2e">~200</span> mails on <a href="http://sourceforge.net/p/semediawiki/mailman/semediawiki-devel/">semediawiki-devel</a></p>
+					<p class="fragment"><span style="color:#17ff2e">~5500</span> edits and <span style="color:#17ff2e">~1250</span> new pages on <a href="https://semantic-mediawiki.org/">semantic-mediawiki.org</a></p>
+					<p class="fragment">
+						<span style="color:#17ff2e">174</span> issues
+						<span class="fragment">, including <span style="color:#17ff2e">&gt;52</span> bugs and <span style="color:#17ff2e">&gt;21</span> feature requests</span></p>
+				</section>
+
+				<section>
+					<section>
+						<h3>SMW 2.1</h3>
+
+						<img src="img/smw2.2.jpg" class="fragment" />
+					</section>
+
+					<section data-background="img/SemSearch1.png" data-transition="linear" data-background-transition="slide"></section>
+					<section data-background="img/SemSearch2.png" data-transition="linear" data-background-transition="slide"></section>
+				</section>
+
+				<section>
+					<section>
+						<h3>SMW 2.2</h3>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>SMW 2.3</h3>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#006650" data-transition="linear" data-background-transition="slide">
+						<h3>Contributing to the project</h3>
+
+						<ul>
+							<li class="fragment roll-in highlight-current-green">File bugs you find and enhancements you want</li>
+							<li class="fragment roll-in highlight-current-green">Become part of the testers group</li>
+							<li class="fragment roll-in highlight-current-green">Add or enhance documentation</li>
+							<li class="fragment roll-in highlight-current-green">Add or enhance translations</li>
+							<li class="fragment roll-in highlight-current-green">Answer questions and participate in discussions</li>
+							<li class="fragment roll-in highlight-current-green">Code review</li>
+							<li class="fragment roll-in highlight-current-green">Contribute code (correctly)</li>
+						</ul>
+
+						<p class="fragment" style="color:#17ff2e"><br />Small and simple contributions are much appreciated</p>
+					</section>
+				</section>
+
+				<section data-background="#4d7e65" data-transition="linear" data-background-transition="slide">
+					<p>
+						<img src="img/cat_question2.jpg" />
+
+						<br /><br />bit.ly/2015-smw<br /><br />
+					</p>
+				</section>
+
+				<section data-transition="linear">
+					<h3>Special:Links</h3>
+					<ul>
+						<li><a href="http://bit.ly/smw-2014">View slides bit.ly/smw-2015</a></li>
+						<li><a href="https://github.com/JeroenDeDauw/slides/">Slides on GitHub</a> (CC BY-SA 3.0 licensed)</li>
+						<li><a href="https://semantic-mediawiki.org">semantic-mediawiki.org</a></li>
+						<li><a href="https://twitter.com/#!/SemanticMW">@SemanticMW on Twitter</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Special:Attribution</h3>
+					<ul>
+						<li>The awesome work presented: <a href="https://semantic-mediawiki.org/wiki/Help:SMW_Project">SMW community</a></li>
+						<li>Slides: CC BY-SA 3.0, <a href="https://twitter.com/#!/JeroenDeDauw">Jeroen De Dauw</a></li>
+						<li>Slide engine: <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>, Copyright (C) 2015 Hakim El Hattab</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				width: 970,
+
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
