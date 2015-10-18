@@ -29,6 +29,12 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<style>
+			.shadow {
+				text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;
+			}
+		</style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -198,17 +204,31 @@
 
 					<section data-background="img/SemSearch1.png" data-transition="linear" data-background-transition="slide"></section>
 					<section data-background="img/SemSearch2.png" data-transition="linear" data-background-transition="slide"></section>
+
+					<section>
+						<p>The SPARQLStore now supports concept queries (#696) and regex like queries ([[Url::~http://*query=*]] OR [[Url::~*ccc*]]) for Page and URL values (#679).</p>
+					</section>
+
+					<section>
+						<p>Postgres fully supported</p>
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h3>SMW 2.2</h3>
 					</section>
+
+					<section>
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h3>SMW 2.3</h3>
+					</section>
+
+					<section>
 					</section>
 				</section>
 
@@ -240,12 +260,10 @@
 					</section>
 				</section>
 
-				<section data-background="#4d7e65" data-transition="linear" data-background-transition="slide">
-					<p>
-						<img src="img/cat_question2.jpg" />
+				<section data-background="img/cat-questions.jpg" data-transition="linear" data-background-transition="slide">
+					<br /><br /><br /><br /><br /><p class="shadow">Questions?</p><br /><br /><br /><br />
 
-						<br /><br />bit.ly/2015-smw<br /><br />
-					</p>
+					<p class="shadow">bit.ly/smw-2015</p>
 				</section>
 
 				<section data-transition="linear">
