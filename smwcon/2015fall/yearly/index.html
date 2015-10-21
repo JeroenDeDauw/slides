@@ -33,6 +33,9 @@
 			.shadow {
 				text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;
 			}
+			table.no-bottom-border td, table.no-bottom-border th {
+				border-bottom: 0;
+			}
 		</style>
 
 		<!--[if lt IE 9]>
@@ -197,7 +200,9 @@
 					</section>
 
 					<section>
-						<img src="img/smw2.2.jpg" class="fragment" />
+						<img src="img/smw2.2.jpg" class="fragment" data-fragment-index="1" />
+						<br />
+						<img src="img/frisbee.gif" class="fragment" data-fragment-index="1" />
 					</section>
 				</section>
 
@@ -261,7 +266,7 @@
 
 				<section>
 					<section>
-						<img src="img/instant_queries.png" height="250"  class="fragment" alt="Y U NO LOAD" />
+						<img src="img/instant_queries.png" height="250px"  class="fragment" alt="Y U NO LOAD" />
 
 						<table class="fragment">
 							<tr>
@@ -274,7 +279,7 @@
 					<section>
 						<p>Experimental feature added in SMW 2.3</p>
 
-						<p>Video be here https://www.youtube.com/watch?v=rXUPwmu5xCw</p>
+						<iframe width="700" height="525" src="https://www.youtube.com/embed/rXUPwmu5xCw" frameborder="0" allowfullscreen></iframe>
 					</section>
 				</section>
 
@@ -285,8 +290,43 @@
 
 				<section>
 					<section>
-						SMW 3.0: MW, PHP
-						Features?
+						<h3>SMW 2.4 & 3.0</h3>
+					</section>
+
+					<section>
+						<p>MediaWiki compatibility</p>
+
+						<table style="font-size: 30px;" class="no-bottom-border">
+							<tr><th>SMW 1.9</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.0</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td></td><td></td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.3</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.4</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td></td></tr>
+							<tr class="fragment"><th>SMW 3.0</th><td style="color: #17ff2e"></td><td></td><td></td><td></td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td style="color: #17ff2e">1.27</td></tr>
+						</table>
+					</section>
+
+					<section>
+						<p>PHP in SMW 3.x</p>
+
+						<ul>
+							<li>Full PHP 7 support</li>
+							<li class="fragment">Drop support for EOL PHP versions in SMW 3.0: 5.3 and 5.4</li>
+							<li class="fragment">Possibly drop fix-only PHP versions: 5.5</li>
+						</ul>
+
+						<p>Removals in SMW 3.x</p>
+
+						<ul>
+							<li>"type" namespace (deprecated in SMW 1.6)</li>
+							<li>Maintenance script aliases such as SMW_setup.php and SMW_refreshData.php (renamed in 2.0)</li>
+							<li>[possibly] Special:SemanticStatistics (Special:Statistics since 1.9)</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>New features</p>
+						<p class="fragment">New quantity type?</p>
+						<p class="fragment">Multilingual support??</p>
 					</section>
 				</section>
 
@@ -299,7 +339,8 @@
 
 					<section data-background-video="img/why-u-no-play.webm">
 						<ul>
-							<li class="fragment shadow">File bugs you find and enhancements you want</li>
+							<li class="fragment shadow">Create feature requests</li>
+							<li class="fragment shadow">File bugs you encounter</li>
 							<li class="fragment shadow">Become part of the testers group</li>
 							<li class="fragment shadow">Add or enhance documentation</li>
 							<li class="fragment shadow">Add or enhance translations</li>
