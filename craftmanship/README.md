@@ -30,4 +30,5 @@ Why static code is generally harmful and should be rarely used.
 
 A simple principle that aids in avoiding common inheritance related pitfalls.
 
+* Read [the abstract](lsp/README.md)
 * View [the slides](http://bit.ly/solid-lsp)
