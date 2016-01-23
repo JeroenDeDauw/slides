@@ -3,7 +3,7 @@
 Everyone knows how to do inheritance. You create an interface or a base class and implement it or derive from it. Done.
 
 Good software design is however not quite that easy. When using inheritance, a number of basic principles
-should be held into account. Favouring of composition over inheritance, not using inheritance for code
+should be held into account. Favouring composition over inheritance, not using inheritance for code
 reuse and using narrow, well segregated, interfaces come to mind. Even though amongst this list of
 fundamentals and critical in nature, the Liskov Substitution Principle is not well known by many developers.
 
