@@ -1,4 +1,4 @@
-# SOLID INHERITANCE: The Liskov Substitution Principle
+# The Liskov Substitution Principle
 
 Everyone knows how to do inheritance. You create an interface or a base class and implement it or derive from it. Done.
 
@@ -36,6 +36,8 @@ The presentation contains high quality slides with lots of long complicated sent
 proofs, to ensure sufficient seriousness.
 
 <img src="img/preview/lsp0.PNG" width="400px" />
+
 <img src="img/preview/lsp1.PNG" width="400px" />
+
 <img src="img/preview/lsp2.PNG" width="400px" />
 
