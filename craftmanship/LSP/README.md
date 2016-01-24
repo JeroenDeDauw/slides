@@ -35,9 +35,9 @@ The covered topics include:
 The presentation contains high quality slides with lots of long complicated sentences, citations and detailed
 proofs, to ensure sufficient seriousness.
 
-<img src="img/preview/lsp0.PNG" width="400px" />
+<img src="img/preview/lsp0.PNG" width="600px" />
 
-<img src="img/preview/lsp1.PNG" width="400px" />
+<img src="img/preview/lsp1.PNG" width="600px" />
 
-<img src="img/preview/lsp2.PNG" width="400px" />
+<img src="img/preview/lsp2.PNG" width="600px" />
 
