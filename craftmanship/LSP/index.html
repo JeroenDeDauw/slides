@@ -76,27 +76,72 @@
 
 				</section>
 
-				<section data-state="soothe">
-					<h3>Or in understandable format</h3>
-					<img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
-					<aside class="notes">
-						* Subtypes can be used as parent types<br />
-						* User can use Sub without knowing it is not Type
-					</aside>
+				<section>
+                    <section data-state="soothe">
+                        <img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
+
+                        <p class="fragment">
+                            Users expecting a Type can be given a Subtype<span class="fragment">,<br />
+                            and then use it as a Type without blowing up</span>
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <p>All methods need to be there</p>
+
+                        <pre><code contenteditable class="PHP">
+interface Logger {
+    public function log( $stuff );
+    public function notice( $stuff );
+    public function warning( $stuff );
+}
+                        </code></pre>
+
+                        <pre class="fragment"><code contenteditable class="PHP">
+class FooBarLogger implements Logger {
+    public function log( $stuff ) {}
+    public function notice( $stuff ) {}
+    // Who needs warnings anyway?
+}
+                        </code></pre>
+
+                        <pre class="fragment"><code contenteditable class="PHP">
+function doStuff( Logger $logger ) {
+    $logger->warning( 'Stuff is being done. Slack is decreasing' );
+}
+
+doStuff( new FooBarLogger() ); // boom
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <p>Contract goes beyond type</p>
+
+                        <pre class="fragment"><code contenteditable class="PHP">
+interface Logger {
+    public function log( $stuff );
+    public function notice( $stuff );
+    public function warning( $stuff );
+}
+                        </code></pre>
+
+                        <pre class="fragment"><code contenteditable class="PHP">
+class TwitterLogger implements Logger {
+    public function log( $stuff ) {
+        if ( strlen( $stuff ) > 140 ) { throw new NotLspException(); }
+    }
+    // ...
+}
+                        </code></pre>
+
+                       <ul class="fragment">
+                           <li>Input requirements need to be at least as general</li>
+                           <li class="fragment">Output requirements need to be at least as strict</li>
+                       </ul>
+                    </section>
+
 				</section>
-
-                <section>
-                    <h2>Not just inheritance</h2>
-                    <img width="320" height="299" src="img/subtype.svg" alt="Y U NO LOAD">
-
-                    <aside class="notes">
-                        * Static inheritance needed for polymorphism<br />
-                        * Duck typing - message passing
-                    </aside>
-
-                    <p>Static inheritance</p>
-                    <p>Duck typing</p>
-                </section>
 
 				<section>
 					<h2>Obvious!</h2>
@@ -125,14 +170,15 @@ class Rectangle {
 				</section>
 
 				<section>
-					<h3>Square</h3>
+					<h3>Adding Square</h3>
 					<p class="fragment">What is the relationship?</p>
 					<p class="fragment">Square <strong>is a</strong> rectangle</p>
 					<p class="fragment">=> inheritance!</p>
+                    <img src="img/lsp-square-client.jpg" class="fragment">
 				</section>
 
 				<section>
-					<h3>Too many fields</h3>
+					<h3>Implementation</h3>
 
 					<pre><code contenteditable class="PHP">
 class Rectangle {
@@ -152,9 +198,11 @@ class Rectangle {
 class Square extends Rectangle {}
 					</code></pre>
 
-					<p class="fragment">Let's not care, enough memory anyway!</p>
-					<p class="fragment">But what about <code>setHeight</code> and <code>setWidth</code>?</p>
-					<p class="fragment">Width and height need to be the same</p>
+					<p class="fragment">Too many fields<span class="fragment"> - whatever, enough memory anyway!</span></p>
+					<p class="fragment">
+                        But what about <code>setHeight</code> and <code>setWidth</code>?<br />
+                        Width and height need to be the same
+                    </p>
 				</section>
 
 				<section data-state="soothe">
@@ -179,22 +227,20 @@ class Square extends Rectangle {
 				</section>
 
 				<section data-state="alert">
-					<p><code>$rectangle->setHeight();</code></p>
-
 					<pre class="fragment"><code contenteditable class="PHP">
-function f( Rectangle $r ) {
-    $r->setWidth( 10 );
-    $r->setHeight( 5 );
+function f( Rectangle $rectangle ) {
+    $rectangle->setWidth( 10 );
+    $rectangle->setHeight( 5 );
 
-    assert( $r->getArea() === 50 ); // Boom
+    assert( $rectangle->getArea() === 50 );
 }
-
-$a = new Square();
-f( $a );
+                    </code></pre>
+                    <pre class="fragment"><code contenteditable class="PHP">
+f( new Square() ); // Boom
 					</code></pre>
 
 					<p class="fragment">Have fun debugging!</p>
-					<p class="fragment">Hide if someone else finds this in your code</p>
+                    <blockquote class="fragment">Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live. --John Woods</blockquote>
 					<p class="fragment">How to fix this mess?</p>
 				</section>
 
@@ -214,6 +260,8 @@ function f( Rectangle $r ) {
 
 					<p class="fragment">OCP violation!</p>
 					<p class="fragment"><code>f</code> now dependent on <code>Square</code></p>
+					<p class="fragment">Shotgun Surgery</p>
+					<p class="fragment">What are boundaries?</p>
 				</section>
 
 				<section>
@@ -221,18 +269,19 @@ function f( Rectangle $r ) {
 
 					<p>Let <code>Rectangle</code> extend <code>Square</code></p>
 
-					<pre><code contenteditable class="PHP">
+					<pre class="fragment"><code contenteditable class="PHP">
 class Square {
     private $side;
 }
-
+                    </code></pre>
+                    <pre class="fragment"><code contenteditable class="PHP">
 class Rectangle extends Square {
     private $otherSide;
 }
 					</code></pre>
 
-					<p class="fragment"><code>$s->setSide( 5 );</code></p>
-					<p class="fragment"><code>assert( $s->getArea() === 25 );</code></p>
+					<p class="fragment"><code>$square->setSide( 5 );</code></p>
+					<p class="fragment"><code>assert( $square->getArea() === 25 );</code></p>
 				</section>
 
 				<section>
@@ -309,7 +358,7 @@ class ComplexNumber {
                         <pre><code contenteditable class="PHP">
 class RealNumber extends ComplexNumber {
 
-    public function __construct( /* float */ $value ) {
+    public function __construct( float $value ) {
         parent::__construct(
             new RealNumber( $value ),
             new RealNumber( 0 )
@@ -323,14 +372,13 @@ class RealNumber extends ComplexNumber {
 
 				<section>
                     <section>
-                        <h3>More craziness</h3>
-
                         <p>Class <span style="color:lightblue">T</span></p>
                         <p>Class <span style="color:lightgreen">S</span> extends <span style="color:lightblue">T</span></p>
 
                         <p class="fragment">List&lt;<span style="color:lightgreen">S</span>&gt; is not a subtype of List&lt;<span style="color:lightblue">T</span>&gt;</p>
 
-                        <p class="fragment">Cannot pass list&lt;Square&gt; to function expecting list&lt;Shape&gt;</p><br />
+                        <br />
+                        <p class="fragment">Cannot pass list&lt;<span style="color:lightgreen">Square</span>&gt; to function expecting list&lt;<span style="color:lightblue">Shape</span>&gt;</p><br />
 
                     </section>
                     <section>
