@@ -297,13 +297,13 @@ class Rectangle extends Square {
 				</section>
 
 				<section data-background="img/cat-wat.jpg" data-transition="linear" data-background-transition="slide">
-					<h3 style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">WTF?</h3>
+					<h3><span class="shadow">WTF?</span></h3>
 
-					<p class="shadow">Squares are not rectangles?!</p>
+					<p class="shadow" style="font-size: 48px">Squares are not rectangles?!</p>
 
-					<p class="fragment shadow">Yeah, they are rectangles</p>
+					<p class="fragment shadow" style="font-size: 48px">Yeah, they are rectangles</p>
 
-					<p class="fragment shadow">Contradicting yourself are you?</p>
+					<p class="fragment shadow" style="font-size: 48px">Contradicting yourself are you?</p>
 				</section>
 
 				<section>
@@ -320,9 +320,9 @@ class Square {
 				</section>
 
 				<section data-background="img/cat-reflection.jpg" data-transition="linear" data-background-transition="slide">
-					<h3 style="text-shadow: 1px 1px 3px #000, 4px 4px 5px darkblue;">Representatives</h3>
+					<h3><span class="shadow">Representatives</span></h3>
 
-					<p class="fragment shadow">Do not share the relationships of the things they represent</p>
+					<p class="fragment shadow" style="font-size: 37px">Do not share the relationships of the things they represent</p>
 				</section>
 
                 <section>
@@ -331,7 +331,7 @@ class Square {
                         <p class="fragment">Real number <strong>is a</strong> complex number</p>
                         <p class="fragment">Complex number <strong>contains</strong> two real number</p>
     
-                        <p class="fragment">Makes perfect sense.<br />Free beer for who implements this and successfully instantiates a complex number</p>
+                        <p class="fragment"><br />Makes perfect sense.<br />Free beer for who implements this and successfully instantiates a complex number</p>
                     </section>
 
                     <section>
@@ -378,9 +378,11 @@ class RealNumber extends ComplexNumber {
                         <p class="fragment">List&lt;<span style="color:lightgreen">S</span>&gt; is not a subtype of List&lt;<span style="color:lightblue">T</span>&gt;</p>
 
                         <br />
-                        <p class="fragment">Cannot pass list&lt;<span style="color:lightgreen">Square</span>&gt; to function expecting list&lt;<span style="color:lightblue">Shape</span>&gt;</p><br />
-
+                        <p class="fragment">
+                            Cannot pass list&lt;<span style="color:lightgreen">Square</span>&gt; to function expecting list&lt;<span style="color:lightblue">Shape</span>&gt;
+                        </p>
                     </section>
+
                     <section>
                         <pre><code contenteditable class="PHP">
 $squares = new List&lt;Square&gt;();
@@ -401,7 +403,7 @@ function f( List&lt;Shape&gt; $list ) {
 				</section>
 
                 <section data-background="img/cat-questions.jpg" data-transition="linear" data-background-transition="slide">
-                    <p class="shadow">Questions?</p>
+                    <p class="shadow" style="font-size: 70px">Questions?</p>
                 </section>
 
                 <section data-state="blackout">
