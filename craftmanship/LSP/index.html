@@ -281,8 +281,13 @@ class Rectangle extends Square {
 }
 					</code></pre>
 
-					<p class="fragment"><code>$square->setSide( 5 );</code></p>
-					<p class="fragment"><code>assert( $square->getArea() === 25 );</code></p>
+                    <pre class="fragment"><code contenteditable class="PHP">
+$square->setSide( 5 );
+                    </code></pre>
+
+                    <pre class="fragment"><code contenteditable class="PHP">
+assert( $square->getArea() === 25 ); // boom if $square instanceof Rectangle
+                    </code></pre>
 				</section>
 
 				<section>
@@ -317,7 +322,7 @@ class Square {
 }
 					</code></pre>
 
-					<p class="fragment">It is a code <strong>representing</strong> a square</p>
+					<p class="fragment">It is code that <strong>represents</strong> a square</p>
 				</section>
 
 				<section data-background="img/cat-reflection.jpg" data-transition="linear" data-background-transition="slide">
