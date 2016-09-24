@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Yearly overview about Semantic MediaWiki, SMWCon Fall 2016</title>
+		<title>Yearly overview of Semantic MediaWiki, SMWCon Fall 2016</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -35,15 +35,11 @@
 			<div class="slides">
 
 				<section>
-					<h2><span class="shadow">Yearly overview about Semantic MediaWiki</span></h2>
+					<h2><span class="shadow">Yearly overview of Semantic MediaWiki</span></h2>
 					<p class="shadow">
 						Presentation by <a href="https://twitter.com/kghbln">Karsten Hoffmeyer</a> and <a href="https://www.entropywins.wtf">@JeroenDeDauw</a><br /><br />
 						<a href="https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2016/Current_Status_and_Next_Steps_for_Semantic_MediaWiki">SMWCon Fall 2016, Frankfurt</a>
 					</p>
-				</section>
-
-				<section data-transition="linear">
-					<img src="img/moar-cats.gif" alt="Y U NO LOAD" class="fragment" />
 				</section>
 
 				<section data-transition="linear">
@@ -58,7 +54,7 @@
 						<p class="fragment"><span style="color:#17ff2e">~100</span> mails on <a href="http://sourceforge.net/p/semediawiki/mailman/semediawiki-devel/">semediawiki-devel</a></p>
 						<p class="fragment"><span style="color:#17ff2e">~5500</span> edits and <span style="color:#17ff2e">~1300</span> new pages on <a href="https://semantic-mediawiki.org/">semantic-mediawiki.org</a></p>
 						<p class="fragment"><span style="color:#17ff2e">~200</span> tickets on GitHub</p>
-						<p class="fragment">including <span style="color:#17ff2e">~50</span> reports and <span style="color:#17ff2e">~30</span> feature requests</p>
+						<p class="fragment">including <span style="color:#b9ffc0">~50</span> bug reports and <span style="color:#b9ffc0">~30</span> feature requests</p>
 					</section>
 
 					<section>
@@ -114,7 +110,7 @@
 					<section>
 						<h3>Codebase cont.</h3>
 
-						<p><span style="color:#17ff2e">a lot of environments get tested</span></p>
+						<p><span style="color:#17ff2e">A lot of different environments get tested continuously</span></p>
 					
 						<p class="fragment">
 							<img src="img/tests_pic.png" alt="Travis integration tests">
@@ -145,7 +141,7 @@
 
 						<ul>
 							<li><span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">3</span>.<span style="color:#ccccff">0</span> <span style="color:gray">(+ 2.3.1)</span></li>
-							<li><span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">4</span>.<span style="color:#ccccff">0</span> <span style="color:gray">(+ 2.4.1)</span></li>
+							<li><span style="color:#ffcccc">2</span>.<span style="color:#ccffcc">4</span>.<span style="color:#ccccff">0</span> <span style="color:gray">(+ 2.4.1, 2.4.2?)</span></li>
 						</ul>
 					</section>
 
@@ -163,7 +159,7 @@
 							<li>Stephan Gambke</li>
 							<li>Siebrand Mazeland</li>
 							<li>Kunal Mehta</li>
-							<li>paladox</li>
+							<li>Thomas Mulhall</li>
 							<li>Hangya</li>
 							<li>Cindy Cicalese</li>
 						</ul>
@@ -202,7 +198,7 @@
 					<h3>Platform compatibility</h3>
 
 					<ul>
-						<li class="fragment">Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7.0</span> <span style="color:gray">(SMW 2.4)</span></li>
+						<li class="fragment">Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7.0</span></li>
 					</ul>
 				</section>
 
@@ -221,7 +217,7 @@
 
 				<section>
 					<section>
-						<h3 style="color: #17ff2e">Language support features</h3>
+						<h3><span style="color: #17ff2e">Language support features</span></h3>
 
 						<p style="text-align: left">SMW was made more responsive to multiple language environments including:</p>
 
@@ -237,7 +233,7 @@
 					</section>
 
 					<section>
-						<h3 style="color: #17ff2e">Language support features cont.</h3>
+						<h3><span style="color: #17ff2e">Language support features cont.</span></h3>
 
 						<ul>
 							<li class="fragment" style="font-size: 90%">Adaptive formatting for Number, Boolean and Date values using the #LOCL formatter</li>
@@ -246,7 +242,7 @@
 					</section>
 
 					<section>
-						<h3 style="color: #17ff2e">Various other features</h3>
+						<h3><span style="color: #17ff2e">Various other features</span></h3>
 
 							<p class="fragment">Simplified navigation and extended "Special:Ask" to provide quick links for immediate result download<br />
 								<img src="img/specialask.png" alt="Sepcial Ask showning quick links">
@@ -262,34 +258,34 @@
 					</section>
 
 					<section>
-						<h3 style="color: #17ff2e">Various other features cont.</h3>
+						<h3><span style="color: #17ff2e">Various other features cont.</span></h3>
 
-							<p class="fragment">Enhanced date, time and number display formatting<br />
+							<p class="fragment" style="text-align: left">Enhanced date, time and number display formatting<br />
 								<ul>
-									<li class="fragment" style="font-size: 90%">"#LOCL" formatter (predefined language specific formatting)</li>
-									<li class="fragment" style="font-size: 90%">"#-F[...]" formatter (individual free formatting) as in |?Has date#-F[F j, Y]</li>
-									<li class="fragment" style="font-size: 90%">Possibility to specify display precision for numeric values (decimals) as in |?Has number#-p2</li>
+									<li class="fragment" style="font-size: 90%">#LOCL formatter (predefined language specific formatting)</li>
+									<li class="fragment" style="font-size: 90%">#-F[...] formatter (individual free formatting) as in<br />|?Has date#-F[F j, Y]</li>
+									<li class="fragment" style="font-size: 90%">Possibility to specify display precision for numeric values (decimals) as in<br />|?Has number#-p2</li>
 								</ul>
 							</p>
 					</section>
 
 					<section>
-						<h3 style="color: #17ff2e">Various other features cont.</h3>
+						<h3><span style="color: #17ff2e">Various other features cont.</span></h3>
 
-							<p class="fragment">Improved selection of pages
+							<p class="fragment" style="text-align: left">Improved selection of pages
 								<ul>
-									<li class="fragment" style="font-size: 90%">Comparator support for single value queries (&sim; and !&sim;) as in {{#ask: [[&sim;Foo/*]] ... }}</li>
-									<li class="fragment" style="font-size: 90%">Range query support (&gt; and &lt;) as in {{#ask: [[&gt; AAA]] [[&lt;AAD]] ... }}</li>
+									<li class="fragment" style="font-size: 90%">Comparator support for single value queries (&sim; and !&sim;) as in<br />{{#ask: [[&sim;Foo/*]] ... }}</li>
+									<li class="fragment" style="font-size: 90%">Range query support (&gt; and &lt;) as in<br />{{#ask: [[&gt; AAA]] [[&lt;AAD]] ... }}</li>
 								</ul>
 							</p>
 					</section>
 
 					<section>
-						<h3 style="color: #17ff2e">Various other features cont.</h3>
+						<h3><span style="color: #17ff2e">Various other features cont.</span></h3>
 
-							<p class="fragment">Improved handling of outdated entities (plays with "rebuildData.php" --shallow-update parameter)</p>
+							<p class="fragment" style="text-align: left">Improved handling of outdated entities (plays with "rebuildData.php" --shallow-update parameter)</p>
 
-							<p class="fragment">More parameters to the "rebuildData.php" script:<br />
+							<p class="fragment" style="text-align: left">More parameters to the "rebuildData.php" script:<br />
 								<ul>
 									<li class="fragment" style="font-size: 90%">--ignore-exceptions</li>
 									<li class="fragment" style="font-size: 90%">--exception-log="/path/to/smw/logs/directory/"</li>
@@ -308,18 +304,18 @@
 					</section>
 
 					<section data-background="#005566">
-						<h3>New features in SMW 2.5</h3>
+						<h3><span class="shadow">New features in SMW 2.5</span></h3>
 
 						<ul>
 							<li class="fragment">Support for MySQL and SQLite's “native” full-text search on text and uri typed values including phrase matching</li>
-							<li class="fragment">Reference statements to record provenance metadata on individual value annotations<br />(record like value - data - source)<br />
+							<li class="fragment">Reference statements to record provenance metadata on individual value annotations<br />(record like: value - data - source)<br />
 								<img src="img/referencedstatements.png" alt="Referenced statements in action">
 							</li>
 						</ul>
 					</section>
 
 					<section data-background="#005566">
-						<h3>New features in SMW 2.5 cont.</h3>
+						<h3><span class="shadow">New features in SMW 2.5 cont.</span></h3>
 
 						<ul>
 							<li class="fragment" style="font-size: 90%">Property chain support for printout statements as in<br />|?-Located in.Has population.Retrieved on<br />
@@ -344,7 +340,7 @@
 					<section data-background="#006060">
 						<h3><span class="shadow">New features in SMW 3.0</span></h3>
 
-						<p>Currently only internal changes are planned.</p>
+						<p>Currently only internal changes are planned though much more to be expected.</p>
 					</section>
 				</section>
 
