@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Yearly SMW overview, SMWCon Fall 2016</title>
+		<title>Yearly overview about Semantic MediaWiki, SMWCon Fall 2016</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -35,7 +35,7 @@
 			<div class="slides">
 
 				<section>
-					<h2><span class="shadow">Yearly SMW overview</span></h2>
+					<h2><span class="shadow">Yearly overview about Semantic MediaWiki</span></h2>
 					<p class="shadow">
 						Presentation by <a href="https://twitter.com/kghbln">Karsten Hoffmeyer</a> and <a href="https://www.entropywins.wtf">@JeroenDeDauw</a><br /><br />
 						<a href="https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2016/Current_Status_and_Next_Steps_for_Semantic_MediaWiki">SMWCon Fall 2016, Frankfurt</a>
@@ -53,10 +53,11 @@
 				<section>
 					<section>
 						<h3>Community and users</h3>
+
 						<p class="fragment"><span style="color:#17ff2e">~1100</span> mails on <a href="http://sourceforge.net/p/semediawiki/mailman/semediawiki-user/">semediawiki-user</a></p>
 						<p class="fragment"><span style="color:#17ff2e">~100</span> mails on <a href="http://sourceforge.net/p/semediawiki/mailman/semediawiki-devel/">semediawiki-devel</a></p>
 						<p class="fragment"><span style="color:#17ff2e">~5500</span> edits and <span style="color:#17ff2e">~1300</span> new pages on <a href="https://semantic-mediawiki.org/">semantic-mediawiki.org</a></p>
-						<p class="fragment"><span style="color:#17ff2e">~200</span> tickets on GitHub including ~50 bug reports and ~30 feature requests</p>
+						<p class="fragment"><span style="color:#17ff2e">~200</span> tickets on GitHub</p>
 						<p class="fragment">including <span style="color:#17ff2e">~50</span> reports and <span style="color:#17ff2e">~30</span> feature requests</p>
 					</section>
 
@@ -88,7 +89,7 @@
 					<section>
 						<h3>Codebase cont.</h3>
 
-						<p><span style="color:#17ff2e">8.39 (good)</span> Scrutinizer, <a href="https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticMediaWiki/">code quality assessment</a></p>
+						<p><span style="color:#17ff2e">8.39 (good)</span> – Scrutinizer, <a href="https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticMediaWiki/">code quality assessment</a></p>
 						<p class="fragment">up from <span style="color:#b9ffc0;font-size:90%;">8.24 (good)</span> last year</p>
 						<p class="fragment">
 							<img src="img/scrutizizer_2015graph.png" alt="Scrutinizer 2014/2015">&emsp;
@@ -99,7 +100,7 @@
 					<section>
 						<h3>Codebase cont.</h3>
 
-						<p><span style="color:#17ff2e">SMW 2.5-alpha</span> <a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/issues/107">– 4032</a> integration tests</p>
+						<p><span style="color:#17ff2e">SMW 2.5-alpha</span> – <a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/issues/107">4032</a> integration tests</p>
 						<p class="fragment"><span style="color:#17ff2e">SMW 2.4</span> – 3685 integration tests</a><br />
 							<span style="color:#17ff2e">SMW 2.3</span> – 3113 integration tests</a><br />
 							<span style="color:#17ff2e">SMW 2.2</span> – 3014 integration tests</a><br />
@@ -169,9 +170,9 @@
 
 						<ul>
 							<li>Jeroen De Dauw</li>
+							<li>Jaider Andrade Ferreira</li>
 							<li>Vitaliy Filippov</li>
 							<li>Aaron Schulz</li>
-							<li>Jaider Andrade Ferreira</li>
 							<li>Ori Livneh</li>
 							<li>Peter Grassberger</li>
 							<li>Reedy</li>
@@ -190,14 +191,14 @@
 				</section>
 
 				<section>
-					<h3>New features in SMW 2.4</h3>
+					<h3>Information about and new features in SMW 2.4</h3>
 
-					<p class="fragment">Let's start cycling through the yet invisible infos and features
+					<p class="fragment">Let's start cycling through the yet invisible infos and features<br />
 						<img class="fragment" src="img/cyclekittie.jpg" alt="Cat on an invisible bike">
 					</p>
 				</section>
 
-				<section>
+				<section data-background="#005555">
 					<h3>Platform compatibility</h3>
 
 					<ul>
@@ -220,15 +221,13 @@
 
 				<section>
 					<section>
-						<h3>Support for multiple languages</h3>
+						<h3 style="color: #17ff2e">Language support features</h3>
 
-						<p>Various efforts were made in making SMW more responsive to a language context including:</p>
+						<p style="text-align: left">SMW was made more responsive to multiple language environments including:</p>
 
 						<ul>
-							<li class="fragment">Support for text storage in multiple languages using the new monolingual text datatype using @languagecode</li>
-							<li class="fragment">Provide a methods to describe a property in multiple languages using @languagecode</li>
-							<li class="fragment">Adaptive formatting for Number, Boolean and Date values using the #LOCL formatter</li>
-							<li class="fragment">Recognize page content language to aid value parsing (supported by the Semantic Interlanguage Extension)</li>
+							<li class="fragment" style="font-size: 90%">Support for text storage in multiple languages using the new monolingual text datatype using @languagecode</li>
+							<li class="fragment" style="font-size: 90%">Provide a methods to describe a property in multiple languages using @languagecode</li>
 						</ul>
 
 						<p class="fragment">
@@ -238,7 +237,16 @@
 					</section>
 
 					<section>
-						<h3>Various features</h3>
+						<h3 style="color: #17ff2e">Language support features cont.</h3>
+
+						<ul>
+							<li class="fragment" style="font-size: 90%">Adaptive formatting for Number, Boolean and Date values using the #LOCL formatter</li>
+							<li class="fragment" style="font-size: 90%">Recognize page content language to aid value parsing (supported by the Semantic Interlanguage Extension)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 style="color: #17ff2e">Various other features</h3>
 
 							<p class="fragment">Simplified navigation and extended "Special:Ask" to provide quick links for immediate result download<br />
 								<img src="img/specialask.png" alt="Sepcial Ask showning quick links">
@@ -254,36 +262,39 @@
 					</section>
 
 					<section>
-						<h3>Various features cont.</h3>
+						<h3 style="color: #17ff2e">Various other features cont.</h3>
 
-							<p class="fragment">Enhanced date and time display formatting<br />
+							<p class="fragment">Enhanced date, time and number display formatting<br />
 								<ul>
-									<li>"#LOCL" formatter (predefined language specific formatting)</li>
-									<li>"#-F[...]" formatter (individual free formatting) as in |?Has date#-F[F j, Y]</li>
-								</ul>
-							</p>
-
-							<p class="fragment">Possibility to specify display precision for numeric values (decimals) as in |?Has number#-p2</p>
-
-							<p class="fragment">Improved selection of pages
-								<ul>
-									<li>Comparator support for single value queries (&sim; and !&sim;) as in {{#ask: [[&sim;Foo/*]] ... }}</li>
-									<li>Range query support (&gt; and &lt;) as in {{#ask: [[&gt; AAA]] [[&lt;AAD]] ... }}</li>
+									<li class="fragment" style="font-size: 90%">"#LOCL" formatter (predefined language specific formatting)</li>
+									<li class="fragment" style="font-size: 90%">"#-F[...]" formatter (individual free formatting) as in |?Has date#-F[F j, Y]</li>
+									<li class="fragment" style="font-size: 90%">Possibility to specify display precision for numeric values (decimals) as in |?Has number#-p2</li>
 								</ul>
 							</p>
 					</section>
 
 					<section>
-						<h3>Various features cont.</h3>
+						<h3 style="color: #17ff2e">Various other features cont.</h3>
+
+							<p class="fragment">Improved selection of pages
+								<ul>
+									<li class="fragment" style="font-size: 90%">Comparator support for single value queries (&sim; and !&sim;) as in {{#ask: [[&sim;Foo/*]] ... }}</li>
+									<li class="fragment" style="font-size: 90%">Range query support (&gt; and &lt;) as in {{#ask: [[&gt; AAA]] [[&lt;AAD]] ... }}</li>
+								</ul>
+							</p>
+					</section>
+
+					<section>
+						<h3 style="color: #17ff2e">Various other features cont.</h3>
 
 							<p class="fragment">Improved handling of outdated entities (plays with "rebuildData.php" --shallow-update parameter)</p>
 
 							<p class="fragment">More parameters to the "rebuildData.php" script:<br />
 								<ul>
-									<li>--ignore-exceptions</li>
-									<li>--exception-log="/path/to/smw/logs/directory/"</li>
-									<li>--with-maintenance-log</li>
-									<li> --redirects</li>
+									<li class="fragment" style="font-size: 90%">--ignore-exceptions</li>
+									<li class="fragment" style="font-size: 90%">--exception-log="/path/to/smw/logs/directory/"</li>
+									<li class="fragment" style="font-size: 90%">--with-maintenance-log</li>
+									<li class="fragment" style="font-size: 90%"> --redirects</li>
 								</ul>
 							</p>
 					</section>
@@ -296,22 +307,28 @@
 						<img src="img/seefuture.jpg" height="200px" alt="Y U NO LOAD" />
 					</section>
 
-					<section  data-background="#005566">
+					<section data-background="#005566">
 						<h3>New features in SMW 2.5</h3>
 
 						<ul>
 							<li class="fragment">Support for MySQL and SQLite's “native” full-text search on text and uri typed values including phrase matching</li>
-							<li class="fragment">Reference statements to record provenance metadata on individual value annotations (record like value - data - source)<br />
+							<li class="fragment">Reference statements to record provenance metadata on individual value annotations<br />(record like value - data - source)<br />
 								<img src="img/referencedstatements.png" alt="Referenced statements in action">
 							</li>
-							<li class="fragment">Property chain support for printout statements as in |?-Located in.Has population.Retrieved on<br />
+						</ul>
+					</section>
+
+					<section data-background="#005566">
+						<h3>New features in SMW 2.5 cont.</h3>
+
+						<ul>
+							<li class="fragment" style="font-size: 90%">Property chain support for printout statements as in<br />|?-Located in.Has population.Retrieved on<br />
 								<img src="img/propertychainprintouts.png" alt="Property chain printouts">
 							</li>
-							<li class="fragment">Support for property labels in the user's language<br />
+							<li class="fragment" style="font-size: 90%">Support for property labels in the user's language<br />
 								<img src="img/propertylocallabel.png" alt="Property label in user's language">
 							</li>
 						</ul>
-
 					</section>
 
 					<section data-background="#006655">
