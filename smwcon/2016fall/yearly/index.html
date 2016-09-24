@@ -100,10 +100,10 @@
 						<h3>Codebase cont.</h3>
 
 						<p><span style="color:#17ff2e">SMW 2.5-alpha</span> <a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/issues/107">– 4032</a> integration tests</p>
-						<p class="fragment"><span style="color:#17ff2e">SMW 2.4</span> – 3685 integration tests</a><br /><br />
-							<span style="color:#17ff2e">SMW 2.3</span> – 3113 integration tests</a><br /><br />
-							<span style="color:#17ff2e">SMW 2.2</span> – 3014 integration tests</a><br /><br />
-							<span style="color:#17ff2e">SMW 2.1</span> – 2966 integration tests</a><br /><br />
+						<p class="fragment"><span style="color:#17ff2e">SMW 2.4</span> – 3685 integration tests</a><br />
+							<span style="color:#17ff2e">SMW 2.3</span> – 3113 integration tests</a><br />
+							<span style="color:#17ff2e">SMW 2.2</span> – 3014 integration tests</a><br />
+							<span style="color:#17ff2e">SMW 2.1</span> – 2966 integration tests</a><br />
 							<span style="color:#17ff2e">SMW 2.0</span> – 2316 integration tests</a>
 						</p>
 
@@ -153,7 +153,6 @@
 
 						<ul>
 							<li>James Hong Kong</li>
-							<li>Jeroen De Dauw</li>
 							<li>Karsten Hoffmeyer</li>
 							<li>Felipe de Jong</li>
 							<li>Florian Schmidt</li>
@@ -169,6 +168,7 @@
 						</ul>
 
 						<ul>
+							<li>Jeroen De Dauw</li>
 							<li>Vitaliy Filippov</li>
 							<li>Aaron Schulz</li>
 							<li>Jaider Andrade Ferreira</li>
@@ -189,17 +189,19 @@
 					</section>
 				</section>
 
-				<section data-background-video="img/cat-lapse.webm">
-					<p class="shadow">New features in SMW 2.3 - 2.5</p>
+				<section>
+					<h3>New features in SMW 2.4</h3>
+
+					<p class="fragment">Let's start cycling through the yet invisible infos and features
+						<img class="fragment" src="img/cyclekittie.jpg" alt="Cat on an invisible bike">
+					</p>
 				</section>
 
 				<section>
 					<h3>Platform compatibility</h3>
 
 					<ul>
-						<li class="fragment">Added <strong>beta</strong> support for <span style="color:#17ff2e">PHP 7</span> <span style="color:gray">(SMW 2.3)</span></li>
-						<li class="fragment">Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7</span> <span style="color:gray">(SMW 2.4)</span></li>
-						<li class="fragment">Added full <span style="color:#17ff2e">PostgreSQL</span> support <span style="color:gray">(SMW 2.3)</span></li>
+						<li class="fragment">Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7.0</span> <span style="color:gray">(SMW 2.4)</span></li>
 					</ul>
 				</section>
 
@@ -218,26 +220,73 @@
 
 				<section>
 					<section>
-						<h3>SPARQLStore</h3>
+						<h3>Support for multiple languages</h3>
+
+						<p>Various efforts were made in making SMW more responsive to a language context including:</p>
 
 						<ul>
-							<li class="fragment">redirects</li>
-							<li class="fragment">subcategories + subproperties</li>
+							<li class="fragment">Support for text storage in multiple languages using the new monolingual text datatype using @languagecode</li>
+							<li class="fragment">Provide a methods to describe a property in multiple languages using @languagecode</li>
+							<li class="fragment">Adaptive formatting for Number, Boolean and Date values using the #LOCL formatter</li>
+							<li class="fragment">Recognize page content language to aid value parsing (supported by the Semantic Interlanguage Extension)</li>
 						</ul>
 
-						<p class="fragment"><strong>SQLStore feature parity!</strong></p>
+						<p class="fragment">
+							<img src="img/propertylangen.png" alt="Property description shown in English">&emsp;
+							<img src="img/propertylangzh.png" alt="Property description shown in Chinese">
+						</p>
 					</section>
-				</section>
 
-				<section>
-					<p>Experimental feature added in SMW 2.3</p>
+					<section>
+						<h3>Various features</h3>
 
-					<iframe width="700" height="525" src="https://www.youtube.com/embed/rXUPwmu5xCw" frameborder="0" allowfullscreen></iframe>
-				</section>
+							<p class="fragment">Simplified navigation and extended "Special:Ask" to provide quick links for immediate result download<br />
+								<img src="img/specialask.png" alt="Sepcial Ask showning quick links">
+							</p>
 
-				<section>
-					<section data-background="img/SemSearch1.png" data-transition="linear" data-background-transition="slide"></section>
-					<section data-background="img/SemSearch2.png" data-transition="linear" data-background-transition="slide"></section>
+							<p class="fragment">Support for uniqueness and pattern based (regular expressions) property value constraints<br />
+								<img src="img/oopsvalue.png" alt="Erroneous value assignment">
+							</p>
+
+							<p class="fragment">Support for DISPLAYTITLE via a queryable special property</p>
+
+						<p class="fragment">Improved handling of outdated entities ("rebuildData.php" --shallow-update option)</p>
+					</section>
+
+					<section>
+						<h3>Various features cont.</h3>
+
+							<p class="fragment">Enhanced date and time display formatting<br />
+								<ul>
+									<li>"#LOCL" formatter (predefined language specific formatting)</li>
+									<li>"#-F[...]" formatter (individual free formatting) as in |?Has date#-F[F j, Y]</li>
+								</ul>
+							</p>
+
+							<p class="fragment">Possibility to specify display precision for numeric values (decimals) as in |?Has number#-p2</p>
+
+							<p class="fragment">Improved selection of pages
+								<ul>
+									<li>Comparator support for single value queries (&sim; and !&sim;) as in {{#ask: [[&sim;Foo/*]] ... }}</li>
+									<li>Range query support (&gt; and &lt;) as in {{#ask: [[&gt; AAA]] [[&lt;AAD]] ... }}</li>
+								</ul>
+							</p>
+					</section>
+
+					<section>
+						<h3>Various features cont.</h3>
+
+							<p class="fragment">Improved handling of outdated entities (plays with "rebuildData.php" --shallow-update parameter)</p>
+
+							<p class="fragment">More parameters to the "rebuildData.php" script:<br />
+								<ul>
+									<li>--ignore-exceptions</li>
+									<li>--exception-log="/path/to/smw/logs/directory/"</li>
+									<li>--with-maintenance-log</li>
+									<li> --redirects</li>
+								</ul>
+							</p>
+					</section>
 				</section>
 
 				<section>
@@ -247,19 +296,38 @@
 						<img src="img/seefuture.jpg" height="200px" alt="Y U NO LOAD" />
 					</section>
 
+					<section  data-background="#005566">
+						<h3>New features in SMW 2.5</h3>
+
+						<ul>
+							<li class="fragment">Support for MySQL and SQLite's “native” full-text search on text and uri typed values including phrase matching</li>
+							<li class="fragment">Reference statements to record provenance metadata on individual value annotations (record like value - data - source)<br />
+								<img src="img/referencedstatements.png" alt="Referenced statements in action">
+							</li>
+							<li class="fragment">Property chain support for printout statements as in |?-Located in.Has population.Retrieved on<br />
+								<img src="img/propertychainprintouts.png" alt="Property chain printouts">
+							</li>
+							<li class="fragment">Support for property labels in the user's language<br />
+								<img src="img/propertylocallabel.png" alt="Property label in user's language">
+							</li>
+						</ul>
+
+					</section>
+
 					<section data-background="#006655">
-						<h3 class="fragment"><span class="shadow">Removals in SMW 3.x</span></h3>
+						<h3 class="fragment"><span class="shadow">Removals in SMW 3.0</span></h3>
 
 						<ul>
 							<li class="fragment">"type" namespace <small>(deprecated in SMW 1.6)</small></li>
-							<li class="fragment">Maintenance script aliases <small>such as SMW_setup.php (renamed in 2.0)</small></li>
-							<li class="fragment">Possibly Special:SemanticStatistics <small>(Special:Statistics since 1.9)</small></li>
+							<li class="fragment">Maintenance script aliases <small>such as "SMW_setup.php" (renamed in 2.0)</small></li>
+							<li class="fragment">"Special:SemanticStatistics" <small>(relocated to "Special:Statistics" since 1.9)</small></li>
 						</ul>
 					</section>
 
 					<section data-background="#006060">
-						<h3><span class="shadow">New features</span></h3>
+						<h3><span class="shadow">New features in SMW 3.0</span></h3>
 
+						<p>Currently only internal changes are planned.</p>
 					</section>
 				</section>
 
