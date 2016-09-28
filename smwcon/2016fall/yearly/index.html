@@ -35,7 +35,8 @@
 			<div class="slides">
 
 				<section>
-					<h2><span class="shadow">Yearly overview of Semantic MediaWiki</span></h2>
+					<h3><span class="shadow">Yearly Semantic MediaWiki overview</span></h3>
+					<br />
 					<p class="shadow">
 						Presentation by <a href="https://twitter.com/kghbln">Karsten Hoffmeyer</a> and <a href="https://www.entropywins.wtf">@JeroenDeDauw</a><br /><br />
 						<a href="https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2016/Current_Status_and_Next_Steps_for_Semantic_MediaWiki">SMWCon Fall 2016, Frankfurt</a>
@@ -81,36 +82,21 @@
 					</section>
 
 					<section>
-						<h3>Codebase cont.</h3>
-
-						<p><span style="color:#17ff2e">8.39 (good)</span> – Scrutinizer, <a href="https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticMediaWiki/">code quality assessment</a></p>
-						<p class="fragment">up from <span style="color:#b9ffc0;font-size:90%;">8.24 (good)</span> last year</p>
-						<p class="fragment">
+						<h3>Code quality</h3>
+						<p>
 							<img src="img/scrutizizer_2015graph.png" alt="Scrutinizer 2014/2015">&emsp;
 							<img src="img/scrutizizer_2016graph.png" alt="Scrutinizer 2015/2016">
 						</p>
 					</section>
 
 					<section>
-						<h3>Codebase cont.</h3>
-
-						<p><span style="color:#17ff2e">SMW 2.5-alpha</span> – <a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/issues/107">4032</a> integration tests</p>
-						<p class="fragment"><span style="color:#17ff2e">SMW 2.4</span> – 3685 integration tests</p>
-						<p class="fragment">
-							<img src="img/tests_graph.png" alt="Tests 2015/2016" style="width: 30%; height: 30%"/>
-						</p>
-
-						<p class="fragment">up from <span style="color:#b9ffc0;font-size:90%;">3113</span> last year (SMW 2.3)</p>
+						<img src="img/tests_graph.png" alt="Tests 2015/2016" />
 					</section>
 
 					<section>
-						<h3>Codebase cont.</h3>
-
-						<p><span style="color:#17ff2e">A lot of different environments get tested continuously.</span></p>
+						<p><span style="color:#17ff2e">Continuous testing of many environments</span></p>
 					
-						<p class="fragment">
-							<img src="img/tests_pic.png" alt="Travis integration tests">
-						</p>
+						<img src="img/tests_pic.png" alt="Travis integration tests">
 					</section>
 
 					<section>
@@ -180,27 +166,6 @@
 							Smaller font than last year :)
 						</aside>
 					</section>
-				</section>
-
-				<section data-background="#005555">
-					<h3>Platform compatibility</h3>
-
-					<ul>
-						<li class="fragment">Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7.0</span></li>
-					</ul>
-				</section>
-
-				<section data-background="#005555">
-					<h3><span class="shadow">MediaWiki compatibility</span></h3>
-
-					<table style="font-size: 30px;" class="no-bottom-border">
-						<tr><th>SMW 1.9</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-						<tr class="fragment"><th>SMW 2.0</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td></td><td></td><td></td><td></td><td></td></tr>
-						<tr class="fragment"><th>SMW 2.3</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td></td><td></td><td></td></tr>
-						<tr class="fragment"><th>SMW 2.4</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td style="color: #17ff2e">1.27</td><td></td></tr>
-						<tr class="fragment"><th>SMW 2.5</th><td style="color: #17ff2e"></td><td></td><td></td><td></td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td style="color: #17ff2e">1.27</td><td>...</td></tr>
-						<tr class="fragment"><th>SMW 3.0</th><td style="color: #17ff2e"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="color: #17ff2e">1.27</td><td>...</td></tr>
-					</table>
 				</section>
 
 				<section>
@@ -286,6 +251,10 @@
 								</ul>
 							</p>
 					</section>
+
+					<section data-background="#005555">
+						<p>Added <strong>full</strong> support for <span style="color:#17ff2e">PHP 7.0</span></p>
+					</section>
 				</section>
 
 				<section>
@@ -320,30 +289,39 @@
 					</section>
 
 					<section data-background="#006655">
-						<h3 class="fragment"><span class="shadow">Removals in SMW 3.0</span></h3>
+						<h3><span class="shadow">Removals in SMW 3.0</span></h3>
 
 						<ul>
-							<li class="fragment">"type" namespace <small>(deprecated in SMW 1.6)</small></li>
+							<li>"type" namespace <small>(deprecated in SMW 1.6)</small></li>
 							<li class="fragment">Maintenance script aliases <small>such as "SMW_setup.php" (renamed in 2.0)</small></li>
 							<li class="fragment">"Special:SemanticStatistics" <small>(relocated to "Special:Statistics" since 1.9)</small></li>
 						</ul>
 					</section>
 
-					<section data-background="#006060">
-						<h3><span class="shadow">New features in SMW 3.0</span></h3>
+					<section data-background="#005555">
+						<h3><span class="shadow">MediaWiki compatibility</span></h3>
 
-						<p>Currently only internal changes are planned though much more is to be expected.</p>
+						<table style="font-size: 30px;" class="no-bottom-border">
+							<tr><th>SMW 1.9</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.0</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.3</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td></td><td></td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.4</th><td style="color: #17ff2e">1.19</td><td>1.20</td><td>1.21</td><td>1.22</td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td style="color: #17ff2e">1.27</td><td></td></tr>
+							<tr class="fragment"><th>SMW 2.5</th><td style="color: #17ff2e"></td><td></td><td></td><td></td><td style="color: #17ff2e">1.23</td><td>1.24</td><td>1.25</td><td>1.26</td><td style="color: #17ff2e">1.27</td><td>...</td></tr>
+							<tr class="fragment"><th>SMW 3.0</th><td style="color: #17ff2e"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="color: #17ff2e">1.27</td><td>...</td></tr>
+						</table>
 					</section>
 				</section>
 
 				<section>
-					<section data-background="#006650" data-transition="linear" data-background-transition="slide">
+					<!--<section data-background="#006650" data-transition="linear" data-background-transition="slide">-->
+						<!---->
+
+						<!--&lt;!&ndash; TODO: add cat &ndash;&gt;-->
+					<!--</section>-->
+
+					<section>
 						<h3><span class="shadow">Contributing to the project</span></h3>
 
-						<!-- TODO: add cat -->
-					</section>
-
-					<section data-background-video="img/why-u-no-play.webm">
 						<ul style="font-size: 48px">
 							<li class="fragment shadow">Create feature requests</li>
 							<li class="fragment shadow">File bugs you encounter</li>
