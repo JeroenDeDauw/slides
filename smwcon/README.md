@@ -7,6 +7,30 @@ for [SMWCon](https://semantic-mediawiki.org/wiki/SMWCon).
 Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 
+## SMWCon Fall 2016, Frankfurt
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2016
+
+### Current status and next steps for SMW
+
+The yearly "what happened and what are we working on now" talk.
+
+* [Wiki page](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2016/Current_Status_and_Next_Steps_for_Semantic_MediaWiki)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2016fall/yearly/)
+* [Video](https://www.youtube.com/watch?v=ElADzcPLUdk&list=PLw2YgbWET_phmswFqdtSMF689lI3f8jh4)
+
+## SMWCon Fall 2015, Barcelona
+
+https://semantic-mediawiki.org/wiki/SMWCon_Fall_2015
+
+### Current status and next steps for SMW
+
+The yearly "what happened and what are we working on now" talk.
+
+* [Wiki page](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2015/Current_Status_and_Next_Steps_for_Semantic_MediaWiki)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2015fall/yearly/)
+* [Video](https://www.youtube.com/watch?v=hOzU-v1oITw&list=PLw2YgbWET_pgKPQj3McAyoeWCfYvfRFJU&index=12)
+
 ## SMWCon Fall 2014, Vienna
 
 https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014
