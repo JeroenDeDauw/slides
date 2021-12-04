@@ -1,4 +1,4 @@
-Slides of [Jeroen De Dauw](https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw)
+Slides of [Jeroen De Dauw](https://www.entropywins.wtf/)
 for [SMWCon](https://semantic-mediawiki.org/wiki/SMWCon).
 
 
